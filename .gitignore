@@ -1,0 +1,62 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# =========================
+# Virtual Environment
+# =========================
+.venv/
+env/
+venv/
+
+# =========================
+# Visual Studio Code
+# =========================
+.vscode/
+.history/
+
+# =========================
+# Operating System Files
+# =========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+desktop.ini
+
+# =========================
+# Logs and Backups
+# =========================
+*.log
+*.bak
+*.tmp
+*.swp
+
+# =========================
+# Test Cache (pytest, etc.)
+# =========================
+.cache/
+.pytest_cache/
+coverage.*
+htmlcov/
+
+# =========================
+# Jupyter or Notebooks (if added later)
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Storybook Archipelago (recursive systems)
+# =========================
+*.trace
+*.memory
+*.snapshot
