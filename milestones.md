@@ -1,46 +1,62 @@
-<!-- Save to: storybook_primordial_soup/.gitignore.md -->
+<!-- Save to: storybook_archipelago/milestones.md -->
 
-# 🧹 .gitignore – Primordial Soup
+# ✅ Milestone Log – Storybook Archipelago
 
-This file describes which files and folders should be ignored by version control.
-
-It corresponds to a standard `.gitignore` but is written in Markdown for documentation or review purposes.  
-Use it alongside the actual `.gitignore` file in the project root.
-
----
-
-## 📂 Ignored Folders
-
-- `.venv/` – Local virtual environment (not portable across machines)
-- `__pycache__/` – Python cache directories
-- `.mypy_cache/` – Static analysis cache
-- `.pytest_cache/` – Test framework cache
-- `.vscode/` – Editor-specific settings (optional, but often excluded)
+This file tracks major design, development, and recursive breakthroughs across the entire *Storybook Archipelago* project.  
+Each entry marks a confirmed structural shift, system emergence, or traversal milestone.  
+Use it to monitor cross-mode growth, recursive integrity, and player readiness.
 
 ---
 
-## 📄 Ignored Files
+## 🌀 PHASE 0 – Genesis & Framework Lock-In
 
-- `*.pyc` – Compiled Python files
-- `*.pyo`
-- `*.log` – Logs from scripts or play sessions
-- `*.tmp` – Temporary files
-- `*.DS_Store` – macOS directory metadata
-- `Thumbs.db` – Windows Explorer cache file
+### ✅ Project Initialization
+- 🛠️ Created `storybook_archipelago/` folder and activated `.venv`
+- 🛠️ Initialized Git repository and published to GitHub
+- 🛠️ Added `.gitignore` (Python, VSC, logs, recursion artifacts)
 
----
-
-## 📄 Not Ignored (Important)
-
-- `requirements.txt`
-- `README.md`
-- `documentation_model.md`
-- All `.md` game design and gameplay files
-- All `.py` code used in automation or game infrastructure
+### ✅ Core Structure Canonized
+- 📐 Locked in 16 game modes using stanza layout: `a0_0` to `a3_3`
+- 📐 Enforced naming convention:
+  - `_mode` → game modes (Layer 1)
+  - `_minigame` → minigames (Layer 2)
+  - `_node` → minigame nodes (Layer 3)
 
 ---
 
-## ✨ Reminder
+## 🗺️ STRUCTURE – Canonical Game Modes
 
-This `.gitignore.md` is for **documentation** only.  
-To activate ignoring behavior, ensure the real `.gitignore` file exists with matching rules.
+| Pos   | Folder                  | Type         | Description                                      |
+|-------|-------------------------|--------------|--------------------------------------------------|
+| a0_0  | sailing_mode/           | Poetic       | 🚢 Ocean traversal, game entrypoint              |
+| a0_1  | isle_mode/              | Poetic       | 🏝️ Land traversal, local scene routing           |
+| a0_2  | dreaming_mode/          | Poetic       | 🌀 Memory tone, recursion seeding                |
+| a0_3  | high_command_mode/      | System       | 🎛️ Global orchestration & strain regulation      |
+| a1_0  | memory_mode/            | System       | 🧠 Loop memory keeper and timeline navigator     |
+| a1_1  | filename_mode/          | System       | 🔖 Canonical naming and indexing logic           |
+| a1_2  | camouflage_mode/        | System       | 🎭 Textual, visual, and narrative concealment    |
+| a1_3  | narrative_mode/         | System       | 📖 Story structure, branching, and pacing        |
+| a2_0  | visualizer_mode/        | Hybrid       | 🗺️ Debug views, maps, structural overlays        |
+| a2_1  | automation_mode/        | System       | 🧰 Recursive builder and compiler pipelines      |
+| a2_2  | codex_builder_mode/     | System       | 📘 Generates taskmaps, stanzamaps, and docs      |
+| a2_3  | psychiatrist_mode/      | System       | 🧪 Detects recursion errors and breakdowns       |
+| a3_0  | sentinel_mode/          | System       | 🧱 Canon guardian and access control             |
+| a3_1  | quarantine_mode/        | System       | 🚨 Contains recursion anomalies                  |
+| a3_2  | archivist_mode/         | System       | 🗂️ Logs, snapshots, and recursion lineage        |
+| a3_3  | testing_mode/           | Experimental | 🧪 Safe zone for experimental logic              |
+
+---
+
+## 🔜 Next Milestones
+
+- [ ] Add: `README.md`, `camouflage_layers.md`, and this file
+- [ ] Document `a0_0_sailing_mode/` and `a0_1_isle_mode/`
+- [ ] Begin building: `whispering_grove_node/` (first playable minigame node)
+- [ ] Define camouflage layer logic and entry/exit traversal protocols
+
+---
+
+## 📝 Notes
+
+- This file tracks **global** milestones across all modes.
+- Individual game modes and minigames will also have their own `milestones.md`.
