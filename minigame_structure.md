@@ -57,12 +57,12 @@ storybook_archipelago/
 │           └── subtaskmap.md          # 🧱 Checklist of what’s implemented/tested
 ```
 
-This file layout balances:
+This node layout balances:
 
 - 🔁 Player input handling  
 - 📖 Narrative and camouflage  
 - 🧪 Full test support  
-- 🧠 System-level routing and orchestration  
+- 🧠 Recursive routing, orchestration, and state flow  
 - 🧱 Recursive introspection and automation  
 
 Each file has a **singular, canonical purpose**.  
