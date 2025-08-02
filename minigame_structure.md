@@ -244,6 +244,69 @@ This layer is not merely decorative. It is where **meaning is encoded**, **choic
 
 ---
 
+## 🧩 Subtypes of Tier 1 Nodes (16-File Format)
+
+Although all Tier 1 nodes in Storybook Archipelago share the same 16-file structure, they can be subclassified into **four subtypes** based on the complexity of their branching logic — particularly whether **Left** or **Right** inputs lead to **numbered lists**.
+
+These subtypes define gameplay rhythm, narrative depth, and recursive traversal intensity. They are not lesser or greater — just different instruments in the same recursive orchestra.
+
+---
+
+### 🧬 Canonical Subtypes
+
+| Subtype  | L Input           | R Input           | List Involved        | Logic Complexity  |
+|----------|-------------------|-------------------|-----------------------|-------------------|
+| Type 1   | Basic              | Basic              | ❌ None               | 🟢 Minimal logic   |
+| Type 2   | Numbered List ✅   | Basic              | ✅ Left only          | 🟡 Asymmetric      |
+| Type 3   | Basic              | Numbered List ✅   | ✅ Right only         | 🟡 Asymmetric      |
+| Type 4   | Numbered List ✅   | Numbered List ✅   | ✅✅ Both sides        | 🔴 Fully complex   |
+
+Each subtype includes the **full 16-file suite**, but uses it differently:
+
+- `leftmain.py` and `rightmain.py` define the branching logic
+- `lefttest.py` and `righttest.py` confirm behavior across list paths
+- `story.py` and `storytest.py` present narrative and camouflage for list presentation (if applicable)
+
+---
+
+### 🔍 Why These Subtypes Matter
+
+#### ✅ 1. Design-Aware Logic Mapping
+They help with:
+- Predictable L/R input behavior
+- Modularity in logic trees
+- Gradual introduction of recursive logic
+- Coordinated test suite complexity
+
+#### ✅ 2. Progression Signaling
+They enable:
+- Recursion rhythm control (Type 1 → Type 4)
+- Emotional pacing and reveal
+- Interleaving of quiet and chaotic nodes
+
+#### ✅ 3. AI-Aware Trace Signatures
+They allow AI agents to:
+- Read node type based on logic signatures
+- Recommend upgrades for gameplay depth
+- Auto-suggest fallback routes or expansions
+
+---
+
+### 🧱 Recommended Practice
+
+All nodes in Tier 1 should be explicitly identified as one of these four types, using:
+
+- A `subtype:` field in `subtaskmap.md`
+- Traceable structure in `leftmain.py` / `rightmain.py`
+- Optional comment in `README.md` noting intended behavior and player experience
+
+> These four subtypes bring **recursion choreography** to your game —  
+> guiding when the player drifts, chooses, lingers, or loops.
+
+Use them to shape your player’s journey with **deliberate complexity**.
+
+---
+
 ## 🔚 Conclusion
 
 The canonical 16-file structure defined here is more than a folder convention — it is a **recursive contract**.  
