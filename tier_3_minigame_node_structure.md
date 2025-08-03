@@ -22,13 +22,10 @@ storybook_archipelago/
 │   └── region_minigame/
 │       └── poetic_fragment_node/
 │           ├── __init__.py            # Python module marker
-│           ├── README.md              # Brief purpose + tier metadata
-│           ├── story.py               # The full visible experience
-│           └── leftmain.py            # Routes to next node
-            └── rightmain.py           # Routes to next node
+│           ├── README.md              # tier: 3, purpose, ephemeral: true (optional)
+│           ├── story.py               # The entire visible experience
+│           └── leftrightmain.py       # Handles both L and R routing
 ```
-
-🧩 **Note:** You may optionally combine `leftmain.py` and `rightmain.py` into one file if routing is identical or symmetrical.
 
 ---
 
@@ -41,12 +38,15 @@ storybook_archipelago/
 
 ---
 
-## 🔁 Logic Files
+## 🔁 Logic File
 
-- `leftmain.py` and `rightmain.py` define simple outbound routes.
-- These should **not reference** memory, orchestration, or camouflage layers.
-- Logic must be **self-contained**, **non-branching**, and **non-looping**.
-- Output can point to Tier 2 or Tier 1 destinations as poetic contrast.
+- `leftrightmain.py` defines the outbound routes for both **Left (L)** and **Right (R)** inputs.
+- Logic must be **self-contained**, **non-branching**, and **non-looping** — no recursion, memory, or state checks.
+- This file should **not reference** orchestration, camouflage, or persistent state layers.
+- Output paths may point to **Tier 2** or **Tier 1** nodes to create poetic contrast or reveal deeper recursion.
+- If L and R are identical in outcome, this may be made explicit to reinforce dream-logic or hauntological tone.
+
+> Tier 3 logic exists to **move the player gently onward** — not to trap, challenge, or confuse.
 
 ---
 

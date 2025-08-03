@@ -27,6 +27,7 @@ storybook_archipelago/
 │           ├── story.py               # 📖 Narrative content (can be short or symbolic)
 │           └── testlogic.py           # ✅ Minimal test coverage
 ```
+
 ## 🧱 Purpose of Tier 2 Nodes
 
 - Serve as fast traversal or side-room content  
@@ -83,7 +84,7 @@ Every Tier 2 node must include:
 ## 🔄 Upgrade / Downgrade Rules
 
 | Direction       | Condition                                            |
-|----------------|------------------------------------------------------|
+|-----------------|------------------------------------------------------|
 | Tier 2 → Tier 1 | Node is revisited, remembered, or gains recursion   |
 | Tier 2 → Tier 3 | Node loses logic but retains poetic value           |
 | Tier 2 → Delete | Node becomes unused and unreachable                 |
