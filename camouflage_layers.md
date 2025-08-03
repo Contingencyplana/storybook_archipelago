@@ -173,7 +173,7 @@ You are not done camouflaging.
 
 ---
 
-## 13. 🎯 Layer 10.0 – TONS-of-FUN Camouflage
+## 13. 🎯 – Layer 10.0 Final Camouflage: TONS-of-FUN
 
 - **Adds:** Anything that makes players laugh, gasp, shout, or tell a friend  
 - **Tests:** Is this game finally TONS-of-FUN?  

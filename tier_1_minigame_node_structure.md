@@ -1,10 +1,12 @@
-<!-- Save to: storybook_archipelago/minigame_structure.md -->
+<!-- Save to: storybook_archipelago/tier_1_minigame_node_structure.md -->
 
-# 🧱 Canonical Minigame Node Structure
+# 🧱 Canonical Tier 1 Minigame Node Structure
 
-This file defines the internal file architecture of every minigame node in **Storybook Archipelago**.
+This file defines the internal file architecture of every **Tier 1** minigame node in **Storybook Archipelago**.
 
-Each node consists of **exactly 16 files**, arranged across complementary recursive layers. These files are modular, testable, and traceable — forming a complete gameplay and development loop.
+Tier 1 nodes are the most **complete, testable, and narratively rich** type of node.  
+Each one consists of **exactly 16 files**, arranged across complementary recursive layers.  
+These files form a fully introspectable gameplay unit — modular, poetic, test-backed, and ready for orchestration by AI agents.
 
 This structure ensures:
 
@@ -13,15 +15,15 @@ This structure ensures:
 - 🧱 Predictable integration and recursive expansion  
 - 🧭 Compatibility with AI agents like `filename_mode/`, `high_command_mode/`, and `storytelling_ai`
 
-> All future minigame nodes must conform to this structure unless explicitly overridden by camouflage or recursion directives.
+> All future Tier 1 nodes must conform to this structure unless explicitly overridden by camouflage or recursion directives.
 
-The 16 files are grouped as follows:
+The 16 files are grouped into six core layers:
 
-- 📘 **Documentation Layer**
-- 📖 **Narrative Layer**
-- 🔁 **Left/Right Logic Layer**
-- 🧠 **Integration Layer**
-- 🎭 **Camouflage Layer**
+- 📘 **Documentation Layer**  
+- 📖 **Narrative Layer**  
+- 🔁 **Left/Right Logic Layer**  
+- 🧠 **Integration Layer**  
+- 🎭 **Camouflage Layer**  
 - 🧬 **Orchestration Layer**
 
 Each of the following sections describes these layers in detail.
@@ -32,7 +34,7 @@ Each of the following sections describes these layers in detail.
 
 🧱 FINAL STRUCTURE — 16 Files, Balanced, Recursive, and Complete
 
-Every minigame node in *Storybook Archipelago* must contain exactly the following 16 files:
+Every Tier 1 minigame node in *Storybook Archipelago* must contain exactly the following 16 files:
 
 ```plaintext
 storybook_archipelago/
@@ -68,11 +70,13 @@ This node layout balances:
 Each file has a **singular, canonical purpose**.  
 Together, they form a node that is **modular**, **traceable**, and **recursively complete**.
 
+> For simpler node types (e.g. Tier 2 and Tier 3), see `node_tiers.md`, `tier_2_minigame_node_structure.md`, and `tier_3_minigame_node_structure.md`.
+
 ---
 
 ## 📦 Python Module Marker
 
-Each minigame node contains a `__init__.py` file to mark it as a valid Python module.
+Each Tier 1 minigame node contains a `__init__.py` file to mark it as a valid Python module.
 
 ---
 
@@ -170,29 +174,6 @@ It transforms gameplay from mechanical flow into **evolving narrative experience
 
 ## 🔁 Left/Right Logic Layer
 
-This layer handles the branching logic that governs the player's traversal through the game world. Every minigame node responds to **Left (L)** and **Right (R)** input, and this layer defines what happens when each is selected.
-
-These files represent the **core gameplay decision points** — the functional skeleton behind story presentation and narrative camouflage.
-
----
-
-- `leftmain.py` – 🔁  
-  Defines the logic executed when the player presses **L**. This may trigger state changes, route to a new node, apply a narrative transformation, or invoke camouflage overlays. `leftmain.py` should always coordinate with orchestration and camouflage layers where appropriate.
-
-- `lefttest.py` – ✅  
-  Validates the behavior of `leftmain.py`. This includes path correctness, state mutations, failover routes, and any side effects that may be triggered by L-input. Tests should confirm that the output matches narrative and structural expectations across recursion levels.
-
----
-
-The Left/Right logic files are where decision meets recursion.  
-They must be testable, introspectable, and recursively modular.
-
-If pressing L leads to confusion, contradiction, or silence — revisit this layer.
-
----
-
-## 🔁 Left/Right Logic Layer
-
 This layer governs the **primary traversal logic** for each minigame node.  
 It defines what happens when the player presses **Left (L)** or **Right (R)** — the foundational inputs of the entire Archipelago experience.
 
@@ -254,8 +235,8 @@ These subtypes define gameplay rhythm, narrative depth, and recursive traversal 
 
 ### 🧬 Canonical Subtypes
 
-| Subtype  | L Input           | R Input           | List Involved        | Logic Complexity  |
-|----------|-------------------|-------------------|-----------------------|-------------------|
+| Subtype  | L Input            | R Input           | List Involved         | Logic Complexity  |
+|----------|--------------------|-------------------|-----------------------|-------------------|
 | Type 1   | Basic              | Basic              | ❌ None               | 🟢 Minimal logic   |
 | Type 2   | Numbered List ✅   | Basic              | ✅ Left only          | 🟡 Asymmetric      |
 | Type 3   | Basic              | Numbered List ✅   | ✅ Right only         | 🟡 Asymmetric      |
@@ -315,15 +296,16 @@ Each file serves a **singular, traceable role**, and together they form a modula
 This structure:
 
 - Empowers AI agents to navigate, validate, and evolve each node  
-- Ensures full test parity across gameplay, logic, memory, and disguise  
-- Supports recursive growth while maintaining clarity and coherence  
+- Guarantees full test parity across logic, memory, story, and disguise  
+- Supports recursive growth while preserving narrative clarity  
 
-Whether the player presses L, R, or gets pulled into a loop of memory, the node must hold its shape — narratively, logically, emotionally.
+Whether the player presses L, R, or slips into a loop of memory, the node must hold its shape — narratively, logically, emotionally.
 
 > The node is the atom of recursion.  
 > Sixteen files. One complete storybeat.  
 > And the beginning of many more.
 
-This file may evolve as recursion deepens, but the principle holds:
+This document may evolve as recursion deepens —  
+but the doctrine holds:
 
 **Keep it testable. Keep it poetic. Keep it recursive.**
