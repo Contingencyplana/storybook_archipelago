@@ -84,7 +84,7 @@ Tier 3 nodes do **not** require standalone test files. However:
 
 ## 📂 Layer-Specific Test Notes
 
-| File              | Test File         | Required Tier | Notes                               |
+| File              | Test File         | Required Tier  | Notes                               |
 |-------------------|-------------------|----------------|-------------------------------------|
 | `leftmain.py`     | `lefttest.py`     | Tier 1         | Optional Tier 2                     |
 | `rightmain.py`    | `righttest.py`    | Tier 1         | Optional Tier 2                     |
