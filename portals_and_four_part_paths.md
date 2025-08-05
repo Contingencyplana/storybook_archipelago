@@ -57,17 +57,22 @@ All portal destinations must follow this format:
 
 ---
 
-## 📘 Benefits of Heading Upgrade
+## 🔁 Workspace Usage Guidelines
 
-| Feature                | Benefit                                   |
-|------------------------|-------------------------------------------|
-| 🧭 **Navigability**     | Shows up in markdown ToC (Table of Contents) |
-| 🧩 **AI/Parser Friendly** | Easier for automation to scan, fold, index   |
-| 🧑‍💻 **Visual Grouping**   | Collapsible in many markdown editors         |
+- All `portalmap.md` files must use the `id` value from this file as the **first path segment**.
+- Any workspace not listed here is **non-canonical** and must not be referenced in routing.
+- Archived or external workspaces may still be linked, but only with **safeguards** and **resolution layers** in place.
 
 ---
 
-### ✅ Final Verdict:
-> You **used code blocks and yaml syntax correctly**. Now, just upgrade each workspace label to a `###` heading for full clarity and structure.
+## 📓 Notes
 
-Would you like me to regenerate the full `workspace_registry.md` with those minor heading corrections applied?
+- This registry is intended to support future tools such as:
+  - ✅ AI routing agents
+  - ✅ Visualization overlays
+  - ✅ Cloud-to-local resolution bridges
+  - ✅ `orchestration_ai` link validators
+- The file is **machine-readable** and **human-maintainable**.
+- It should be **updated** whenever a new Visual Studio Code workspace is introduced to the Storybook project family.
+
+> _“Let the registry be a map to recursion, not a lock upon it.”_
