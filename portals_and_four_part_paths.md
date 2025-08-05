@@ -13,9 +13,9 @@ It governs not only how one node links to another, but also how entire game mode
 
 All portal destinations must follow this format:
 
-## ✅ Registered Workspaces
+### ✅ Registered Workspaces
 
-### 🧱 1. `storybook/`
+#### 🧱 1. storybook/
 
 ```yaml
 - id: storybook
@@ -25,8 +25,7 @@ All portal destinations must follow this format:
   notes: Root design system, editor logic, builder recursion layers.
 ```
 
-
-🌊 2. storybook_archipelago/
+#### 🌊 2. storybook_archipelago/
 
 ```yaml
 - id: storybook_archipelago
@@ -36,9 +35,7 @@ All portal destinations must follow this format:
   notes: Game mode launcher, poetic node recursion, player-facing stanzas.
 ```
 
-
-🤖 3. storybook_fun_factory/
-
+#### 🤖 3. storybook_fun_factory/
 
 ```yaml
 - id: storybook_fun_factory
@@ -48,7 +45,7 @@ All portal destinations must follow this format:
   notes: Randomness simulator, AI stress tests, edge case generators.
 ```
 
-🧬 4. storybook_primordial_soup/
+#### 🧬 4. storybook_primordial_soup/
 
 ```yaml
 - id: storybook_primordial_soup
@@ -74,4 +71,3 @@ All portal destinations must follow this format:
 > You **used code blocks and yaml syntax correctly**. Now, just upgrade each workspace label to a `###` heading for full clarity and structure.
 
 Would you like me to regenerate the full `workspace_registry.md` with those minor heading corrections applied?
-
