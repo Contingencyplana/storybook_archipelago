@@ -12,4 +12,3 @@ It governs not only how one node links to another, but also how entire game mode
 ## 🔁 Canonical Format – Four-Part Paths
 
 All portal destinations must follow this format:
-
