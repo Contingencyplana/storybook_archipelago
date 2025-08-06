@@ -10,10 +10,10 @@ Each target may initially point to a placeholder or later node and should only b
 
 ## 🔁 Portal Definitions
 
-| Input | Leads To                          | Status     |
-|-------|-----------------------------------|------------|
-| `L`   | `a0_1_drifting_glade_node/`       | ☐ Pending  |
-| `R`   | `a0_1_drifting_glade_node/`       | ☐ Pending  |
+| Input | Leads To                                                                                         | Status     |
+|-------|--------------------------------------------------------------------------------------------------|------------|
+| `L`   | `storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/` | ☐ Pending  |
+| `R`   | `storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/` | ☐ Pending  |
 
 ---
 
@@ -33,16 +33,3 @@ Before linking is finalized:
 - Camouflage layers (fog/silence) may delay or obscure perception of linkage.
 
 > _“To walk left or right is not to choose a path. It is to choose a way of listening.”_
-
-
-
-
-
-## 🔁 Portal Definitions
-
-| Input | Leads To                                                                                         | Status     |
-|-------|--------------------------------------------------------------------------------------------------|------------|
-| `L`   | `storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/` | ☐ Pending  |
-| `R`   | `storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/` | ☐ Pending  |
-
-C:\Users\Admin\storybook_archipelago\a0_0_sailing_mode
