@@ -57,7 +57,7 @@ All nodes must belong to **one of the following tiers**:
 **Usage:** One-off events, dreams, hallucinations, ghost encounters, narrative echoes.
 
 ### ✅ Must include:
-- `story.py`, `leftmain.py`, `rightmain.py`, `README.md`
+- `__init__.py`, `story.py`, `leftrightmain.py`, `README.md`
 
 ### ⚠️ Limitations:
 - No test layer required
