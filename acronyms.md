@@ -27,6 +27,12 @@
 
 ---
 
+## G
+
+**GDD** – Game Design Document. Part of the blueprint for one of SHAGI Multiverse's Hivemind's thousands of interconnected multiplayer video games.
+
+---
+
 ## H
 
 **HC** – High Command. The top-level AI oversight agent with audit powers over all others.
@@ -57,9 +63,12 @@
 
 ## S
 
+**SHAGI** – Supersafe Hyperadvanced Artifical General Intelligence.
+
 **STM** – Stanzamap. Defines stanza groupings of nodes (e.g., `stanzamap_0.md`).
 
 **SPZ** – Special Planning Zone. Refers to folders like `mirror_decisions/` or `playability_ai/`.
+
 
 ---
 

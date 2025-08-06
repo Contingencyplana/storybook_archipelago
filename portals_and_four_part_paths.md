@@ -1,3 +1,5 @@
+<!-- Save to: storybook_archipelago/portals_and_four_part_paths.md -->
+
 # 🌉 portals_and_four_part_paths.md
 **Canonical Protocol – Recursive Portal Structure for Storybook Archipelago**
 
@@ -13,66 +15,110 @@ It governs not only how one node links to another, but also how entire game mode
 
 All portal destinations must follow this format:
 
-### ✅ Registered Workspaces
-
-#### 🧱 1. storybook/
-
 ```yaml
-- id: storybook
-  title: Core Game Maker and SHAGI Engine
-  path: storybook/
-  status: active
-  notes: Root design system, editor logic, builder recursion layers.
+{workspace}/{game_mode}/{minigame}/{node}/
 ```
 
-#### 🌊 2. storybook_archipelago/
 
-```yaml
-- id: storybook_archipelago
-  title: Repair Game – Entry into Poetic Recursion
-  path: storybook_archipelago/
-  status: active
-  notes: Game mode launcher, poetic node recursion, player-facing stanzas.
-```
+Each part is **required**, even for local links.
 
-#### 🤖 3. storybook_fun_factory/
+### 📌 Component Breakdown
 
-```yaml
-- id: storybook_fun_factory
-  title: Chaos Engine and Test World
-  path: storybook_fun_factory/
-  status: active
-  notes: Randomness simulator, AI stress tests, edge case generators.
-```
-
-#### 🧬 4. storybook_primordial_soup/
-
-```yaml
-- id: storybook_primordial_soup
-  title: Recursive Multiplayer Cellworld
-  path: storybook_primordial_soup/
-  status: active
-  notes: Cybercell growth, AI memory loops, multiplayer recursion.
-```
+| Segment         | Description                                | Example                                      |
+|------------------|--------------------------------------------|----------------------------------------------|
+| `workspace`     | Full name of the VSC workspace, always begins with `storybook_` | `storybook_archipelago/` |
+| `game_mode`     | Folder ending in `_mode/`                   | `a0_0_sailing_mode/`                         |
+| `minigame`      | Folder ending in `_minigame/`               | `a0_0_enchanted_isle_minigame/`             |
+| `node`          | Folder ending in `_node/`                   | `a0_1_drifting_glade_node/`                 |
 
 ---
 
-## 🔁 Workspace Usage Guidelines
+## 🧠 Rationale
 
-- All `portalmap.md` files must use the `id` value from this file as the **first path segment**.
-- Any workspace not listed here is **non-canonical** and must not be referenced in routing.
-- Archived or external workspaces may still be linked, but only with **safeguards** and **resolution layers** in place.
+| Justification                | Why It Matters                                                |
+|-----------------------------|---------------------------------------------------------------|
+| ✅ **Disambiguation**        | Prevents confusion from duplicate node names across modes     |
+| ✅ **Cross-Workspace Links** | Enables safe links between Visual Studio Code workspaces      |
+| ✅ **AI Routing Integrity**  | Allows agents like `orchestration_ai` to trace full game paths|
+| ✅ **Camouflage Drift**      | Helps memory systems detect tonal shifts across traversal      |
+| ✅ **Export Safety**         | Supports `.pak`, `.zip`, and Azure deployments unambiguously  |
 
 ---
 
-## 📓 Notes
+## 🗺️ Examples
 
-- This registry is intended to support future tools such as:
-  - ✅ AI routing agents
-  - ✅ Visualization overlays
-  - ✅ Cloud-to-local resolution bridges
-  - ✅ `orchestration_ai` link validators
-- The file is **machine-readable** and **human-maintainable**.
-- It should be **updated** whenever a new Visual Studio Code workspace is introduced to the Storybook project family.
+| Use Case                     | Valid Path                                                                 |
+|------------------------------|----------------------------------------------------------------------------|
+| 🔁 Local node jump           | `storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/` |
+| 🌉 Cross-mode transition     | `storybook_archipelago/a0_5_shore_mode/a2_0_echo_ridge_minigame/a0_0_sand_gate_node/`             |
+| 🌐 Cross-workspace linkage   | `storybook_primordial_soup/a3_2_overseer_mode/a9_1_hidden_cycle_minigame/a0_2_the_gate_that_looped/` |
 
-> _“Let the registry be a map to recursion, not a lock upon it.”_
+---
+
+## 🚫 Deprecated Path Formats
+
+Avoid the following patterns:
+
+- ❌ `a0_1_drifting_glade_node/` ← ambiguous
+- ❌ `./a0_1_drifting_glade_node/` ← assumes filesystem-relative logic
+- ❌ `../a0_1_drifting_glade_node/` ← breaks portability between workspaces
+- ❌ paths without `storybook_` prefix
+
+---
+
+## 🤖 Router Expectations
+
+Agents and routers (e.g., `integration.py`, `orchestration.py`, `high_command`) must:
+
+- Accept only **fully qualified 4-part paths**
+- Treat paths as **logical identifiers**, not OS filesystem paths
+- Be prepared to resolve targets **across workspace boundaries** using future `workspace_registry.md`
+
+---
+
+## 🌐 Multi-Workspace Strategy
+
+To support expansion beyond a single VSC instance:
+
+- All VSC folders must begin with: `storybook_`
+- Workspaces will be tracked in `workspace_registry.md` (see below)
+- Cross-workspace node access must **never** use hardcoded drive paths
+
+| Milestone                 | Resulting Workspace Shift                  |
+|---------------------------|--------------------------------------------|
+| ≥ 256 nodes               | Initiate workspace: `storybook_graphics/` or `storybook_multiplayer/` |
+| Multiplayer test loop     | Launch: `storybook_netcode/`               |
+| Community UI scaffolding  | Spin out: `storybook_loretools/`           |
+
+---
+
+## 📁 Storage & Naming Conventions
+
+- ✅ All folders in a path must **end in a type suffix**:
+  - `_mode/`, `_minigame/`, `_node/`
+- ✅ All workspaces must begin with: `storybook_`
+- ✅ Paths are always **lowercase**, snake_case only
+- ✅ No trailing slashes when used in variables (only in `portalmap.md`)
+
+---
+
+## 🔧 Future Companion Files
+
+| File                          | Purpose                                                          |
+|-------------------------------|------------------------------------------------------------------|
+| `workspace_registry.md`       | Declares and maps all active `storybook_` workspaces             |
+| `recursive_linkage_policy.md` | Defines when links are allowed, mirrored, or escalated          |
+| `node_addressing_spec.md`     | Governs grammar and syntax of path declarations                 |
+| `portal_fallback_protocol.md` | Describes what happens when a link cannot be resolved           |
+
+---
+
+## 🔚 Closing Thought
+
+> _“A game world is not a line of code. It is a constellation of paths. Every link must know its sky.”_
+
+This document governs the **structural integrity of traversal** throughout Storybook Archipelago — and ensures that recursion, redirection, and reflection remain possible, testable, and safe.
+
+All `portalmap.md` files must follow this format.  
+All cross-workspace links must conform.  
+This is recursive law.

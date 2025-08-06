@@ -1,3 +1,5 @@
+<!-- Save to: storybook_archipelago/plannning_spaces.md -->
+
 # 🧠 planning_spaces.md
 Canonical Planning Folder Structures in Storybook Archipelago
 
