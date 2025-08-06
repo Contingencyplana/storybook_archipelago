@@ -40,9 +40,9 @@ Before linking is finalized:
 
 ## 🔁 Portal Definitions
 
-| Input | Leads To                          | Status     |
-|-------|-----------------------------------|------------|
-| `L`   | `storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/`       | ☐ Pending  |
-| `R`   | `storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/`       | ☐ Pending  |
+| Input | Leads To                                                                                         | Status     |
+|-------|--------------------------------------------------------------------------------------------------|------------|
+| `L`   | `storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/` | ☐ Pending  |
+| `R`   | `storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/` | ☐ Pending  |
 
 C:\Users\Admin\storybook_archipelago\a0_0_sailing_mode
