@@ -6,6 +6,7 @@
 > _“Consistency is camouflage for complexity.”_  
 > This file defines all required naming and structural conventions for the Storybook Archipelago project.  
 > These conventions ensure recursive safety, tooling compatibility, contributor clarity, and poetic cohesion across all gameplay layers.
+> See also: `names_have_power.md` for the poetic and recursive role of naming in gameplay, memory, and AI.
 
 ---
 
