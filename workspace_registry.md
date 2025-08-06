@@ -1,3 +1,5 @@
+<!-- Save to: storybook_archipelago/workspace_registry.md -->
+
 # 🗂️ workspace_registry.md
 **Registry of Storybook Workspaces**
 

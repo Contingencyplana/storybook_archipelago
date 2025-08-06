@@ -1,3 +1,5 @@
+<!-- Save to: storybook_archipelago/secondary_purpose.md -->
+
 # 🛠 secondary_purpose.md  
 **Strategic Recursive Function of Storybook Archipelago**
 

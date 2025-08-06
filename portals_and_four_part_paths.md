@@ -24,33 +24,33 @@ Each part is **required**, even for local links.
 
 ### 📌 Component Breakdown
 
-| Segment         | Description                                | Example                                      |
-|------------------|--------------------------------------------|----------------------------------------------|
-| `workspace`     | Full name of the VSC workspace, always begins with `storybook_` | `storybook_archipelago/` |
-| `game_mode`     | Folder ending in `_mode/`                   | `a0_0_sailing_mode/`                         |
-| `minigame`      | Folder ending in `_minigame/`               | `a0_0_enchanted_isle_minigame/`             |
-| `node`          | Folder ending in `_node/`                   | `a0_1_drifting_glade_node/`                 |
+| Segment     | Description                                                     | Example                         |
+|-------------|-----------------------------------------------------------------|---------------------------------|
+| `workspace` | Full name of the VSC workspace, always begins with `storybook_` | `storybook_archipelago/`        |
+| `game_mode` | Folder ending in `_mode/`                                       | `a0_0_sailing_mode/`            |
+| `minigame`  | Folder ending in `_minigame/`                                   | `a0_0_enchanted_isle_minigame/` |
+| `node`      | Folder ending in `_node/`                                       | `a0_1_drifting_glade_node/`     |
 
 ---
 
 ## 🧠 Rationale
 
-| Justification                | Why It Matters                                                |
-|-----------------------------|---------------------------------------------------------------|
-| ✅ **Disambiguation**        | Prevents confusion from duplicate node names across modes     |
-| ✅ **Cross-Workspace Links** | Enables safe links between Visual Studio Code workspaces      |
-| ✅ **AI Routing Integrity**  | Allows agents like `orchestration_ai` to trace full game paths|
+| Justification                | Why It Matters                                                 |
+|------------------------------|----------------------------------------------------------------|
+| ✅ **Disambiguation**        | Prevents confusion from duplicate node names across modes      |
+| ✅ **Cross-Workspace Links** | Enables safe links between Visual Studio Code workspaces       |
+| ✅ **AI Routing Integrity**  | Allows agents like `orchestration_ai` to trace full game paths |
 | ✅ **Camouflage Drift**      | Helps memory systems detect tonal shifts across traversal      |
-| ✅ **Export Safety**         | Supports `.pak`, `.zip`, and Azure deployments unambiguously  |
+| ✅ **Export Safety**         | Supports `.pak`, `.zip`, and Azure deployments unambiguously   |
 
 ---
 
 ## 🗺️ Examples
 
-| Use Case                     | Valid Path                                                                 |
-|------------------------------|----------------------------------------------------------------------------|
-| 🔁 Local node jump           | `storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/` |
-| 🌉 Cross-mode transition     | `storybook_archipelago/a0_5_shore_mode/a2_0_echo_ridge_minigame/a0_0_sand_gate_node/`             |
+| Use Case                     | Valid Path                                                                                           |
+|------------------------------|------------------------------------------------------------------------------------------------------|
+| 🔁 Local node jump           | `storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/`     |
+| 🌉 Cross-mode transition     | `storybook_archipelago/a0_5_shore_mode/a2_0_echo_ridge_minigame/a0_0_sand_gate_node/`                |
 | 🌐 Cross-workspace linkage   | `storybook_primordial_soup/a3_2_overseer_mode/a9_1_hidden_cycle_minigame/a0_2_the_gate_that_looped/` |
 
 ---

@@ -1,3 +1,5 @@
+<!-- Save to: storybook_archipelago/glossary.md -->
+
 # 📖 glossary.md  
 **Poetic and Structural Terms – Storybook Archipelago**
 
@@ -19,6 +21,12 @@
 **Camouflage** – A recursive design layer that masks logic in tone, mood, glitch, silence, or wonder. All gameplay must pass the camouflage test: _“Is it joyful yet?”_
 
 **Containment** – The practice of constraining AI agency, recursion, and branching paths to preserve system stability.
+
+**Cyberdoc** – The nickname for **Primordial Soup**, which acts as the recursive cybernetic doctor. It diagnoses and heals recursive structures at depth, including anomaly containment and cybercell logic.
+
+**Cybernurse** – The nickname for **Storybook Archipelago**, which heals surface systems and recursive scaffolds. It is the first to act in the triage sequence and later assists the cyberdoc in deeper repair.
+
+**Cyberstemcell** – The foundational recursive unit within Primordial Soup. Each cyberstemcell can divide, differentiate, or contain anomalies. Forms the basis of cybercell growth and minigame generation.
 
 ---
 

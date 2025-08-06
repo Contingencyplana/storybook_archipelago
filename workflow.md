@@ -1,3 +1,5 @@
+<!-- Save to: storybook_archipelago/workflow.md -->
+
 # 🧱 workflow.md  
 **Canonical Build and Recursion Workflow – Storybook Archipelago**
 

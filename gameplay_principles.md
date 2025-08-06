@@ -1,3 +1,5 @@
+<!-- Save to: storybook_archipelago/gameplay_principles.md -->
+
 # 📘 gameplay_principles.md  
 **Foundational Player Philosophy – Storybook Archipelago**
 

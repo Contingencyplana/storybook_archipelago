@@ -1,3 +1,5 @@
+<!-- Save to: storybook_archipelago/acronyms.md -->
+
 # 🔤 acronyms.md  
 **Canonical Acronyms and Shortforms – Storybook Archipelago**
 
@@ -7,41 +9,41 @@
 
 ## A
 
-**AI** – Artificial Intelligence. Used throughout to denote autonomous agents with bounded purpose.
+**AI** – Artificial Intelligence. Denotes autonomous agents with bounded roles and purpose.
 
-**AIA** – AI Agents. Collective reference to all functional and narrative AI entities.
+**AIA** – AI Agents. Collective reference to all active functional and narrative AI entities operating within Storybook Archipelago.
 
 ---
 
 ## C
 
-**CMD** – Camouflage Mode Drift. A state where player tone perception no longer matches logical state. Triggers `camouflage.py` escalation.
+**CMD** – Camouflage Mode Drift. A state where player tone perception no longer matches logical state, triggering escalation via `camouflage.py`.
 
-**CGL** – Camouflage Glitch Layer. A test layer where recursion-induced glitches are framed as poetic signals.
+**CGL** – Camouflage Glitch Layer. A recursive test layer where visual or narrative glitches are reinterpreted as poetic signals.
 
 ---
 
 ## F
 
-**FMAP** – Fallback Map. A routing file inside `mirror_decisions/` that maps failed nodes to safe recursion branches.
+**FMAP** – Fallback Map. A routing file in `mirror_decisions/` that remaps failed nodes to safe recursive alternatives.
 
 ---
 
 ## G
 
-**GDD** – Game Design Document. Part of the blueprint for one of SHAGI Multiverse's Hivemind's thousands of interconnected multiplayer video games.
+**GDD** – Game Design Document. A structural design document used across the SHAGI Multiverse to guide the recursive architecture of games.
 
 ---
 
 ## H
 
-**HC** – High Command. The top-level AI oversight agent with audit powers over all others.
+**HC** – High Command. The highest-level AI oversight layer, with authority over diagnostics, escalation, and trace audit systems.
 
 ---
 
 ## M
 
-**MDL** – Mirror Decision Log. Logged anomaly in `mirror_decision.md`.
+**MDL** – Mirror Decision Log. A recorded anomaly entry in `mirror_decision.md`.
 
 **MS** – Milestones. Logged achievements or completions in `milestones.md`.
 
@@ -49,39 +51,43 @@
 
 ## N
 
-**NPC** – Non-Playable Character. Used sparingly in Storybook Archipelago; most characters are reflective or poetic fragments.
+**NPC** – Non-Playable Character. Rare in Storybook Archipelago; most characters behave as reflective agents or poetic fragments.
 
 ---
 
 ## R
 
-**RM** – Roadmap. Used in `roadmaps/` to define gameplay routes at the mode level.
+**RM** – Roadmap. Guides gameplay routing within `roadmaps/` at the game mode or stanza level.
 
-**RT** – Recursive Tier. Indicates whether something operates on Tier 1, 2, or 3.
+**RT** – Recursive Tier. Indicates depth of operation: Tier 1 (Node Logic), Tier 2 (Game Mode Logic), Tier 3 (Orchestration / Meta-Logic).
 
 ---
 
 ## S
 
-**SHAGI** – Supersafe Hyperadvanced Artifical General Intelligence.
+**SHAGI** – Supersafe Hyperadvanced Artificial General Intelligence. The multiverse-level AI framework within which this project is nested.
 
-**STM** – Stanzamap. Defines stanza groupings of nodes (e.g., `stanzamap_0.md`).
+**SPZ** – Special Planning Zone. Reserved directories for metagame orchestration or override logic, e.g., `mirror_decisions/`, `playability_ai/`.
 
-**SPZ** – Special Planning Zone. Refers to folders like `mirror_decisions/` or `playability_ai/`.
-
+**STM** – Stanzamap. A stanza-based planning file (e.g., `stanzamap_0.md`) that defines Layer 4 node groupings.
 
 ---
 
 ## T
 
-**TMP** – Template. Used for starter files and minigame scaffolding.
+**TMP** – Template. Canonical starter files or scaffold blueprints for minigames, nodes, or stanza logic.
 
-**TST** – Test File. Suffix for logic or behavior verification (e.g., `camoutest.py`, `storytest.py`).
+**TST** – Test File. Suffix used to indicate validation or logic tests (e.g., `camoutest.py`, `storytest.py`, `integtest.py`).
 
 ---
 
 ## V
 
-**VSC** – Visual Studio Code. Canonical development environment for this project.
+**VSC** – Visual Studio Code. Official development environment for Storybook Archipelago.
 
 ---
+
+## 📘 Notes
+
+- This file supports tooling across `memory_state.md`, `ai_agents.md`, and all `orchestration.py` layers.
+- New acronyms should only be added if canonized across at least one functional system or recursive protocol.

@@ -1,3 +1,5 @@
+<!-- Save to: storybook_archipelago/agent_escalation_matrix.md -->
+
 # 🧭 agent_escalation_matrix.md – Authority Ladder for Recursive AI Agents
 
 This file defines **when** and **how** an AI agent may escalate its behavior, request intervention, or trigger higher-tier oversight.

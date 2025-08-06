@@ -1,3 +1,5 @@
+<!-- Save to: storybook_archipelago/ai_handshake_protocol.md -->
+
 # 🤝 AI Handshake Protocol – Cooperative Conduct Between Recursive Agents
 
 ## 🧠 Purpose

@@ -1,3 +1,5 @@
+<!-- Save to: storybook_archipelago/ai_agency_theory.md -->
+
 # 🤖 ai_agency_theory.md  
 **Canonical Theory of AI Agency in Storybook Archipelago**
 
