@@ -92,5 +92,5 @@ Storybook Archipelago follows several key principles:
 
 This file defines the global scope and structure of *Storybook Archipelago*.  
 Each mode and minigame may include its own `README.md` or `story.py` as needed.
-
+Each mode and minigame may include its own `README.md` or `story.py` as needed.
 Welcome to the archipelago.

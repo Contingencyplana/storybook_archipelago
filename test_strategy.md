@@ -109,6 +109,7 @@ All test files should validate:
 ---
 
 ## L/R Path Test Expectations (Additional Rules)
+ 
 
 - Left path MUST include the token `[LEFT]` somewhere in the returned string.
 - Right path MUST include the token `[RIGHT]`.
@@ -122,6 +123,7 @@ assert "[RIGHT]" in right_output
 assert "grove" in story_output.lower()
 assert "[PORTAL:" not in story_output
 ```
+
 ## 🧪 Recursive Edge-Case Testing
 
 For advanced Tier 1 nodes, also test:
