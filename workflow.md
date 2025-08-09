@@ -1,104 +1,164 @@
 <!-- Save to: storybook_archipelago/workflow.md -->
 
-# 🧱 workflow.md  
+---
+id: workflow
+title: Canonical Build and Recursion Workflow
+version: 1.0.0
+status: stable
+owners: [ "Storybook Archipelago Core" ]
+last_updated: 2025-08-09
+depends_on:
+  - portals_and_four_part_paths.md   # Gate A
+  - workspace_registry.md            # Gate A
+links:
+  - test_strategy.md
+  - worldmap.md
+  - planning_spaces.md
+  - camouflage_layers.md
+  - recursive_anomaly_protocol.md
+---
+
+# 🧱 workflow.md
 **Canonical Build and Recursion Workflow – Storybook Archipelago**
 
-> _“To build is to recurse with care. To recurse is to build with order.”_  
-> This file defines the step-by-step process for creating game modes, minigames, and nodes in Storybook Archipelago using recursive, test-first, and camouflage-compliant methodology.
+> _“To build is to recurse with care. To recurse is to build with order.”_
+
+This file defines the **step‑by‑step process** for creating game modes, minigames, and nodes in Storybook Archipelago using **test‑first**, **four‑part paths**, and **camouflage‑compliant** methods.
 
 ---
 
-## 1. 🗺️ Layered Build Order – Game World Structure
+## 1) 🗺️ Layered Build Order — Game World Structure
 
 Storybook Archipelago unfolds recursively in **three tiers**:
 
-| Tier | Folder Ends In     | Description                          |
-|------|--------------------|--------------------------------------|
-| 1    | `_mode/`           | Game modes / world zones             |
-| 2    | `_minigame/`       | Thematic gameplay clusters (stanzic) |
-| 3    | `_node/`           | Individual interactive L/R nodes     |
+| Tier | Folder Suffix | Description                              |
+|-----:|----------------|------------------------------------------|
+| 1    | `_mode/`       | Game modes / world zones                 |
+| 2    | `_minigame/`   | Thematic gameplay clusters (stanzic)     |
+| 3    | `_node/`       | Individual interactive L/R nodes         |
 
-Each game mode contains minigames.  
-Each minigame contains nodes.  
-Each node contains logic, camouflage, state, and story layers.
+- Each **mode** contains **minigames**.  
+- Each **minigame** contains **nodes**.  
+- Each **node** contains **logic**, **camouflage**, **state**, and **story** layers.
 
----
-
-## 2. 🌀 Seven-Step Minigame Node Workflow
-
-To create a functional gameplay node, follow this 7-step process:
-
-### **Step 1 – Planning Shell**
-- `README.md` – Node purpose, camouflage intent, tone
-- `portalmap.md` – L/R links to other nodes (can be placeholders)
-- `subtaskmap.md` – Checklist of implementation progress
-
-### **Step 2 – Input Router**
-- `integration.py` – Routes input to L, R, or story
-- `integtest.py` – Validates dispatch logic
-
-### **Step 3 – Camouflage Layer**
-- `camouflage.py` – Mood, glitch, silence, recursion mask
-- `camoutest.py` – Verifies trigger conditions, fallback
-
-### **Step 4 – Orchestration Layer**
-- `orchestration.py` – Memory state, transitions, conditionals
-- `orchtest.py` – Validates memory flow and decision reactions
-
-### **Step 5 – Left Path**
-- `leftmain.py` – L-button logic
-- `lefttest.py` – Validates left path responses
-
-### **Step 6 – Right Path**
-- `rightmain.py` – R-button logic
-- `righttest.py` – Validates right path responses
-
-### **Step 7 – Story Layer**
-- `story.py` – Player-facing narrative and L/R poetic options
-- `storytest.py` – Tests text branching and options display
+> **Pathing rule:** All links in any `portalmap.md` **must** use the four‑part path format from `portals_and_four_part_paths.md`.
 
 ---
 
-## 3. 🧪 Testing Protocol (Per `test_strategy.md`)
+## 2) 🌀 Seven‑Step Minigame Node Workflow
 
-- Every `.py` logic file must have a matching `test.py`
-- Testing may be partial during early scaffolding but must reach **minimum coverage before gameplay activation**
-- Tier 3 nodes must pass `camouflage`, `integration`, and `orchestration` tests before being linked in `portalmap.md`
+Create a functional Tier‑3 node using this **7‑step** sequence:
+
+### **Step 1 — Planning Shell**
+- `README.md` — Node purpose, camouflage intent, tone
+- `portalmap.md` — L/R links using **four‑part paths** (placeholders allowed initially)
+- `subtaskmap.md` — Checklist of implementation progress
+
+### **Step 2 — Input Router**
+- `integration.py` — Routes input to L, R, or story
+- `integtest.py` — Validates dispatch logic
+
+### **Step 3 — Camouflage Layer**
+- `camouflage.py` — Mood, glitch, silence, recursion mask
+- `camoutest.py` — Verifies trigger conditions, fallbacks
+
+### **Step 4 — Orchestration Layer**
+- `orchestration.py` — Memory state, transitions, conditionals
+- `orchtest.py` — Validates memory flow and decision reactions
+
+### **Step 5 — Left Path**
+- `leftmain.py` — L‑button logic
+- `lefttest.py` — Validates left path responses
+
+### **Step 6 — Right Path**
+- `rightmain.py` — R‑button logic
+- `righttest.py` — Validates right path responses
+
+### **Step 7 — Story Layer**
+- `story.md` — Player‑facing narrative and L/R poetic options
+- `storytest.py` — Tests text branching and options display
+
+> **Consistency note:** All storytelling content lives in `story.md`. Logic lives in `*main.py` files (incl. `storytelling_ai` orchestration when used).
 
 ---
 
-## 4. 📁 Planning Folder Use
+## 3) 🧪 Testing Protocol (per `test_strategy.md`)
 
-| Planning Folder     | Use Case |
-|---------------------|----------|
-| `taskmaps/`         | Used inside each minigame for stanza planning and execution |
-| `roadmaps/`         | Used inside each game mode to plan minigame sequence and theme |
-| `mirror_decisions/` | Dormant until triggered by recursive anomaly (used for containment, rollback, and diagnostics) |
-
-All planning folders must contain the canonical files listed in `planning_spaces.md`.
-
----
-
-## 5. 🔁 Recursive Safety and Automation
-
-- All minigame generation may be **manual or automated**, but must follow the 7-step build pattern
-- Any skipped step must be marked in `subtaskmap.md` with ☐
-- Automation stanzas (e.g. `compiler_ai/`) may override this flow, but only if supervised by `high_command`
+- Every Python logic file (`*.py`) must have a matching `*test.py`.
+- Scaffolding may start with partial tests, but **minimum test coverage** defined in `test_strategy.md` must be met **before a node is link‑enabled**.
+- Tier‑3 nodes must pass **integration**, **camouflage**, and **orchestration** tests before being referenced in any upstream `portalmap.md`.
+- CI must **fail** on:
+  - Non‑canonical paths (relative, wrong suffix, missing `storybook_`)
+  - Missing/duplicate test files for required modules
+  - Lint violations specified in `test_strategy.md`
 
 ---
 
-## 6. 🧬 Fallbacks and Anomaly Handling
+## 4) 📁 Planning Folders
 
-- If a node fails tests or introduces branching drift, it must be flagged in its `subtaskmap.md`
-- If a minigame collapses recursion or logic, escalate to `mirror_decisions/`
-- Anomaly triggers are routed through `recursive_anomaly_protocol.md`
+| Planning Folder     | Purpose                                                      |
+|---------------------|--------------------------------------------------------------|
+| `taskmaps/`         | Stanza/task planning within a minigame                       |
+| `roadmaps/`         | Mode‑level planning of minigame sequence and themes         |
+| `mirror_decisions/` | Activated only on anomaly; holds containment/rollback docs  |
+
+All planning folders must include the canonical files listed in `planning_spaces.md`.
+
+---
+
+## 5) 🔁 Recursive Safety & Automation
+
+- Minigame generation may be **manual** or **automated**, but must follow the **7‑step** pattern.
+- Any skipped step must be marked in `subtaskmap.md` with ☐ and a short rationale.
+- Automation stanzas (e.g., compiler/validators) may compress steps, but only under **`high_command`** oversight and with tests updated accordingly.
+
+---
+
+## 6) 🧬 Fallbacks & Anomaly Handling
+
+- If a node fails tests or introduces branching drift, flag it in `subtaskmap.md` and block it from `portalmap.md` until fixed.
+- If a minigame collapses recursion or corrupts traversal, escalate to `mirror_decisions/` and follow `recursive_anomaly_protocol.md`.
+- All anomalies must record:
+  - Trigger conditions
+  - Containment actions
+  - Re‑entry criteria (tests required to restore links)
+
+---
+
+## 7) ⚙️ Tooling Hooks (recommended)
+
+- **Pre‑commit**: path linter (four‑part), filename suffix linter, Markdown lint
+- **CI jobs**:
+  - `validate-paths` (four‑part + registry cross‑check)
+  - `run-tests` (per `test_strategy.md`)
+  - `build-worldmap` (verifies `worldmap.md` references resolve)
+- **VS Code tasks**:
+  - `Validate Docs` → linters + schema checks
+  - `Audit Gate A–E` → targeted checks per acceptance gate
+
+---
+
+## 8) ✅ Acceptance & Gates
+
+- **Node acceptance (Tier‑3 minimal viable slice):**
+  - `integration.py` routes L/R/INVALID
+  - `leftmain.py`/`rightmain.py` return structured results
+  - `portalmap.md` uses **four‑part paths** only
+  - Tests: `integtest.py` + at least one of `lefttest.py` or `righttest.py` pass
+
+- **Gate mapping:**
+  - **Gate A** (Step 1): Four‑part paths + registry validated repo‑wide
+  - **Gate B** (Step 2): README/conventions/glossary stabilized
+  - **Gate C** (Step 3): CI green; world map resolvable
+  - **Gate D** (Step 4): Planning and design principles standardized
+  - **Gate E** (Step 5): AI safety/escalation/tiers codified
 
 ---
 
 ## 🔚 Conclusion
 
 This workflow governs **all gameplay creation** in Storybook Archipelago.  
-It ensures recursion grows safely, nodes are testable, and gameplay remains camouflaged, poetic, and traceable.
+It ensures recursion grows safely, nodes are testable, and gameplay remains **camouflaged, poetic, and traceable**.
 
-> _“If the game is not TONS-of-FUN, the recursion isn’t done.”_  
-> _(See: `camouflage_layers.md → Section 13`)_
+> _“If the game is not TONS‑of‑FUN, the recursion isn’t done.”_  
+> _(See `camouflage_layers.md`, Section 13)_

@@ -3,27 +3,40 @@
 # 🗂️ workspace_registry.md
 **Registry of Storybook Workspaces**
 
-> _"To travel the archipelago, you must first know which shores exist."_  
+> _"To travel the archipelago, you must first know which shores exist."_
 
-This file defines the official registry of all `storybook_` Visual Studio Code workspaces recognized by the Storybook game ecosystem.  
-It is used by AI agents, routers, portal resolvers, and exporters to validate or traverse portal paths across multiple game spaces.
+This file defines the **authoritative registry** of all `storybook_` Visual Studio Code workspaces recognized by the Storybook game ecosystem.  
+It is used by AI agents, routers, portal resolvers, and exporters to **validate** or **traverse** portal paths across multiple game spaces.
 
 ---
 
-## 📜 Canonical Format
+## 📜 Canonical Entry Format
 
-Each entry must follow this structure:
+Each entry **must** follow this YAML structure:
 
 ```yaml
-- id: storybook_example
+- id: storybook_example            # required; lowercase, snake_case; must start with "storybook_"
   title: Short human-readable description
-  path: /relative/path/from/global/root/
+  path: relative/path/from/root/   # required; relative to global workspace container
   status: active | archived | external
   notes: optional clarifying information
 ```
 
-✅ Registered Workspaces
-🧱 1. storybook/
+## 🔒 Enforcement Rules
+
+- `id` is the **exact string** used as the first segment of any four-part path.  
+- `path` must be **relative to the workspace container**; never an absolute OS path.  
+- Lint/test tools must reject:
+  - IDs not starting with `storybook_`
+  - Missing or duplicate IDs
+  - Invalid `status` values
+- Archived/external workspaces must only be linked with **safeguards** and **resolution layers**.
+
+---
+
+## ✅ Registered Workspaces
+
+### 🧱 1. storybook/
 
 ```yaml
 - id: storybook
@@ -33,7 +46,7 @@ Each entry must follow this structure:
   notes: Root design system, editor logic, builder recursion layers.
 ```
 
-🌊 2. storybook_archipelago/
+### 🌊 2. storybook_archipelago/
 
 ```yaml
 - id: storybook_archipelago
@@ -43,7 +56,7 @@ Each entry must follow this structure:
   notes: Game mode launcher, poetic node recursion, player-facing stanzas.
 ```
 
-🤖 3. storybook_fun_factory/
+### 🤖 3. storybook_fun_factory/
 
 ```yaml
 - id: storybook_fun_factory
@@ -53,7 +66,7 @@ Each entry must follow this structure:
   notes: Randomness simulator, AI stress tests, edge case generators.
 ```
 
-🧬 4. storybook_primordial_soup/
+### 🧬 4. storybook_primordial_soup/
 
 ```yaml
 - id: storybook_primordial_soup
@@ -65,20 +78,23 @@ Each entry must follow this structure:
 
 ## 🔁 Workspace Usage Guidelines
 
-- All `portalmap.md` files must use the `id` value from this file as the **first path segment**.
-- Any workspace not listed here is **non-canonical** and must not be referenced in routing.
-- Archived or external workspaces may still be linked, but only with **safeguards** and **resolution layers** in place.
+- All `portalmap.md` files must use the `id` value from this file as the **first path segment**.  
+- Any workspace not listed here is **non-canonical** and must not be referenced in routing.  
+- Archived or external workspaces:
+  - May still be linked if explicitly marked in `status`.
+  - Must include safeguards and a resolution layer before traversal.
 
 ---
 
 ## 📓 Notes
 
-- This registry is intended to support future tools such as:
-  - ✅ AI routing agents
-  - ✅ Visualization overlays
-  - ✅ Cloud-to-local resolution bridges
-  - ✅ `orchestration_ai` link validators
-- The file is **machine-readable** and **human-maintainable**.
-- It should be **updated** whenever a new Visual Studio Code workspace is introduced to the Storybook project family.
+This registry supports:
+- ✅ AI routing agents
+- ✅ Visualization overlays
+- ✅ Cloud-to-local resolution bridges
+- ✅ `orchestration_ai` link validators
+
+The file is **machine-readable** and **human-maintainable**.  
+It should be **updated** whenever a new Visual Studio Code workspace is introduced to the Storybook project family.
 
 > _“Let the registry be a map to recursion, not a lock upon it.”_
