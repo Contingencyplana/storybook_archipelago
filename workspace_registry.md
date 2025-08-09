@@ -22,6 +22,11 @@ Each entry **must** follow this YAML structure:
   notes: optional clarifying information
 ```
 
+## ♻️ Legacy IDs (grandfathered)
+- `storybook` — **allowed as a one‑time legacy exception** for historical reasons.
+  - New workspaces MUST use the `storybook_` prefix (e.g., `storybook_core`, `storybook_archipelago`, …).
+  - Migration plan: `storybook` → `storybook_core` during the **Heal** pass (cybernurse/cyberdoc milestone). Validators should treat `storybook` as valid until that migration completes.
+
 ## 🔒 Enforcement Rules
 
 - `id` is the **exact string** used as the first segment of any four-part path.  
@@ -43,7 +48,7 @@ Each entry **must** follow this YAML structure:
   title: Core Game Maker and SHAGI Engine
   path: storybook/
   status: active
-  notes: Root design system, editor logic, builder recursion layers.
+  notes: Root design system, editor logic, builder recursion layers. Grandfathered legacy id; scheduled to rename to `storybook_core` during Heal phase.
 ```
 
 ### 🌊 2. storybook_archipelago/
