@@ -63,3 +63,72 @@
 5) Add remaining files step‑by‑step; only link after all tests pass.
 
 _References: `portals_and_four_part_paths.md`, `workflow.md`, `node_tiers.md`, tier structure docs, `workspace_registry.md`, `test_strategy.md`, `camouflage_layers.md`._
+
+VS Code tasks (build/test)
+We provide two convenient tasks:
+
+Test: repo root (pytest) – runs pytest from the workspace root.
+
+Test: current node (pytest) – runs pytest in the folder of the currently opened file (handy for node‑local test loops).
+
+Portal examples (four‑part paths)
+Canonical examples for portalmap.md rows:
+
+L → storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/
+
+R → storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/
+
+Cross‑workspace example:
+
+L → storybook_primordial_soup/a1_0_cell_mode/a0_2_first_membrane_minigame/a0_0_warm_pool_node/
+
+Rules:
+
+Paths must be four‑part: {workspace}/{mode}/{minigame}/{node}/
+
+{workspace} must appear in workspace_registry.md
+
+No OS‑absolute paths
+
+Return value contract (handlers & story) — v1
+Purpose: keep tests stable and strings human‑readable.
+
+integration.route_input(user_input, memory) -> str
+
+leftmain.handle_left(memory) -> str
+
+rightmain.handle_right(memory) -> str
+
+story.describe_scene(memory) -> str
+
+String markers (for tests):
+
+Left path MUST include the token "[LEFT]" somewhere in the returned string.
+
+Right path MUST include the token "[RIGHT]".
+
+If a handler wants to indicate a portal choice (even if not followed yet), include a single bracketed portal tag on one line, e.g.:
+[PORTAL: storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/]
+
+story.describe_scene() MUST include the word "grove" (lowercase ok) and MUST NOT include [PORTAL: tags.
+
+Examples (not prescriptive prose, just shape):
+
+Left: "The fog leans with you. [LEFT] The hush thickens."
+
+Right: "You answer the wind by not answering. [RIGHT] The leaves tilt."
+
+With portal hint (optional):
+"You part the boughs. [LEFT]\n[PORTAL: storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/]"
+
+Story: "In the whispering grove, the air listens back."
+
+Test hooks:
+
+lefttest.py: assert "[LEFT]" in output
+
+righttest.py: assert "[RIGHT]" in output
+
+storytest.py: assert "grove" in output.lower() and assert "[PORTAL:" not in output
+
+Do NOT switch to JSON payloads. We stay with strings + lightweight markers.
