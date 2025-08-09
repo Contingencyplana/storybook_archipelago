@@ -75,10 +75,12 @@ Create a functional Tier‑3 node using this **7‑step** sequence:
 - `righttest.py` — Validates right path responses
 
 ### **Step 7 — Story Layer**
-- `story.md` — Player‑facing narrative and L/R poetic options
+- `story.py` — Player-facing narrative and L/R poetic options
 - `storytest.py` — Tests text branching and options display
 
-> **Consistency note:** All storytelling content lives in `story.md`. Logic lives in `*main.py` files (incl. `storytelling_ai` orchestration when used).
+> **Consistency note:** All storytelling content lives in `story.py`. Logic lives in `*main.py` files (incl. `storytelling_ai` orchestration when used).
+
+> Follow the **Return value contract (handlers & story) — v1** for string markers.
 
 ---
 

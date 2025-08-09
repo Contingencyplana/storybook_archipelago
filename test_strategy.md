@@ -108,6 +108,20 @@ All test files should validate:
 
 ---
 
+## L/R Path Test Expectations (Additional Rules)
+
+- Left path MUST include the token `[LEFT]` somewhere in the returned string.
+- Right path MUST include the token `[RIGHT]`.
+- `story.describe_scene(memory)` MUST include the word “grove” (case-insensitive) and MUST NOT include any `[PORTAL:` tag.
+
+Suggested pytest assertions:
+
+```python
+assert "[LEFT]" in left_output
+assert "[RIGHT]" in right_output
+assert "grove" in story_output.lower()
+assert "[PORTAL:" not in story_output
+```
 ## 🧪 Recursive Edge-Case Testing
 
 For advanced Tier 1 nodes, also test:

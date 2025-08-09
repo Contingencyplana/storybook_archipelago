@@ -32,10 +32,12 @@ Each layer nests into the next, forming a recursive stanza of traversal and game
 
 Each `_node/` (Layer 3) has two complementary components:
 
-- **`story.md`** – Defines the poetic stanza, list entries, L/R logic, and player-facing narrative.
+- **`story.py`** – Defines the poetic stanza, list entries, L/R logic, and player-facing narrative.
 - **`leftmain.py` / `rightmain.py`** – Handle gameplay logic, branching, and recursive orchestration.
 
 Additional helpers (e.g., `camouflage.py`, `orchestration.py`) may appear in advanced nodes.
+
+> In Tier‑1 nodes, **story.py** exposes the player‑facing narrative via `describe_scene(memory)`.
 
 ---
 
@@ -68,7 +70,7 @@ Storybook Archipelago follows several key principles:
 
 - **Recursion as Gameplay** – The game is both recursive in structure and in theme.
 - **Tiny Step Doctrine** – Each node performs a singular, traceable action.
-- **Dualism of Story and Logic** – `story.md` and the `.py` files are co-equal.
+- **Dualism of Story and Logic** – `story.py` and the `.py` files are co-equal.
 - **L/R Decision Flow** – Every node responds to Left/Right input, with optional numbered lists.
 - **Camouflage Layers** – A visual and narrative layer system that filters and remaps perception.
 
@@ -81,6 +83,8 @@ Storybook Archipelago follows several key principles:
 - Use `milestones.md` to track major progress
 - Use `camouflage_layers.md` to define layer logic and visibility
 - All traversal begins with player input: `L`, `R`, or a number.
+
+> To run tests quickly in VS Code, use the tasks **“Test: repo root (pytest)”** or **“Test: current node (pytest)”** from the command palette.
 
 ---
 
