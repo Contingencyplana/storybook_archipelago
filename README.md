@@ -1,4 +1,4 @@
-<!-- Save to: storybook_archipelago/README.md -->
+﻿<!-- Save to: storybook_archipelago/README.md -->
 
 # 🏝️ Storybook Archipelago – Multiplayer Game Framework
 
@@ -91,6 +91,6 @@ Storybook Archipelago follows several key principles:
 ## 📝 Notes
 
 This file defines the global scope and structure of *Storybook Archipelago*.  
-Each mode and minigame may include its own `README.md` or `story.md` as needed.
+Each mode and minigame may include its own `README.md` or `story.py` as needed.
 
 Welcome to the archipelago.
