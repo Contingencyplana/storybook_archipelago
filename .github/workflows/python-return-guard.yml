@@ -1,0 +1,26 @@
+name: Code guard — disallow non-string returns
+on:
+  pull_request:
+  push:
+    branches: [ master, main ]
+jobs:
+  lint-non-string-returns:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ripgrep
+        run: sudo apt-get update && sudo apt-get install -y ripgrep
+      - name: Fail if dict/list literal returns found
+        run: |
+          if rg -n --hidden --no-messages -g '!**/.git/**' -g '!**/.venv/**' -g '*.[pP][yY]' -P '^[\s]*(?!#)[\s]*return[\s]*[\{\[]' .; then
+            echo 'Found non-string returns (dict/list literal). Handlers and story must return strings.' >&2
+            exit 1
+          fi
+      - name: Fail if json.dumps returns found
+        run: |
+          if rg -n --hidden --no-messages -g '!**/.git/**' -g '!**/.venv/**' -g '*.[pP][yY]' -P '^[\s]*(?!#)[\s]*return[\s]*(json\.(dumps|dump)\(|ujson\.dumps\()' .; then
+            echo 'Found json.dumps return. Return plain strings instead.' >&2
+            exit 1
+          fi
+      - name: OK
+        run: echo "No non-string returns detected."
