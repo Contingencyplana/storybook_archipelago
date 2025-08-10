@@ -5,6 +5,9 @@
       "label": "Test: repo root (pytest)",
       "type": "shell",
       "command": "pytest -q",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
       "group": "test",
       "problemMatcher": []
     },
@@ -12,6 +15,9 @@
       "label": "Test: current node (pytest)",
       "type": "shell",
       "command": "pytest -q ${fileDirname}",
+      "options": {
+        "cwd": "${fileDirname}"
+      },
       "group": "test",
       "problemMatcher": []
     },
