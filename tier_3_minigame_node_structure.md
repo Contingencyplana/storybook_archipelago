@@ -48,6 +48,8 @@ storybook_archipelago/
 
 > Tier 3 logic exists to **move the player gently onward** — not to trap, challenge, or confuse.
 
+Handlers must return strings; do not emit JSON. Markers are optional in Tier 3.
+
 ---
 
 ## 📘 README File

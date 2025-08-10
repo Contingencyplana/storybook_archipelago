@@ -223,6 +223,8 @@ This layer is not merely decorative. It is where **meaning is encoded**, **choic
 
 > If the player doesn't feel *something* before pressing L or R, this layer isn't done.
 
+See **Return value contract (handlers & story) — v1** for required string markers.
+
 ---
 
 ## 🧩 Subtypes of Tier 1 Nodes (16-File Format)
