@@ -60,7 +60,7 @@
 
 ## a1_3_narrative_mode
 **Poetic Role:** Where the story is shaped, split, and sewn together  
-**System Role:** Directs `story.md` evolution, handles poetic branching and echoes  
+**System Role:** Directs `story.py` evolution (Tier‑1 exposes `describe_scene(memory)`), handles poetic branching and echoes  
 **Key Metaphors:** Loom, whispering thread, memory-scroll  
 
 ---

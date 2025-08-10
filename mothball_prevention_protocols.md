@@ -64,7 +64,7 @@ These features ensure Archipelago stays **playable** and **fun**:
 
 | Anchor                  | Role                                          |
 |-------------------------|-----------------------------------------------|
-| `story.md`              | Controls pacing, immersion, narrative clarity |
+| `story.py`              | Controls pacing, immersion, narrative clarity |
 | `camouflage.py`         | Regulates tone and joy                        |
 | `leftmain.py` / `rightmain.py` | Simple input routing to poetic logic   |
 | Node structure (L/R + optional list) | Prevents interaction drift       |

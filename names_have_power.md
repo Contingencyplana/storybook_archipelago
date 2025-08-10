@@ -33,7 +33,7 @@ Names in the file system are not decorative — they are **functional spells**.
 | `a1_1_filename_mode/` | Resolves its own recursive identity |
 | `fallbackmap.md` | Maps misnamed or missing nodes to recovery |
 | `camouflage.py` | Applies tone shifts based on named triggers |
-| `story.md` | Names become lines of a recursive poem |
+| `story.py` | Names become lines of a recursive poem |
 
 Filenames = entry points into logic. Renaming = redefining recursion.
 

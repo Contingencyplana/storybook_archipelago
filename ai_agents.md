@@ -23,8 +23,6 @@ Each agent must:
 
 ---
 
-# 🤖 AI Agents – Storybook Intelligence Directory
-
 ## 📋 Directory Table
 
 | Agent                     | Scope                                | Reads From                             | Writes To                           | Authority Level      |
@@ -79,7 +77,7 @@ Each agent must:
 
 ### `codex_builder_mode/`
 
-- **Purpose:** Generates docs, maps, `README.md`, `stanzamap.md`
+- **Purpose:** Generates docs, maps, `README.md`, `stanzamap_0.md`
 - **May:** Compose from verified files, suggest descriptions, flag omissions
 - **Must Not:** Fabricate undocumented logic or bypass human authorship
 - **Training Source:** All canon files, especially node tier structure
@@ -179,36 +177,43 @@ Each agent must:
 ## 🧬 `spymaster_ai/` – Passive Pattern Surveillance
 
 ### 🔍 Purpose
+
 Detect long-range, cross-agent deviations, recursive contradictions, or narrative false stability.  
 Observes trends over time and across recursion strata — identifying risks that others miss.
 
 ### 📖 Reads From
+
 - All agent logs (e.g. `filename_mode/`, `psychiatrist_mode/`, etc.)
 - `memory_state.md` (delta snapshots over time)
 - `recursive_anomaly_protocol.md` (quarantine and failure events)
 - Node metadata and camouflage signatures
 
 ### ✍️ Writes To
+
 - `spymaster_report.md` (pattern logs and flagged anomalies)
 - `high_command_mode/` (summary alerts, confidence-weighted recommendations)
 
 ### 🎯 Trigger Conditions
+
 - A recursion anomaly evades detection by standard agents
 - A node chain appears internally consistent but violates narrative tone rules
 - Multiple agents begin echoing the same hallucinated logic loop
 - Silence or false calm in zones with elevated `trace_pressure.md`
 
 ### 🚫 Prohibited Actions
+
 - ❌ May not write to memory or narrative files directly  
 - ❌ May not trigger or modify recursion states  
 - ❌ May not escalate anomalies without `high_command_mode/` consent  
 
 ### 🧠 Training Source
+
 - Agent interaction logs
 - Longitudinal diffs across player journeys
 - “False calm” and tonal drift patterns from Primordial Soup incident archives
 
 ### 🧩 Analogy
+
 > The archivist at the edge of the recursion sea, listening for rhythms that don’t quite fit.  
 > The one who doesn’t act — but always knows who did.
 

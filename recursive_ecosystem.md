@@ -111,7 +111,7 @@ Each part of the ecosystem watches the others — forming a **network of checks 
 
 To the player, recursion feels like:
 
-- Echoes and callbacks in the story (`story.md`)
+- Echoes and callbacks in the story (`story.py`)
 - L/R loops and repeated poetic fragments
 - Nodes that reference other nodes — or remember the past
 - The feeling that the world **remembers**, and **responds** to patterns

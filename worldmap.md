@@ -64,16 +64,19 @@ Traversal **between** minigames happens via **portalmap.md** or **cross-mode sta
 Traversal in Storybook Archipelago is **recursive** and **poetic**.
 
 ### ⛵ Sea Travel (L/R Logic)
+
 - The player starts in `sailing_mode/` on the open sea
 - L and R input lead to new islands or minigames
-- The **story.py** and **camouflage.py** disguise these transitions
+- The **story.py** and **camouflage.py** disguise these transitions (Tier‑1 story exposes `describe_scene(memory)`)
 
 ### 🏝️ Island Landfall
+
 - Each island is a `minigame/` inside `isle_mode/` or another mode
 - Minigames are explorable: four nodes (a0_0 to a0_3) per stanza
 - Nodes may exit to other islands, sea, memory, or recursion modes
 
 ### 🌀 Recursion Travel
+
 - Some logic paths (Tier 1 or advanced Tier 2) allow access to:
   - `dreaming_mode/` — memory echoes, surreal logic
   - `high_command_mode/` — authority decisions, AI intervention
