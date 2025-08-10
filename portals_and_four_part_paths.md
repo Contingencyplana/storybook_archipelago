@@ -39,10 +39,12 @@ Each part is **required**, even for local links.
 ## ✅ Enforcement Rules
 - All paths must be **fully qualified** (no relative paths).  
 - All folders in the path must **end with the correct type suffix**: `_mode/`, `_minigame/`, `_node/`.  
-- All workspaces must begin with: `storybook_`.  
+- All workspaces must begin with: `storybook_`  
+  - **Exception:** `storybook` is grandfathered until it is healed by a cybernurse/cyberdoc, per `workspace_registry.md`.
 - Paths must be **lowercase**, snake_case only.  
 - When stored in variables: **no trailing slash**.  
 - Lint/test tools must reject any link that violates the above.
+- **Trailing slashes:** `portalmap.md` rows MAY include a trailing `/`. Variables/identifiers (e.g., `{workspace}`, `{mode}`, `{minigame}`, `{node}`) MUST NOT include trailing slashes.
 
 These rules will be cross-checked against:
 - `workspace_registry.md` — authoritative list of valid workspaces  

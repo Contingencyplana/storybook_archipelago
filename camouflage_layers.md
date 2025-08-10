@@ -205,6 +205,8 @@ Your system must expect recursion:
 This is not an art direction.  
 This is a *development contract*.
 
+> **Do not alter logic markers or portal tags.** Camouflage must not modify `[LEFT]` / `[RIGHT]` markers or inject `[PORTAL:` lines into handler/story returns.
+
 ---
 
 ## 14. 🔚 Conclusion

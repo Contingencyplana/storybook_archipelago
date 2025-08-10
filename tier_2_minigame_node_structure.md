@@ -43,6 +43,7 @@ Only **basic validation** is required:
 - Confirm `leftmain.py` and `rightmain.py` route correctly  
 - Confirm `story.py` options align with input logic  
 - Validate that `integration.py` triggers correct transitions  
+- Preferred tests: `lefttest.py` / `righttest.py` and, if present, `integtest.py` for the router.
 
 Tier 2 nodes **must be testable**, but do **not** require full recursion edge-case coverage.
 
