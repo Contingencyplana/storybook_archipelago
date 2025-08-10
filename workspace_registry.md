@@ -44,12 +44,14 @@ Each entry **must** follow this YAML structure:
 ### 🧱 1. storybook/
 
 ```yaml
-- id: storybook
+- id: storybook_core
   title: Core Game Maker and SHAGI Engine
   path: storybook/
   status: active
   notes: Root design system, editor logic, builder recursion layers. Grandfathered legacy id; scheduled to rename to `storybook_core` during Heal phase.
 ```
+
+Formerly ‘storybook’; renamed to comply with ‘must start with storybook_’ rule.
 
 ### 🌊 2. storybook_archipelago/
 
