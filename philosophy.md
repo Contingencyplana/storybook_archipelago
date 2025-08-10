@@ -26,16 +26,19 @@ This means:
 - Structure and narrative are not separate: they **mirror and reinforce** one another.
 
 At the lowest camouflage level, this recursion is explicit:
+
 - Nodes loop until completed.
 - Game modes may spawn their own recursive logic.
 - Story fragments reappear in new contexts with altered meaning.
 
 At higher camouflage layers, recursion may appear:
+
 - As foreshadowing or déjà vu.
 - As story elements that loop or misremember.
 - As minigames that rewrite their own objectives.
 
 This recursive backbone ensures:
+
 - Every system is **modular and extensible**
 - Every player journey is **revisitable**
 - Every narrative arc is **folded, not linear**
@@ -78,7 +81,7 @@ Each node in Storybook Archipelago is built on a recursive duality — the balan
 
 This dual structure includes:
 
-- `story.md` – the poetic layer  
+- `story.py` – the poetic layer  
   - Contains narrative, metaphor, emotion, and camouflage  
   - Presents L/R decisions and numbered lists through prose  
   - May include character voice, ambient cues, or recursive myths  
@@ -87,7 +90,7 @@ This dual structure includes:
   - Handle input parsing, state transitions, AI triggers  
   - Run tests, manage fallback loops, and orchestrate memory  
 
-### Why it matters:
+### Why it matters
 
 - **No layer is secondary.**  
   Story drives logic. Logic shapes story. Each recursive system lives through both.
