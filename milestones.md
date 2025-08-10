@@ -60,3 +60,22 @@ Use this file to monitor cross-mode growth, recursive integrity, and player read
 
 - This file tracks **global** milestones across all modes.
 - Each game mode and minigame will also maintain its own `milestones.md` file.
+
+## Milestone: Overarching Docs & Guardrails — 2025-08-10
+
+**Completed**
+- Standardized narrative references to `story.py` and added `describe_scene(memory)` note.
+- Added VS Code pytest tasks (`Test: repo root`, `Test: current node`).
+- Canonicalized Return Value Contract v1 and added Tier-3 exception for markers.
+- Normalized disallowed substring to `[PORTAL:` across docs/tests.
+- Renamed registry id to `storybook_core` (+ legacy note).
+- Added guardrails:
+  - VS Code + CI: disallow `[PORTAL:]`
+  - VS Code + CI: disallow non-string returns in handlers/story (dict/list literals, `json.dumps`)
+- Cleaned README duplication and updated registry note to present tense.
+
+**Key commits**
+- 322317b, 1f8dea3, 0115ce7, 0e09383, a3694ce, 8ad91b3, 24e738c, d76163e
+
+**Next**
+- Audit `a0_0_sailing_mode` for contract compliance and naming consistency.
