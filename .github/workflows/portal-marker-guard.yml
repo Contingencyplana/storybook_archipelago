@@ -1,0 +1,20 @@
+name: Doc guard — disallow [PORTAL:]
+on:
+  pull_request:
+  push:
+    branches: [ master, main ]
+jobs:
+  lint-portal-marker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ripgrep
+        run: sudo apt-get update && sudo apt-get install -y ripgrep
+      - name: Fail if disallowed marker appears
+        run: |
+          if rg -n --hidden --no-messages -g '!**/.git/**' '\[PORTAL:\]' .; then
+            echo 'Found disallowed "[PORTAL:]" markers. Use "[PORTAL:" instead.' >&2
+            exit 1
+          else
+            echo 'OK: no disallowed "[PORTAL:]" found.'
+          fi
