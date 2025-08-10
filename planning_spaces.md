@@ -34,7 +34,7 @@ Each `roadmaps/` folder supports one gameplay mode (Tier 1) and defines world-le
 - `README.md` — Game mode purpose, design vision, traversal rules
 - `roadstanza_0.md` — First stanza of minigames within the mode
 - `roadmap.md` — Planning logic, gameplay goals, routing logic
-- All downstream `portalmap.md` links must use **four‑part paths**.
+All downstream portalmap.md links must use four‑part paths.
 
 **Optional:**
 - `roadstanza_1.md`, etc. — Additional stanzas as the mode grows

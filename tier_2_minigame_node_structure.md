@@ -25,7 +25,7 @@ storybook_archipelago/
 │           ├── leftmain.py            # 🔁 Handles L-input logic
 │           ├── rightmain.py           # 🔁 Handles R-input logic
 │           ├── story.py               # 📖 Narrative content (can be short or symbolic)
-│           └── testlogic.py           # ✅ Minimal test coverage
+│           └── testlogic.py           # ✅ Minimal test coverage (see Test Requirements)
 ```
 
 ## 🧱 Purpose of Tier 2 Nodes
@@ -43,7 +43,7 @@ Only **basic validation** is required:
 - Confirm `leftmain.py` and `rightmain.py` route correctly  
 - Confirm `story.py` options align with input logic  
 - Validate that `integration.py` triggers correct transitions  
-- Preferred tests: `lefttest.py` / `righttest.py` and, if present, `integtest.py` for the router.
+Prefer `lefttest.py` and/or `righttest.py`, and use `integtest.py` where integration routing is under test, to align with repo-wide conventions.
 
 Tier 2 nodes **must be testable**, but do **not** require full recursion edge-case coverage.
 

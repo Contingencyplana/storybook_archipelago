@@ -35,6 +35,8 @@ Each `_node/` (Layer 3) has two complementary components:
 - **`story.py`** – Defines the poetic stanza, list entries, L/R logic, and player-facing narrative.
 - **`leftmain.py` / `rightmain.py`** – Handle gameplay logic, branching, and recursive orchestration.
 
+Use the `story.py` API; the narrative surface is `describe_scene(memory)`.
+
 Additional helpers (e.g., `camouflage.py`, `orchestration.py`) may appear in advanced nodes.
 
 > In Tier‑1 nodes, **story.py** exposes the player‑facing narrative via `describe_scene(memory)`.
@@ -85,6 +87,8 @@ Storybook Archipelago follows several key principles:
 - All traversal begins with player input: `L`, `R`, or a number.
 
 > To run tests quickly in VS Code, use the tasks **“Test: repo root (pytest)”** or **“Test: current node (pytest)”** from the command palette.
+
+Use VS Code tasks ‘Test: repo root (pytest)’ or ‘Test: current node (pytest)’ to run tests.
 
 ---
 

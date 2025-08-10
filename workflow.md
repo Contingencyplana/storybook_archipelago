@@ -80,7 +80,7 @@ Create a functional Tier‑3 node using this **7‑step** sequence:
 
 > **Consistency note:** All storytelling content lives in `story.py`. Logic lives in `*main.py` files (incl. `storytelling_ai` orchestration when used).
 
-> Follow the **Return value contract (handlers & story) — v1** for string markers.
+Follow the **Return value contract (handlers & story) — v1** for string markers.
 
 ---
 

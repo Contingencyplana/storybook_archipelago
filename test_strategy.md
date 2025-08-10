@@ -106,6 +106,12 @@ All test files should validate:
 
 > Every time the player presses **L** or **R**, that decision must be **predictable**, **testable**, and **narratively sound**.
 
+- Left-path outputs MUST include the literal string "[LEFT]".
+- Right-path outputs MUST include the literal string "[RIGHT]".
+- Story outputs MUST contain the word "grove".
+- Story outputs MUST NOT contain the substring "[PORTAL:".
+- Markers are plain-string literals (not Markdown).
+
 ---
 
 ## L/R Path Test Expectations (Additional Rules)
