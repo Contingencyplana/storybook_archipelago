@@ -78,6 +78,8 @@ Storybook Archipelago follows several key principles:
 
 ---
 
+See: docs/return_value_contract_v1.md
+
 ## 6. 🚀 Getting Started
 
 - Launch development in the safe zone: `a3_3_testing_mode/`
