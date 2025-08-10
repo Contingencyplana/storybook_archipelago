@@ -48,7 +48,7 @@ Each entry **must** follow this YAML structure:
   title: Core Game Maker and SHAGI Engine
   path: storybook/
   status: active
-  notes: Root design system, editor logic, builder recursion layers. Grandfathered legacy id; scheduled to rename to `storybook_core` during Heal phase.
+  notes: Root design system, editor logic, builder recursion layers. Renamed from ‘storybook’ to ‘storybook_core’; legacy id remains grandfathered elsewhere until Heal completes.
 ```
 
 Formerly ‘storybook’; renamed to comply with ‘must start with storybook_’ rule.

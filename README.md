@@ -88,8 +88,6 @@ See: docs/return_value_contract_v1.md
 - Use `camouflage_layers.md` to define layer logic and visibility
 - All traversal begins with player input: `L`, `R`, or a number.
 
-> To run tests quickly in VS Code, use the tasks **“Test: repo root (pytest)”** or **“Test: current node (pytest)”** from the command palette.
-
 Use VS Code tasks ‘Test: repo root (pytest)’ or ‘Test: current node (pytest)’ to run tests.
 
 ---
@@ -97,6 +95,5 @@ Use VS Code tasks ‘Test: repo root (pytest)’ or ‘Test: current node (pytes
 ## 📝 Notes
 
 This file defines the global scope and structure of *Storybook Archipelago*.  
-Each mode and minigame may include its own `README.md` or `story.py` as needed.
 Each mode and minigame may include its own `README.md` or `story.py` as needed.
 Welcome to the archipelago.
