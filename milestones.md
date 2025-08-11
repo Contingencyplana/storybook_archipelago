@@ -71,7 +71,7 @@ Use this file to monitor cross-mode growth, recursive integrity, and player read
 - Normalized disallowed substring to `[PORTAL:` across docs/tests.
 - Renamed registry id to `storybook_core` (+ legacy note).
 - Added guardrails:
-  - VS Code + CI: disallow `[PORTAL:]`
+  - VS Code + CI: disallow the closed-bracket portal tag variant; use `[PORTAL:` only.
   - VS Code + CI: disallow non-string returns in handlers/story (dict/list literals, `json.dumps`)
 - Cleaned README duplication and updated registry note to present tense.
 
