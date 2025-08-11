@@ -3,3 +3,4 @@
 **/__pycache__/ export-ignore
 **/*.pyc   export-ignore
 .vscode/   export-ignore
+ /dist/     export-ignore

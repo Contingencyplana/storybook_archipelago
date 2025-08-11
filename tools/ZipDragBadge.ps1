@@ -43,6 +43,8 @@ function New-Zip {
     [Windows.Forms.Application]::DoEvents()
 
     $env:GIT_PAGER = ''
+  $env:GIT_DIR = $null
+  $env:GIT_WORK_TREE = $null
     git --no-pager -C $Workspace archive -o $zip --format zip --worktree-attributes HEAD 2>$null
     $code = $LASTEXITCODE
 
@@ -57,6 +59,8 @@ function New-Zip {
     $Status.Text = "Gathering files…"
     $Bar.Style = 'Continuous'
     $Bar.Value = 0
+  $Bar.Maximum = 100
+  $Bar.Style = [System.Windows.Forms.ProgressBarStyle]::Continuous
     $Status.Refresh()
     [Windows.Forms.Application]::DoEvents()
 
@@ -66,6 +70,7 @@ function New-Zip {
       return ($full -match '\\\.git(\\|$)') -or
              ($full -match '\\\.venv(\\|$)') -or
              ($full -match '\\__pycache__(\\|$)') -or
+             ($full -match '\\dist(\\|$)') -or
              ($full -match '\\\.vscode(\\|$)') -or
              ($full -match '\\\.github(\\|$)')
     }
@@ -117,6 +122,7 @@ function New-Zip {
                 $mb  = "{0:N1}" -f ($done/1MB)
 
                 $Status.Text = "Creating ZIP ($pct%)… ($mb MB)"
+                $Bar.Value = [int]([Math]::Min(100,[Math]::Max(0,$pct)))
                 $Status.Refresh()
                 [Windows.Forms.Application]::DoEvents()
                 $sw.Restart()
@@ -126,6 +132,13 @@ function New-Zip {
             $inStream?.Close()
             $outStream?.Close()
           }
+        }
+
+        if ($WasCanceled.Value) {
+          try { $archive.Dispose() } catch {}
+          try { $zipStream.Close() } catch {}
+          Remove-Item -Force $zip -ErrorAction SilentlyContinue
+          return
         }
       } finally {
         $archive.Dispose()
