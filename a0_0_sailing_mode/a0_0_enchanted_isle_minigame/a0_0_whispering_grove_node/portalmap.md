@@ -12,8 +12,8 @@ Each target may initially point to a placeholder or later node and should only b
 
 | Input | Leads To                                                                                         | Status     |
 |-------|--------------------------------------------------------------------------------------------------|------------|
-| `L`   | `storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/` | ☐ Pending  |
-| `R`   | `storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/` | ☐ Pending  |
+| `L`   | `storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/` | ☑ Active  |
+| `R`   | `storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/` | ☑ Active  |
 
 ---
 
