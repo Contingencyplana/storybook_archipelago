@@ -53,6 +53,7 @@ Use this file to monitor cross-mode growth, recursive integrity, and player read
 - [ ] Document `a0_0_sailing_mode/` and `a0_1_isle_mode/`
 - [x] Begin building first playable minigame node: `whispering_grove_node/`
 - [ ] Start `a0_1_drifting_glade_node` (planning shell)
+- [ ] Define camouflage layer logic and traversal protocols (entry/exit rules)
 
 ---
 
