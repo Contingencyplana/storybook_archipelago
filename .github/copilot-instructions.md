@@ -107,8 +107,8 @@ Left path MUST include the token "[LEFT]" somewhere in the returned string.
 
 Right path MUST include the token "[RIGHT]".
 
-If a handler wants to indicate a portal choice (even if not followed yet), include a single bracketed portal tag on one line, e.g.:
-[PORTAL: storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/]
+If a handler wants to indicate a portal choice (even if not followed yet), include a single open portal tag on one line, e.g.:
+[PORTAL: storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/
 
 story.describe_scene() MUST include the word "grove" (lowercase ok) and MUST NOT include [PORTAL: tags.
 
@@ -119,7 +119,7 @@ Left: "The fog leans with you. [LEFT] The hush thickens."
 Right: "You answer the wind by not answering. [RIGHT] The leaves tilt."
 
 With portal hint (optional):
-"You part the boughs. [LEFT]\n[PORTAL: storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/]"
+"You part the boughs. [LEFT]\n[PORTAL: storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/"
 
 Story: "In the whispering grove, the air listens back."
 

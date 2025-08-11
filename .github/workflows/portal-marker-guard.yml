@@ -10,11 +10,11 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install ripgrep
         run: sudo apt-get update && sudo apt-get install -y ripgrep
-      - name: Fail if disallowed marker appears
+      - name: Fail if any closed-bracket portal tag appears
         run: |
-          if rg -n --hidden --no-messages -g '!**/.git/**' -g '*.[mM][dD]' '\[PORTAL:\]' .; then
-            echo 'Found disallowed "[PORTAL:]" markers. Use "[PORTAL:" instead.' >&2
+          if rg -n --hidden --no-messages -g '!**/.git/**' -g '*.[mM][dD]' -P '\\[PORTAL:[^\\]]*\\]' .; then
+            echo 'Found closed-bracket portal tags. Use the open form "[PORTAL:" only in docs/strings.' >&2
             exit 1
           else
-            echo 'OK: no disallowed "[PORTAL:]" found.'
+            echo 'OK: no closed-bracket portal tags found.'
           fi
