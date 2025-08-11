@@ -10,21 +10,21 @@
 | Step | Files                        | Status | Notes |
 |------|------------------------------|--------|-------|
 | 1    | `README.md`, `portalmap.md`, `subtaskmap.md` | ✅ Done | Planning shell complete |
-| 2    | `integration.py`, `integtest.py`             | ☐       | Awaiting dispatch logic |
-| 3    | `camouflage.py`, `camoutest.py`              | ☐       | Will use fog + silence |
-| 4    | `orchestration.py`, `orchtest.py`            | ☐       | Includes entry memory seed |
-| 5    | `leftmain.py`, `lefttest.py`                 | ☐       | Basic tone shift only |
-| 6    | `rightmain.py`, `righttest.py`               | ☐       | Basic tone shift only |
-| 7    | `story.py`, `storytest.py`                   | ☐       | Poetic L/R whispering options |
+| 2    | `integration.py`, `integtest.py`             | ✅ Done | Router dispatching L/R/other → story with string returns |
+| 3    | `camouflage.py`, `camoutest.py`              | ✅ Done | Fog overlay, no logic changes; strings only |
+| 4    | `orchestration.py`, `orchtest.py`            | ✅ Done | Sets entry seed in memory, delegates to router |
+| 5    | `leftmain.py`, `lefttest.py`                 | ✅ Done | Left path returns string with [LEFT] marker |
+| 6    | `rightmain.py`, `righttest.py`               | ✅ Done | Right path returns string with [RIGHT] marker |
+| 7    | `story.py`, `storytest.py`                   | ✅ Done | Story includes "grove" and no [PORTAL: tags |
 
 ---
 
 ## 🧪 Test Requirements
 
 Before linking this node in `portalmap.md`, confirm:
-- [ ] `integtest.py`, `camoutest.py`, `orchtest.py` pass
-- [ ] `lefttest.py`, `righttest.py` confirm basic routing
-- [ ] `storytest.py` validates narrative and branching
+- [x] `integtest.py`, `camoutest.py`, `orchtest.py` pass
+- [x] `lefttest.py`, `righttest.py` confirm basic routing
+- [x] `storytest.py` validates narrative and branching
 
 ---
 
