@@ -48,6 +48,19 @@
       ],
       "group": "test",
       "problemMatcher": []
+    },
+    {
+      "label": "Package: make clean ZIP",
+      "type": "process",
+      "command": "pwsh",
+      "options": { "cwd": "${workspaceFolder}" },
+      "args": [
+        "-NoProfile",
+        "-Command",
+        "$ErrorActionPreference='Stop'; $ws='${workspaceFolder}'; $date=Get-Date -Format 'yyyyMMdd-HHmm'; $dist=Join-Path $ws 'dist'; if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Null }; $zip=Join-Path $dist ('storybook_archipelago-' + $date + '.zip'); $env:GIT_PAGER=''; git --no-pager archive -o $zip --format zip --worktree-attributes HEAD 2>$null; $code=$LASTEXITCODE; if ($code -eq 0) { Write-Host $zip; exit 0 } else { if (Test-Path $zip) { Remove-Item -Force $zip }; $excludes=@('.git','/.git/*','/.venv','/.venv/*'); $items=Get-ChildItem -LiteralPath $ws -Force -Recurse | Where-Object { $_.PSIsContainer -or ($_.FullName -notmatch '\\.git(\\|$)' -and $_.FullName -notmatch '\\__pycache__(\\|$)' -and $_.FullName -notmatch '\\.venv(\\|$)' ) }; Compress-Archive -Path $items -DestinationPath $zip -Force; Write-Host $zip; exit 0 }"
+      ],
+      "group": "build",
+      "problemMatcher": []
     }
   ]
 }
