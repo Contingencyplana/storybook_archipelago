@@ -53,6 +53,8 @@ This file defines the identity, purpose, camouflage intent, and narrative tone o
 - Handlers return strings: `leftmain.handle_left(memory)` includes `[LEFT]`; `rightmain.handle_right(memory)` includes `[RIGHT]`.
 - See [`docs/return_value_contract_v1.md`](../../../docs/return_value_contract_v1.md).
 - `describe_scene(memory)` must include “grove” and must **not** contain `[PORTAL:`.
+- `camouflage.apply_camouflage(memory) -> str` (strings only, no markers)
+- `orchestration.orchestrate(user_input, memory) -> str` (may seed memory, then routes via integration)
 
 ---
 
