@@ -1,4 +1,4 @@
-from rightmain import handle_right
+from a0_0_sailing_mode.a0_0_enchanted_isle_minigame.a0_0_whispering_grove_node.rightmain import handle_right
 
 
 def test_right_has_marker():

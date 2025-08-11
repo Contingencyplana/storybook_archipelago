@@ -47,6 +47,13 @@ This file defines the identity, purpose, camouflage intent, and narrative tone o
 
 ---
 
+## 🧩 Implementation Notes
+
+- Narrative surface lives in `story.py` as `describe_scene(memory) -> str`.
+- Handlers return strings: `leftmain.handle_left(memory)` includes `[LEFT]`; `rightmain.handle_right(memory)` includes `[RIGHT]`.
+
+---
+
 ## ⛑️ Safety Notes
 
 - This node should **not** include numbered list logic
