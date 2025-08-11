@@ -51,8 +51,8 @@ Use this file to monitor cross-mode growth, recursive integrity, and player read
 
 - [x] Add global scaffolding files: `README.md`, `camouflage_layers.md`, and this milestone log
 - [ ] Document `a0_0_sailing_mode/` and `a0_1_isle_mode/`
-- [ ] Begin building first playable minigame node: `whispering_grove_node/`
-- [ ] Define camouflage layer logic and traversal protocols (entry/exit rules)
+- [x] Begin building first playable minigame node: `whispering_grove_node/`
+- [ ] Start `a0_1_drifting_glade_node` (planning shell)
 
 ---
 
@@ -62,9 +62,11 @@ Use this file to monitor cross-mode growth, recursive integrity, and player read
 - Each game mode and minigame will also maintain its own `milestones.md` file.
 
 ---
+
 ## Milestone: Overarching Docs & Guardrails — 2025-08-10
 
 **Completed**
+
 - Standardized narrative references to `story.py` and added `describe_scene(memory)` note.
 - Added VS Code pytest tasks (`Test: repo root`, `Test: current node`).
 - Canonicalized Return Value Contract v1 and added Tier-3 exception for markers.
@@ -76,7 +78,24 @@ Use this file to monitor cross-mode growth, recursive integrity, and player read
 - Cleaned README duplication and updated registry note to present tense.
 
 **Key commits**
+
 - 322317b, 1f8dea3, 0115ce7, 0e09383, a3694ce, 8ad91b3, 24e738c, d76163e, 288d910, 6523b20, 284a366, 67172a8, baeaf3e, 91d1be8
 
 **Next**
+
 - Audit `a0_0_sailing_mode` for contract compliance and naming consistency.
+
+---
+
+## Milestone: Whispering Grove activated — 2025-08-11
+
+**Completed**
+
+- Activated portals in `a0_0_whispering_grove_node/portalmap.md` (L/R → drifting_glade).
+- Node test suite green (integration, left/right, story, camouflage, orchestration).
+
+**Key commits**
+
+- 284a366, 67172a8, baeaf3e, 91d1be8
+
+---
