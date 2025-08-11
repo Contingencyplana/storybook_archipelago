@@ -30,8 +30,8 @@
       },
       "args": [
         "-NoProfile",
-        "-Command",
-        "rg -n --hidden --no-messages -g '!**/.git/**' -g '*.[mM][dD]' -P '\\[PORTAL:[^\\]]*\\]' .; if ($LASTEXITCODE -eq 0) { Write-Error 'Found closed-bracket portal tags. Use the open form \"[PORTAL:\" only.'; exit 1 }"
+  "-Command",
+  "rg -n --hidden --no-messages -g '!**/.git/**' -g '*.[mM][dD]' -P '\\[PORTAL:[^\\]]*\\]' .; if ($LASTEXITCODE -eq 0) { Write-Error 'Found closed-bracket portal tags. Use the open form \\\"[PORTAL:\\\" only.'; exit 1 }; exit 0"
       ],
       "group": "test",
       "problemMatcher": []
@@ -43,8 +43,8 @@
       "options": { "cwd": "${workspaceFolder}" },
       "args": [
         "-NoProfile",
-        "-Command",
-        "rg -n --hidden --no-messages -g '!**/.git/**' -g '!**/.venv/**' -g '*.[pP][yY]' -P '^[\\s]*(?!#)[\\s]*return[\\s]*[\\{\\[]' .; if ($LASTEXITCODE -eq 0) { Write-Error 'Found non-string returns (dict/list literal). Handlers and story must return strings.'; exit 1 }; rg -n --hidden --no-messages -g '!**/.git/**' -g '!**/.venv/**' -g '*.[pP][yY]' -P '^[\\s]*(?!#)[\\s]*return[\\s]*(json\\.(dumps|dump)\\(|ujson\\.dumps\\()' .; if ($LASTEXITCODE -eq 0) { Write-Error 'Found json.dumps return. Return plain strings instead.'; exit 1 }"
+  "-Command",
+  "rg -n --hidden --no-messages -g '!**/.git/**' -g '!**/.venv/**' -g '*.[pP][yY]' -P '^[\\s]*(?!#)[\\s]*return[\\s]*[\\{\\[]' .; if ($LASTEXITCODE -eq 0) { Write-Error 'Found non-string returns (dict/list literal). Handlers and story must return strings.'; exit 1 }; rg -n --hidden --no-messages -g '!**/.git/**' -g '!**/.venv/**' -g '*.[pP][yY]' -P '^[\\s]*(?!#)[\\s]*return[\\s]*(json\\.(dumps|dump)\\(|ujson\\.dumps\\()' .; if ($LASTEXITCODE -eq 0) { Write-Error 'Found json.dumps return. Return plain strings instead.'; exit 1 }; exit 0"
       ],
       "group": "test",
       "problemMatcher": []
