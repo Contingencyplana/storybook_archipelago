@@ -122,7 +122,31 @@ Use this map to guide **new game content**, **AI mode allocation**, and **portal
 
 ---
 
-## 🔚 Conclusion
+## � Portal rules & examples
+
+All portals must:
+
+- Use four-part, relative paths: `{workspace}/{mode}/{minigame}/{node}/`.
+- Start with a workspace id that exists in `workspace_registry.md`.
+- Appear as the open tag form only when hinted in handler output: `[PORTAL:` (no closing bracket).
+- Never use OS-absolute paths.
+
+Examples (canonical):
+
+- L → `storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/`
+- R → `storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/`
+
+Optional open-tag hint shape (single line):
+
+```text
+[PORTAL: storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/
+```
+
+See also: `portals_and_four_part_paths.md`, `docs/return_value_contract_v1.md`.
+
+---
+
+## �🔚 Conclusion
 
 The world of *Storybook Archipelago* is not flat — it is **recursive terrain**.  
 Each **mode** is a **stanza**.  

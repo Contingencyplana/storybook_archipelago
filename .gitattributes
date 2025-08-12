@@ -1,6 +1,6 @@
-/.*        export-ignore
-/.venv/    export-ignore
+/.*         export-ignore
+/.venv/     export-ignore
 **/__pycache__/ export-ignore
-**/*.pyc   export-ignore
-.vscode/   export-ignore
- /dist/     export-ignore
+**/*.pyc    export-ignore
+.vscode/    export-ignore
+/dist/      export-ignore

@@ -180,11 +180,11 @@ All planning folders must include the canonical files listed in `planning_spaces
 - **VS Code tasks**:
   - `Validate Docs` → linters + schema checks
   - `Audit Gate A–E` → targeted checks per acceptance gate
-  - Local guards: `Lint: disallow [PORTAL:]`, `Lint: disallow non-string returns (handlers/story)`
+  - Local guards: portal tag guard (disallow closed-bracket portal tags), non-string return guard (handlers/story)
   - Tests: `Test: repo root (pytest)` / node‑local test task
   - Packaging: `Package: make clean ZIP` (uses `git archive --worktree-attributes` + `.gitattributes export-ignore`)
 
-- CI: doc guard — disallow the closed-bracket portal tag variant; use “[PORTAL:” only.
+- CI: doc guard — disallow the closed-bracket portal tag variant; use the open form only.
 - CI: code guard — disallow non-string returns in handlers/story.
 - CI (optional): run tests on push/PR (install deps → `pytest -q`).
 

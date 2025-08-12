@@ -92,7 +92,21 @@ Use VS Code tasks ‘Test: repo root (pytest)’ or ‘Test: current node (pytes
 
 ---
 
-## 📝 Notes
+## � Portal conventions
+
+- Paths are four-part and relative: `{workspace}/{mode}/{minigame}/{node}/`.
+- Use only the open tag form when hinting in strings: `[PORTAL:` (no closing bracket).
+- Workspaces must exist in `workspace_registry.md`.
+
+Example:
+
+`storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/`
+
+See: `portals_and_four_part_paths.md`, `docs/return_value_contract_v1.md`.
+
+---
+
+## �📝 Notes
 
 This file defines the global scope and structure of *Storybook Archipelago*.  
 Each mode and minigame may include its own `README.md` or `story.py` as needed.
