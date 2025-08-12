@@ -92,6 +92,15 @@ Use VS Code tasks ‘Test: repo root (pytest)’ or ‘Test: current node (pytes
 
 ---
 
+## 📚 Docs index
+
+- Rhyme & Reason (why guide): [rhyme_and_reason.md](rhyme_and_reason.md)
+- Node Type Rollout (Tier‑1 subtypes pacing): [node_type_rollout.md](node_type_rollout.md)
+- Node Tiers (1–3 canonical): [node_tiers.md](node_tiers.md)
+- Tier‑1 Node Structure (16 files): [tier_1_minigame_node_structure.md](tier_1_minigame_node_structure.md)
+
+---
+
 ## � Portal conventions
 
 - Paths are four-part and relative: `{workspace}/{mode}/{minigame}/{node}/`.

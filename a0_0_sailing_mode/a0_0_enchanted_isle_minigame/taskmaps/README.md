@@ -18,19 +18,16 @@ It is the first minigame within `a0_0_sailing_mode`, and serves as the player’
 
 ---
 
-## 🧱 Planned Node Structure
+## 🧱 Node Structure (Nodestanza 0)
 
-This minigame will contain four gameplay nodes, built as one poetic stanza.  
-They follow a gentle narrative arc from contact → contrast → reflection → exit.
+This minigame’s first nodestanza contains four nodes (see `nodestanza_0.md` for canonical paths):
 
-| Node Folder                    | Working Title                      | Purpose |
-|--------------------------------|------------------------------------|---------|
-| `a0_0_whispering_grove_node/`  | "The whisper that welcomes"        | Entry / initiation |
-| `a0_1_drifting_glade_node/`    | "The grove that offers two paths"  | Tone choice |
-| `a0_2_reflecting_pool_node/`   | "The pool that remembers you"      | Memory echo |
-| `a0_3_rippling_exit_node/`     | "The exit that forgets forward"    | Transition to next island |
-
-Final node names may evolve slightly as camouflage layers emerge.
+| Node Folder                       | Title                         | Status   |
+|-----------------------------------|-------------------------------|----------|
+| `a0_0_whispering_grove_node/`     | Whispering Grove              | Complete |
+| `a0_1_drifting_glade_node/`       | Drifting Glade                | Complete |
+| `a0_2_sunlit_shore_node/`         | Sunlit Shore                  | Complete |
+| `a0_3_wavesong_pier_node/`        | Wavesong Pier                 | Complete |
 
 ---
 
@@ -48,6 +45,7 @@ Final node names may evolve slightly as camouflage layers emerge.
 This minigame will be built using the 7-step minigame node workflow (see `workflow.md`), with one node completed and tested at a time.
 
 Test coverage must include:
+
 - Integration routing
 - Camouflage triggers
 - Memory state validation
@@ -59,6 +57,7 @@ Test coverage must include:
 ## 🔁 Escalation Notes
 
 If recursion fails during node construction (e.g., a logic loop, camouflage breakdown, or test gap):
+
 - Log the event in `subtaskmap.md` of the affected node
 - Escalate to `mirror_decisions/` if unrecoverable
 - Postpone linking in `portalmap.md` until node passes `orchtest.py`, `camoutest.py`, and `storytest.py`
