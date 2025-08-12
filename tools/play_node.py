@@ -22,20 +22,34 @@ import argparse
 import importlib.util
 import sys
 from pathlib import Path
+import importlib
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 def load_integration(node_rel_path: str):
-    node_path = (REPO_ROOT / node_rel_path).resolve()
-    integ_file = node_path / "integration.py"
-    if not integ_file.exists():
-        raise FileNotFoundError(f"integration.py not found at: {integ_file}")
-    spec = importlib.util.spec_from_file_location("node_integration", str(integ_file))
-    if spec is None or spec.loader is None:
-        raise ImportError(f"Cannot load spec for {integ_file}")
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)  # type: ignore[attr-defined]
+    """
+    Import the node's integration module using its package path so that
+    relative imports inside the node (e.g., `from . import leftmain`) work.
+    """
+    pkg_path = node_rel_path.strip("/\\")
+    # Ensure repo root is on sys.path for package imports
+    if str(REPO_ROOT) not in sys.path:
+        sys.path.insert(0, str(REPO_ROOT))
+
+    module_name = pkg_path.replace("/", ".").replace("\\", ".") + ".integration"
+    try:
+        module = importlib.import_module(module_name)
+    except Exception as e:
+        # Fallback: helpful diagnostics about missing __init__.py or bad path
+        node_path = (REPO_ROOT / pkg_path)
+        raise ImportError(
+            f"Failed to import '{module_name}'. Ensure each folder has __init__.py and the path is correct.\n"
+            f"Tried from repo root: {REPO_ROOT}\n"
+            f"Node path: {node_path}\n"
+            f"Original error: {e}"
+        )
+
     if not hasattr(module, "route_input"):
         raise AttributeError("integration.route_input(user_input, memory) not found")
     return module
