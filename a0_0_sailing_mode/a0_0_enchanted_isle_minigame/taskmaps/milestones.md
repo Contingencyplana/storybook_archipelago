@@ -16,3 +16,12 @@
 - Updated `nodestanza_0.md` with canonical four‑part paths
 - Portalmaps pre‑wired forward where applicable (Status: Inactive) pending playtests
 
+## 2025-08-12 — Tier‑1 playtest completed; portals activated
+
+- Completed internal Tier‑1 playtest across all four nodes; scene includes “grove” and handlers return [LEFT]/[RIGHT] markers
+- Activated in‑minigame portals:
+	- `a0_1_drifting_glade_node` L/R → `a0_2_sunlit_shore_node`
+	- `a0_2_sunlit_shore_node` L/R → `a0_3_wavesong_pier_node`
+- Cross‑minigame links remain Pending
+- Tools: `tools/play_node.py` used for interactive validation
+

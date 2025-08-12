@@ -5,4 +5,4 @@
 - L → storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_2_sunlit_shore_node/
 - R → storybook_archipelago/a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_2_sunlit_shore_node/
 
-Status: ☐ Inactive (activate after tests are green and target exists)
+Status: ☑ Active (activated after Tier‑1 playtests)

@@ -6,17 +6,16 @@ This file defines all active AI agents in *Storybook Archipelago*.
 Each agent has a specific scope, authority level, and interaction model.  
 Together, they form a recursive architecture of intelligence — poetic, testable, and self-aware.
 
-
 ## 🧠 What Is an AI Agent?
 
 An **AI agent** is a self-contained subsystem empowered to:
- 
+
 - Read from canonical game structures
 - Write to select outputs (within scope)
 - Trigger recursion, reflection, or revision within defined limits
 
 Each agent must:
- 
+
 - Be declared in this file
 - Operate within its designated tier
 - Follow poetic, narrative, and gameplay doctrines

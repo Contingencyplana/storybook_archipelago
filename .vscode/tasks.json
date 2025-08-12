@@ -25,13 +25,11 @@
       "label": "Lint: disallow closed-bracket portal tags",
       "type": "process",
       "command": "pwsh",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
+      "options": { "cwd": "${workspaceFolder}" },
       "args": [
         "-NoProfile",
-  "-Command",
-  "$ErrorActionPreference='Stop'; rg -n --hidden --no-messages -g '!**/.git/**' -g '*.[mM][dD]' -P '\\[PORTAL:[^\\]]*\\]' .; $code=$LASTEXITCODE; if ($code -eq 0) { Write-Error 'Found closed-bracket portal tags. Use the open form \"[PORTAL:\" only.'; exit 1 } elseif ($code -eq 1) { exit 0 } else { Write-Error \"ripgrep error ($code)\"; exit $code }"
+        "-File",
+        "${workspaceFolder}/scripts/lint_portal_tags.ps1"
       ],
       "group": "test",
       "problemMatcher": []

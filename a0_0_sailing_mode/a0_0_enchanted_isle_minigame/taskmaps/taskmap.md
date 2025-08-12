@@ -9,14 +9,14 @@ Each node follows the canonical **7-step minigame node workflow** as defined in 
 
 ---
 
-## 🧱 Planned Node Structure
+## 🧱 Planned Node Structure (actual)
 
 | Node Folder                     | Working Title                     |
 |--------------------------------|-----------------------------------|
 | `a0_0_whispering_grove_node/`  | The whisper that welcomes         |
 | `a0_1_drifting_glade_node/`    | The grove that offers two paths   |
-| `a0_2_reflecting_pool_node/`   | The pool that remembers you       |
-| `a0_3_rippling_exit_node/`     | The exit that forgets forward     |
+| `a0_2_sunlit_shore_node/`      | The shore that brightens the choice |
+| `a0_3_wavesong_pier_node/`     | The pier that hums of exits       |
 
 ---
 
@@ -26,13 +26,13 @@ Each node must include the following 15 non-empty files (plus `__init__.py`):
 
 | Step | Files                        | Status |
 |------|------------------------------|--------|
-| 1    | `README.md`, `portalmap.md`, `subtaskmap.md` | ☐ |
-| 2    | `integration.py`, `integtest.py`             | ☐ |
-| 3    | `camouflage.py`, `camoutest.py`              | ☐ |
-| 4    | `orchestration.py`, `orchtest.py`            | ☐ |
-| 5    | `leftmain.py`, `lefttest.py`                 | ☐ |
-| 6    | `rightmain.py`, `righttest.py`               | ☐ |
-| 7    | `story.py`, `storytest.py`                   | ☐ |
+| 1    | `README.md`, `portalmap.md`, `subtaskmap.md` | ✅ |
+| 2    | `integration.py`, `integtest.py`             | ✅ |
+| 3    | `camouflage.py`, `camoutest.py`              | ✅ |
+| 4    | `orchestration.py`, `orchtest.py`            | ✅ |
+| 5    | `leftmain.py`, `lefttest.py`                 | ✅ |
+| 6    | `rightmain.py`, `righttest.py`               | ✅ |
+| 7    | `story.py`, `storytest.py`                   | ✅ |
 
 ---
 
@@ -61,6 +61,11 @@ If any criteria fail:
 - [ ] Escalate to `mirror_decisions/` if recursion breaks
 
 ---
+
+## 📌 Current Status (Tier‑1 complete)
+
+- See `nodestanza_0.md` for canonical four‑part paths and node snapshot.
+- See `milestones.md` (2025‑08‑12) for Tier‑1 playtest completion and portal activation notes.
 
 ## 🔚 Closing
 
