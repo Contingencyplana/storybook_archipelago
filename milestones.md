@@ -2,8 +2,8 @@
 
 # ✅ Milestone Log – Storybook Archipelago
 
-This file tracks major design, development, and recursive breakthroughs across the entire *Storybook Archipelago* project.  
-Each entry marks a confirmed structural shift, system emergence, or traversal milestone.  
+This file tracks major design, development, and recursive breakthroughs across the entire *Storybook Archipelago* project.
+Each entry marks a confirmed structural shift, system emergence, or traversal milestone.
 Use this file to monitor cross-mode growth, recursive integrity, and player readiness.
 
 ---
