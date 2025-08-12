@@ -2,20 +2,20 @@ name: Doc guard — disallow closed-bracket portal tags
 on:
   pull_request:
   push:
-    branches: [ master, main ]
+    branches: [master, main]
 jobs:
   lint-portal-marker:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Install ripgrep
         run: sudo apt-get update && sudo apt-get install -y ripgrep
-      - name: Guard: disallow closed-bracket portal tags
-        shell: bash
+      - name: "Guard: disallow closed-bracket portal tags"
         run: |
           set -euo pipefail
           if rg -n --hidden --no-messages -g '!**/.git/**' -g '*.[mM][dD]' -P '\[PORTAL:[^\]]*\]' .; then
-            echo '❌ Found closed-bracket portal tags. Use the open form "[PORTAL:" only.'
+            echo '❌ Found closed-bracket portal tags. Use the open form "[PORTAL:" only.' >&2
             exit 1
           else
             echo '✅ No forbidden closed-bracket portal tags found.'
