@@ -1,7 +1,8 @@
 <!-- Save to: storybook_archipelago/recursive_ecosystem.md -->
 
 # 🔁 recursive_ecosystem.md  
-**The Living Recursion System Behind Storybook Archipelago**
+
+The Living Recursion System Behind Storybook Archipelago
 
 > _“Every action echoes. Every node remembers. Every loop finds its shape.”_
 
@@ -36,7 +37,7 @@ Recursion manifests at multiple depths and forms:
 | Layer                  | Recursive Form                              |
 |------------------------|---------------------------------------------|
 | **Player Input**       | L/R pathing, sublists, poetic loops         |
-| **Node Structure**     | 4-node stanzas (`stanzamap_#.md`)           |
+| **Node Structure**     | 4-node stanzas (`nodestanza_#.md`)          |
 | **Camouflage**         | Glitch loops, silence paths, emotional recursion |
 | **Fallback Logic**     | Route recovery (`fallbackmap.md`, `camouflage.py`) |
 | **Test Infrastructure**| Self-checking stanzas, `*_test.py` pairs     |
@@ -60,6 +61,7 @@ Storybook Archipelago exists **because** its predecessors failed under recursion
 | **Storybook Archipelago** | Recursive stabilizer and nurse | ✅ Active and playable |
 
 Together, these games form a **meta-loop**:
+
 - The doctor (Soup) was broken.
 - The nurse (Archipelago) heals the doctor.
 - Together, they restore the game maker and the test world.
@@ -75,13 +77,13 @@ Recursion does not grow unchecked. It obeys layered protocols:
   All recursion expands only via safe, traceable increments (see `tiny_steps.md`).
 
 - **Camouflage Layer Enforcement**  
-  No recursion is exposed unless it is *joyful, meaningful, or poetic* (see `camouflage_layers.md`).
+  No recursion is exposed unless it is _joyful, meaningful, or poetic_ (see `camouflage_layers.md`).
 
 - **Fallback Paths**  
   Every recursion layer must include rollback or redirect options (see `fallbackmap.md`).
 
 - **Stanza Growth Logic**  
-  All gameplay growth occurs in 4-node stanzas, governed by `stanzamap_#.md`.
+  All gameplay growth occurs in 4-node stanzas, governed by `nodestanza_#.md`.
 
 - **Test Pair Mandate**  
   Every gameplay logic file (`*_main.py`) must be matched with a test (`*_test.py`).

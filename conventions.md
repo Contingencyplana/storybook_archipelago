@@ -1,7 +1,8 @@
 <!-- Save to: storybook_archipelago/conventions.md -->
 
 # 📏 conventions.md  
-**Canonical Naming and Structural Conventions – Storybook Archipelago**
+
+Canonical Naming and Structural Conventions – Storybook Archipelago
 
 > _“Consistency is camouflage for complexity.”_  
 > This file defines all required naming and structural conventions for the Storybook Archipelago project.  
@@ -13,24 +14,30 @@
 ## 1. 🧭 Folder Naming Conventions
 
 ### 🟦 Game Mode Folders (Tier 1)
+
 All game modes must end in `_mode/`.
 
 **Examples:**
+
 - `a0_0_sailing_mode/`
 - `a2_1_funhouse_mode/`
 - `a3_3_testing_mode/`
 
 ### 🟩 Minigame Folders (Tier 2)
+
 All minigame folders must end in `_minigame/`.
 
 **Examples:**
+
 - `enchanted_isle_minigame/`
 - `crumbling_castle_minigame/`
 
 ### 🟨 Minigame Node Folders (Tier 3)
+
 All nodes must end in `_node/`.
 
 **Examples:**
+
 - `whispering_grove_node/`
 - `echoing_cave_node/`
 
@@ -54,7 +61,7 @@ All planning folders must contain the required files defined in `planning_spaces
 | Suffix      | Meaning                             | Example                     |
 |-------------|-------------------------------------|-----------------------------|
 | `.py`       | Logic, orchestration, or test file  | `leftmain.py`, `camouflage.py` |
-| `.md`       | Planning, mapping, narrative intent | `roadmap.md`, `stanzamap_0.md` |
+| `.md`       | Planning, mapping, narrative intent | `roadmap.md`, `nodestanza_0.md` |
 | `main.py`   | Always handles L or R logic         | `leftmain.py`, `rightmain.py` |
 | `test.py`   | Must mirror the file it tests       | `camoutest.py`, `orchtest.py` |
 
@@ -66,7 +73,7 @@ Storytelling logic must reside in `story.py` and `storytest.py`.
 
 | Folder        | Required Files                                              |
 |---------------|-------------------------------------------------------------|
-| `taskmaps/`   | `__init__.py`, `milestones.md`, `README.md`, `stanzamap_0.md`, `taskmap.md` |
+| `taskmaps/`   | `__init__.py`, `milestones.md`, `README.md`, `nodestanza_0.md`, `taskmap.md` |
 | `roadmaps/`   | `__init__.py`, `milestones.md`, `README.md`, `roadstanza_0.md`, `roadmap.md` |
 | `mirror_decisions/` | `__init__.py`, `mirror_decision.md`, `fallbackmap.md`, `README.md`, `milestones.md` |
 
@@ -89,11 +96,11 @@ All folder paths must follow this recursive descent:
 
 ## 6. 🎼 Stanza Numbering (Groups of Four)
 
-Storybook Archipelago organizes content into rhythmic groups of four called **stanzas** at each layer:
+Storybook Archipelago organizes content into rhythmic groups of four called **stanzas** at each layer. Use these canonical terms:
 
-- Workspace stanzas: 4 game modes
-- Game mode stanzas: 4 minigames
-- Minigame stanzas: 4 nodes
+- Mirrorstanza: 4 game modes (workspace/world level)
+- Roadstanza: 4 minigames (mode level)
+- Nodestanza: 4 nodes (minigame level)
 
 Numbering uses the pattern `aS_I` where `S` is the stanza index starting at 0, and `I` is the item within the stanza (0..3). Examples for a minigame with:
 
@@ -112,7 +119,7 @@ Numbering uses the pattern `aS_I` where `S` is the stanza index starting at 0, a
 	- `a4_0...` → `a4_3...`
 	- `a5_0...` → `a5_3...`
 
-This pattern applies at workspace, mode, and minigame levels. It aligns with our L/R traversal and keeps planning predictable. See also `workflow.md` and `roadmaps/` for mode stanza planning, and `taskmaps/` for minigame stanza planning.
+This pattern applies at workspace, mode, and minigame levels. It aligns with our L/R traversal and keeps planning predictable. See also `workflow.md` and `roadmaps/` for mode stanza planning (roadstanza), and `taskmaps/` for minigame stanza planning (nodestanza).
 
 ---
 

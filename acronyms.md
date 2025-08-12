@@ -1,7 +1,8 @@
 <!-- Save to: storybook_archipelago/acronyms.md -->
 
 # 🔤 acronyms.md  
-**Canonical Acronyms and Shortforms – Storybook Archipelago**
+
+Canonical Acronyms and Shortforms – Storybook Archipelago
 
 > _“Every system is a story in shorthand.”_
 
@@ -69,7 +70,10 @@
 
 **SPZ** – Special Planning Zone. Reserved directories for metagame orchestration or override logic, e.g., `mirror_decisions/`, `playability_ai/`.
 
-**STM** – Stanzamap. A stanza-based planning file (e.g., `stanzamap_0.md`) that defines Layer 4 node groupings.
+**NSM** – Nodestanza Map. A stanza-based planning file (e.g., `nodestanza_0.md`) that defines groups of 4 minigame nodes.
+**RSM** – Roadstanza Map. A stanza-based planning file (e.g., `roadstanza_0.md`) that defines groups of 4 minigames within a mode.
+**MSM** – Mirrorstanza Map. A stanza-based planning file (e.g., `mirrorstanza_0.md`) that defines groups of 4 game modes.
+**STM** – Stanzamap (legacy alias of NSM). Previously used name for `nodestanza_#.md`.
 
 ---
 

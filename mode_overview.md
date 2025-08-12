@@ -93,7 +93,7 @@ Descriptive map of the 16 game modes – Storybook Archipelago.
 ## a2_2_codex_builder_mode
 
 **Poetic Role:** A living record, self-documenting as it unfolds  
-**System Role:** Auto-generates docs, glossaries, stanzamaps, and AI profiles  
+**System Role:** Auto-generates docs, glossaries, nodestanza maps, and AI profiles  
 **Key Metaphors:** Scribe, seed-script, recursive tome  
 
 ---

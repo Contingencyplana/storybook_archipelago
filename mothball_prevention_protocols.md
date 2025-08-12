@@ -1,7 +1,8 @@
 <!-- Save to: storybook_archipelago/mothball_prevention_protocols.md -->
 
 # 🧷 mothball_prevention_protocols.md  
-**Long-Term Stability Safeguards – Storybook Archipelago**
+
+Long-Term Stability Safeguards – Storybook Archipelago
 
 > _“The fourth was built to last.”_  
 > This file prevents Storybook Archipelago from suffering the same fate as its predecessors.  
@@ -14,16 +15,19 @@
 A record of why the previous three games were mothballed:
 
 ### ⚙️ Storybook (Game Maker)
+
 - **Failure Mode:** Overgeneration and tool spiral
 - **Cause:** Unbounded remixing, too many system layers, unstable user scripting
 - **Consequence:** Loss of focus, unusable complexity, fractured narrative control
 
 ### 🧪 FUN Factory (Test Game)
+
 - **Failure Mode:** Testbed overload
 - **Cause:** Infinite procedural test scenarios, unclear gameplay endpoints
 - **Consequence:** Players overwhelmed by logic fog, no clean way to "win" or progress
 
 ### 🧬 Primordial Soup (Cyberdoctor)
+
 - **Failure Mode:** Recursive collapse
 - **Cause:** Recursive cell growth without play-layer scaffolding
 - **Consequence:** Anomaly management spiraled into system entanglement and introspective drift
@@ -32,7 +36,7 @@ A record of why the previous three games were mothballed:
 
 ## 2. 🚨 Warning Signs
 
-### Early indicators of a mothball-risk state:
+### Early indicators of a mothball-risk state
 
 - ❗ L/R logic becomes unclear or tangled
 - ❗ Players forget what they're doing or why
@@ -76,22 +80,26 @@ These features ensure Archipelago stays **playable** and **fun**:
 ## 5. ✅ Audit Checklist
 
 Use this checklist when:
+
 - Adding new game modes
 - Expanding stanzas
 - Refactoring logic layers
 - Introducing new AI systems
 
 ### 🗂️ Structure Audit
+
 - [ ] All new folders follow `mode → minigame → node` hierarchy
 - [ ] Node type (1–4) is clearly defined
 - [ ] L and R do not cross-connect without reason
 
 ### 🎭 Camouflage Audit
+
 - [ ] New content passes tone test: “Is it joyful yet?”
 - [ ] No mechanical logic appears without metaphor
 - [ ] Player agency remains obvious and guided
 
 ### 🧪 Test Audit
+
 - [ ] All `*_main.py` files have a corresponding `*_test.py`
 - [ ] Integration routing is verifiable
 - [ ] No orphaned or redundant fallback logic
@@ -103,12 +111,14 @@ Use this checklist when:
 If a recursion collapse, design drift, or UX fog emerges:
 
 ### 🔁 Rollback Procedure
-1. Identify last stable stanza (`stanzamap_#.md`)
+
+1. Identify last stable stanza (`nodestanza_#.md`)
 2. Roll back to last known clean state
 3. Archive experimental branches separately
 4. Freeze development and perform full audit (Section 5)
 
 ### 📼 Fallback Substitution
+
 - Replace broken L/R paths with safe poetic loops
 - Route player into camouflage layers for tonal reset
 - Use `orchestration.py` to simulate memory or clarity

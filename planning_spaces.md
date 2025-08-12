@@ -12,15 +12,25 @@ Planning zones coordinate recursive structure, node development, and anomaly res
 
 Each `taskmaps/` folder supports one minigame (Tier 2 node) and defines its stanza layout and task progression.
 
+Stanza taxonomy (groups of four):
+
+- Nodestanza → 4 minigame nodes (minigame level)
+- Roadstanza → 4 minigames (mode level)
+- Mirrorstanza → 4 game modes (workspace/world level)
+
 **Required:**
+
+
 - `__init__.py` — Python module marker
 - `milestones.md` — Node completions and progress tracking
 - `README.md` — Context, tone, recursion setup
-- `stanzamap_0.md` — The first stanza structure
+- `nodestanza_0.md` — The first stanza structure
 - `taskmap.md` — Core checklist and implementation guide
 
 **Optional:**
-- `stanzamap_1.md`, `stanzamap_2.md`, etc. — Additional stanzas
+
+
+- `nodestanza_1.md`, `nodestanza_2.md`, etc. — Additional stanzas
 
 ---
 
@@ -29,6 +39,7 @@ Each `taskmaps/` folder supports one minigame (Tier 2 node) and defines its stan
 Each `roadmaps/` folder supports one gameplay mode (Tier 1) and defines world-level traversal, poetic progression, and minigame orchestration.
 
 **Required:**
+
 - `__init__.py` — Python module marker
 - `milestones.md` — Stanza and minigame completion log
 - `README.md` — Game mode purpose, design vision, traversal rules
@@ -37,6 +48,7 @@ Each `roadmaps/` folder supports one gameplay mode (Tier 1) and defines world-le
 All downstream portalmap.md links must use four‑part paths.
 
 **Optional:**
+
 - `roadstanza_1.md`, etc. — Additional stanzas as the mode grows
 
 ---
@@ -47,6 +59,7 @@ This folder activates **only** when a confirmed recursive anomaly is detected �
 It contains anomaly logs, rollback plans, and containment mappings.
 
 **Required:**
+
 - `__init__.py` — Python marker for AI indexing
 - `mirror_decision.md` — Canonical anomaly report
 - `fallbackmap.md` — Redirect or recovery instructions
@@ -66,17 +79,21 @@ Specialized planning folders may emerge to support:
 - Gameplay transition layers
 
 **Planning structure will be defined per domain.**  
+
 See:  
+
 - `tiny_steps.md`  
 - `ai_agents.md`  
 - `camouflage_layers.md`  
 - Layer-specific gameplay docs
+
 
 ---
 
 ## 🔚 Conclusion
 
 All planning folders must be:
+
 - **Explicitly structured**
 - **Minimal but sufficient**
 - **Recursively navigable**

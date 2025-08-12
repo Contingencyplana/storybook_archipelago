@@ -57,7 +57,7 @@ Additional helpers (e.g., `camouflage.py`, `orchestration.py`) may appear in adv
 | a1_3  | `narrative_mode/`      | System       | 📖 Story structure, branching, and pacing       |
 | a2_0  | `visualizer_mode/`     | Hybrid       | 🗺️ Debug overlays, maps, and recursive views    |
 | a2_1  | `automation_mode/`     | System       | 🧰 Recursive builder and compiler pipelines     |
-| a2_2  | `codex_builder_mode/`  | System       | 📘 Generates taskmaps, stanzamaps, and docs     |
+| a2_2  | `codex_builder_mode/`  | System       | 📘 Generates taskmaps, nodestanza maps, and docs |
 | a2_3  | `psychiatrist_mode/`   | System       | 🧪 Detects recursion errors and breakdowns      |
 | a3_0  | `sentinel_mode/`       | System       | 🧱 Canon guardian and access control            |
 | a3_1  | `quarantine_mode/`     | System       | 🚨 Recursion anomaly containment                |
