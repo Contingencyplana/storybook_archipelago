@@ -47,6 +47,7 @@ memory = {
   }
 }
 ```
+
 ## 🧠 Memory Guidelines and Gameplay Impact
 
 Memory should always be:

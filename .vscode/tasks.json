@@ -22,7 +22,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Lint: disallow [PORTAL:]",
+      "label": "Lint: disallow closed-bracket portal tags",
       "type": "process",
       "command": "pwsh",
       "options": {

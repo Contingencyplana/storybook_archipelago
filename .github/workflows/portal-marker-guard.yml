@@ -1,4 +1,4 @@
-name: Doc guard — disallow [PORTAL:]
+name: Doc guard — disallow closed-bracket portal tags
 on:
   pull_request:
   push:
