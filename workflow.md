@@ -180,7 +180,7 @@ All planning folders must include the canonical files listed in `planning_spaces
 - **VS Code tasks**:
   - `Validate Docs` → linters + schema checks
   - `Audit Gate A–E` → targeted checks per acceptance gate
-  - Local guards: portal tag guard (disallow closed-bracket portal tags), non-string return guard (handlers/story)
+  - Local guards: portal tag guard (disallow the variant that closes the bracket), non-string return guard (handlers/story)
   - Tests: `Test: repo root (pytest)` / node‑local test task
   - Packaging: `Package: make clean ZIP` (uses `git archive --worktree-attributes` + `.gitattributes export-ignore`)
 

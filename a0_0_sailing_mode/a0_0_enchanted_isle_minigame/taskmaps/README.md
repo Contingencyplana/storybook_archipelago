@@ -23,12 +23,12 @@ It is the first minigame within `a0_0_sailing_mode`, and serves as the player’
 This minigame will contain four gameplay nodes, built as one poetic stanza.  
 They follow a gentle narrative arc from contact → contrast → reflection → exit.
 
-| Node Folder                     | Working Title                     | Purpose |
-|--------------------------------|-----------------------------------|---------|
-| `a0_0_whispering_grove_node/`  | "The whisper that welcomes"       | Entry / initiation |
-| `a0_1_drifting_glade_node/`    | "The grove that offers two paths" | Tone choice |
-| `a0_2_reflecting_pool_node/`   | "The pool that remembers you"     | Memory echo |
-| `a0_3_rippling_exit_node/`     | "The exit that forgets forward"   | Transition to next island |
+| Node Folder                    | Working Title                      | Purpose |
+|--------------------------------|------------------------------------|---------|
+| `a0_0_whispering_grove_node/`  | "The whisper that welcomes"        | Entry / initiation |
+| `a0_1_drifting_glade_node/`    | "The grove that offers two paths"  | Tone choice |
+| `a0_2_reflecting_pool_node/`   | "The pool that remembers you"      | Memory echo |
+| `a0_3_rippling_exit_node/`     | "The exit that forgets forward"    | Transition to next island |
 
 Final node names may evolve slightly as camouflage layers emerge.
 

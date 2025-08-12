@@ -24,7 +24,7 @@ pip install -r requirements.txt
 Preferred via VS Code tasks:
 
 - Test: repo root (pytest)
-- Lint: disallow closed‑bracket portal tags (uses ripgrep). The open form "[PORTAL:" is allowed.
+- Lint: disallow closed‑bracket portal tags (uses ripgrep). Use only the open form of the portal hint (the version without a closing bracket).
 - Lint: disallow non-string returns (handlers/story)
 
 CLI equivalents:
@@ -58,7 +58,7 @@ Minimum Tier‑1 slice before linking:
 - Four‑part portal paths: see `portals_and_four_part_paths.md`.
 - Story text must include "grove" and must not contain any portal tag.
 - Left returns include token "[LEFT]"; Right returns include token "[RIGHT]".
-- Portal tags: use the open form "[PORTAL:" (no closing bracket). The closed‑bracket form is forbidden and enforced by lint.
+- Portal tags: use only the open form of the portal hint (no closing bracket). The closed‑bracket form is forbidden and enforced by lint.
 
 ## Packaging
 
