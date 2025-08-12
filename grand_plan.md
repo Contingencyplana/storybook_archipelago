@@ -63,6 +63,8 @@ References: `camouflage_layers.md`, `return_value_contract_v1.md`, `portals_and_
 - Cadence: per node (1–2 min), per stanza smoke (5–8 min).
 - Signals: scene includes "grove"; `[LEFT]`/`[RIGHT]` markers present; no `[PORTAL:` in story; tone notes captured.
 
+See: `testplayers.md` for who/when to invite and readiness gates.
+
 ## Builder scope
 
 - Now: route creation, edit `story.py` text, trigger tests, mark portals Pending.

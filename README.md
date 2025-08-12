@@ -95,6 +95,7 @@ Use VS Code tasks ‘Test: repo root (pytest)’ or ‘Test: current node (pytes
 ## 📚 Docs index
 
 - Grand Plan (build-from-inside): [grand_plan.md](grand_plan.md)
+- Testplayers (who/when, gates): [testplayers.md](testplayers.md)
 - Rhyme & Reason (why guide): [rhyme_and_reason.md](rhyme_and_reason.md)
 - Node Type Rollout (Tier‑1 subtypes pacing): [node_type_rollout.md](node_type_rollout.md)
 - Node Tiers (1–3 canonical): [node_tiers.md](node_tiers.md)

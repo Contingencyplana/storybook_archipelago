@@ -79,6 +79,8 @@ If the story itself doesn’t enchant, recurse.
 
 If the setting lacks emotional temperature, recurse.
 
+Note: First outside testplayers are invited at this layer. See `testplayers.md` for readiness gates and session shape.
+
 ---
 
 ## 6. 🌀 Layer 3.0 – Intermediate Camouflage
@@ -196,6 +198,7 @@ Without it the game will DROWN stillborn in a Sea of Competition!
 ## ✅ Camouflage Is Not Optional
 
 Your system must expect recursion:
+
 - `camouflage_level` is a recursive float (`4.3`, `6.2`, `8.9`)
 - `camouflage.py` tests, then escalates
 - Every stanza may add a new thin disguise
