@@ -1,0 +1,13 @@
+{
+  "d079b9c": "fix(tools): import nodes by package path in play_node.py to resolve relative-import error",
+  "f8500a8": "docs(testing): add testplayers.md and cross-link from README and grand_plan",
+  "5eb8e39": "docs(strategy): add grand_plan.md and update top-level README",
+  "71ed89e": "docs(milestones,ci): update milestones and refine package-on-tag workflow",
+  "87fc6db": "ci(guards): fix portal-marker guard quoting/indent; clarify messages",
+  "8d1428f": "chore(tooling): add play_node runner; update overarching docs",
+  "a64eda2": "chore(docs): batch doc updates across architecture and workflow",
+  "e5d70f9": "chore(minigame): remove empty minigame node",
+  "da6be3d": "feat(minigame): add a0_3_wavesong_pier_node (Tier-1 scaffold)",
+  "3020871": "feat(minigame): add a0_1_drifting_glade_node (Tier-1 scaffold)",
+  "334cba7": "chore(minigame): remove empty node placeholder"
+}

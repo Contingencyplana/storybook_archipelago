@@ -1,0 +1,13 @@
+{
+  "Fixed play_node.py.": "fix(tools): import nodes by package path in play_node.py to resolve relative-import error",
+  "Added testplayers.md and updated 3 overarching files.": "docs(testing): add testplayers.md and cross-link from README and grand_plan",
+  "Added a Grand Plan. Made changes to Main README.": "docs(strategy): add grand_plan.md and update top-level README",
+  "Updated Main Milestones and Package On Tag.": "docs(milestones,ci): update milestones and refine package-on-tag workflow",
+  "Updated Portal Marker Guard.": "ci(guards): fix portal-marker guard quoting/indent; clarify messages",
+  "Updated 6 overarching files and added playnode.": "chore(tooling): add play_node runner; update overarching docs",
+  "Updated 12 overarching files.": "chore(docs): batch doc updates across architecture and workflow",
+  "Deleted an empty minigame node.": "chore(minigame): remove empty minigame node",
+  "Created C:\\Users\\Admin\\storybook_archipelago\\a0_0_sailing_mode\\a0_0_enchanted_isle_minigame\\a0_3_wavesong_pier_node.": "feat(minigame): add a0_3_wavesong_pier_node (Tier-1 scaffold)",
+  "Created C:\\Users\\Admin\\storybook_archipelago\\a0_0_sailing_mode\\a0_0_enchanted_isle_minigame\\a0_1_drifting_glade_node.": "feat(minigame): add a0_1_drifting_glade_node (Tier-1 scaffold)",
+  "Deleted an empty node.": "chore(minigame): remove empty node placeholder"
+}
