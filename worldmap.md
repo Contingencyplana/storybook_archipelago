@@ -67,7 +67,7 @@ Traversal in Storybook Archipelago is **recursive** and **poetic**.
 
 - The player starts in `sailing_mode/` on the open sea
 - L and R input lead to new islands or minigames
-- The **story.py** and **camouflage.py** disguise these transitions (Tier‑1 story exposes `describe_scene(memory)`)
+- The **story.py** and **camouflage.py** disguise these transitions (Tier‑1 capability story exposes `describe_scene(memory)`)
 
 ### 🏝️ Island Landfall
 

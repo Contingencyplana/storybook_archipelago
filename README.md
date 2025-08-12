@@ -39,7 +39,7 @@ Use the `story.py` API; the narrative surface is `describe_scene(memory)`.
 
 Additional helpers (e.g., `camouflage.py`, `orchestration.py`) may appear in advanced nodes.
 
-> In Tier‑1 nodes, **story.py** exposes the player‑facing narrative via `describe_scene(memory)`.
+> In Tier‑1 (capability) nodes, **story.py** exposes the player‑facing narrative via `describe_scene(memory)`.
 
 ---
 

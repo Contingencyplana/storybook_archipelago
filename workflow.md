@@ -30,7 +30,7 @@ This file defines the **step‑by‑step process** for creating game modes, mini
 We use two ways to build nodes:
 
 - **Standard (7-step)** — follow the detailed sequence below. Use for new mechanics or anything cross-cutting.
-- **Fast-path (automation)** — when the node is simple Tier-3, we compress into **2–3 passes**:
+- **Fast-path (automation)** — when the node is simple Tier‑3 (capability tier), we compress into **2–3 passes**:
 
   1) Planning shell (`README.md`, `portalmap.md`, `subtaskmap.md`)
   2) One-shot build + tests + guard sweeps (integration, camouflage, orchestration, left/right, story)
@@ -127,7 +127,7 @@ Follow the **Return value contract (handlers & story) — v1** for string marker
 
 - Every Python logic file (`*.py`) must have a matching `*test.py`.
 - Scaffolding may start with partial tests, but **minimum test coverage** defined in `test_strategy.md` must be met **before a node is link‑enabled**.
-- Tier‑3 nodes must pass **integration**, **camouflage**, and **orchestration** tests before being referenced in any upstream `portalmap.md`.
+- Tier‑3 (capability tier) nodes must pass **integration**, **camouflage**, and **orchestration** tests before being referenced in any upstream `portalmap.md`.
 - CI must **fail** on:
   - Non‑canonical paths (relative, wrong suffix, missing `storybook_`)
   - Missing/duplicate test files for required modules
@@ -153,7 +153,7 @@ All planning folders must include the canonical files listed in `planning_spaces
 
 ## 5) 🔁 Recursive Safety & Automation
 
-- Minigame generation may be **manual** or **automated**. Prefer the **7‑step** pattern; a compressed **fast-path** is allowed for simple Tier‑3 nodes when criteria in **Execution Modes** are met (idempotent changes, tests + guards green, milestones updated).
+- Minigame generation may be **manual** or **automated**. Prefer the **7‑step** pattern; a compressed **fast-path** is allowed for simple Tier‑3 (capability) nodes when criteria in **Execution Modes** are met (idempotent changes, tests + guards green, milestones updated).
 - Any skipped step must be marked in `subtaskmap.md` with ☐ and a short rationale.
 - Automation stanzas (e.g., compiler/validators) may compress steps, but only under **`high_command`** oversight and with tests updated accordingly.
 
@@ -194,7 +194,7 @@ All planning folders must include the canonical files listed in `planning_spaces
 
 ## 8) ✅ Acceptance & Gates
 
-- **Node acceptance (Tier‑3 minimal viable slice):**
+- **Node acceptance (Tier‑3 capability minimal viable slice):**
   - `integration.py` routes L/R/INVALID
   - `leftmain.py`/`rightmain.py` return structured results
   - `portalmap.md` uses **four‑part paths** only

@@ -70,7 +70,7 @@ Use this file to monitor cross-mode growth, recursive integrity, and player read
 
 - Standardized narrative references to `story.py` and added `describe_scene(memory)` note.
 - Added VS Code pytest tasks (`Test: repo root`, `Test: current node`).
-- Canonicalized Return Value Contract v1 and added Tier-3 exception for markers.
+- Canonicalized Return Value Contract v1 and noted a Tier‑3 capability exception for markers (documented behavior scope, not structure).
 - Normalized disallowed substring to `[PORTAL:` across docs/tests.
 - Renamed registry id to `storybook_core` (+ legacy note).
 - Added guardrails:

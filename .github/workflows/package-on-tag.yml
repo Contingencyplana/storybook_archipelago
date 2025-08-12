@@ -1,0 +1,36 @@
+name: Package on tag — clean ZIP
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare dist
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+
+      - name: Build clean ZIP (git archive)
+        shell: bash
+        run: |
+          set -euo pipefail
+          TAG_NAME="${GITHUB_REF_NAME}"
+          REPO_NAME="${{ github.repository }}"
+          REPO_NAME="${REPO_NAME##*/}"
+          ZIP_PATH="dist/${REPO_NAME}-${TAG_NAME}.zip"
+          git --no-pager archive -o "$ZIP_PATH" --format zip --worktree-attributes HEAD
+          echo "ZIP_PATH=$ZIP_PATH" >> $GITHUB_ENV
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: package-${{ github.ref_name }}
+          path: ${{ env.ZIP_PATH }}
+          if-no-files-found: error
