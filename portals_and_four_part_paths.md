@@ -89,6 +89,8 @@ Any routing logic (e.g., `integration.py`, `orchestration.py`, `high_command`) m
 - Resolve targets across workspaces using `workspace_registry.md`  
 - Fail fast on any invalid path before attempting traversal  
 
+Note: Folder names commonly use stanza numbering (groups of four such as `a0_0..a0_3`, `a1_0..a1_3`). This is a naming rhythm only and does not modify the four-part path format. See `conventions.md` for the stanza scheme.
+
 ---
 
 ## 🌐 Multi-Workspace Strategy

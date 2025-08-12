@@ -36,7 +36,7 @@ We use two ways to build nodes:
   2) One-shot build + tests + guard sweeps (integration, camouflage, orchestration, left/right, story)
   3) Activate portals + log milestones
 
-**Fast-path criteria:** tiny, idempotent edits; tests run from repo root; guards clean (disallow the closed-bracket portal tag variant; use “[PORTAL:” only), and handlers/story return **strings only**.
+**Fast-path criteria:** tiny, idempotent edits; tests run from repo root; guards clean (disallow the closed‑bracket portal tag variant; use the open form only), and handlers/story return **strings only**.
 
 **Definition of done (any mode):**
 
@@ -65,6 +65,8 @@ Storybook Archipelago unfolds recursively in **three tiers**:
 > **Pathing rule:** All links in any `portalmap.md` **must** use the four‑part path format from `portals_and_four_part_paths.md`.
 
 > Terminology note: The table above describes the world’s structural layers (mode → minigame → node). Node capability tiers (Tier‑1/2/3 behavior scope) are defined separately in `node_tiers.md`. By default, build a minimal viable Tier‑1 node slice first, then escalate capability as needed.
+
+> Stanza note: Folders are typically organized in groups of four (stanzas) using `aS_I` numbering (e.g., `a0_0..a0_3`, `a1_0..a1_3`). This rhythm aids planning and traversal and does not change the four‑part path rule. See `conventions.md` for details.
 
 ---
 
@@ -180,11 +182,11 @@ All planning folders must include the canonical files listed in `planning_spaces
 - **VS Code tasks**:
   - `Validate Docs` → linters + schema checks
   - `Audit Gate A–E` → targeted checks per acceptance gate
-  - Local guards: portal tag guard (disallow the variant that closes the bracket), non-string return guard (handlers/story)
+  - Local guards: portal tag guard (disallow the variant that closes the bracket), non‑string return guard (handlers/story)
   - Tests: `Test: repo root (pytest)` / node‑local test task
   - Packaging: `Package: make clean ZIP` (uses `git archive --worktree-attributes` + `.gitattributes export-ignore`)
 
-- CI: doc guard — disallow the closed-bracket portal tag variant; use the open form only.
+- CI: doc guard — disallow the closed‑bracket portal tag variant; use the open form only.
 - CI: code guard — disallow non-string returns in handlers/story.
 - CI (optional): run tests on push/PR (install deps → `pytest -q`).
 

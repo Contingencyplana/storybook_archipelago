@@ -52,6 +52,7 @@ It contains anomaly logs, rollback plans, and containment mappings.
 - `fallbackmap.md` — Redirect or recovery instructions
 - `README.md` — Summary of purpose, severity, and triggers
 - `milestones.md` — Tracks recovery progress or intervention success
+- `mirrorstanza_0.md` — First stanza of game modes within game.
 
 ---
 

@@ -87,7 +87,36 @@ All folder paths must follow this recursive descent:
 
 ---
 
-## 6. 📖 Story and Camouflage Files (Tier 3)
+## 6. 🎼 Stanza Numbering (Groups of Four)
+
+Storybook Archipelago organizes content into rhythmic groups of four called **stanzas** at each layer:
+
+- Workspace stanzas: 4 game modes
+- Game mode stanzas: 4 minigames
+- Minigame stanzas: 4 nodes
+
+Numbering uses the pattern `aS_I` where `S` is the stanza index starting at 0, and `I` is the item within the stanza (0..3). Examples for a minigame with:
+
+- One stanza:
+	- `a0_0...`, `a0_1...`, `a0_2...`, `a0_3...`
+
+- Two stanzas:
+	- `a0_0...`, `a0_1...`, `a0_2...`, `a0_3...`
+	- `a1_0...`, `a1_1...`, `a1_2...`, `a1_3...`
+
+- Six stanzas:
+	- `a0_0...` → `a0_3...`
+	- `a1_0...` → `a1_3...`
+	- `a2_0...` → `a2_3...`
+	- `a3_0...` → `a3_3...`
+	- `a4_0...` → `a4_3...`
+	- `a5_0...` → `a5_3...`
+
+This pattern applies at workspace, mode, and minigame levels. It aligns with our L/R traversal and keeps planning predictable. See also `workflow.md` and `roadmaps/` for mode stanza planning, and `taskmaps/` for minigame stanza planning.
+
+---
+
+## 7. 📖 Story and Camouflage Files (Tier 3)
 
 Each Tier 3 `*_node/` must include:
 
