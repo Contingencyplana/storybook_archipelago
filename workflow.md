@@ -64,11 +64,13 @@ Storybook Archipelago unfolds recursively in **three tiers**:
 
 > **Pathing rule:** All links in any `portalmap.md` **must** use the four‑part path format from `portals_and_four_part_paths.md`.
 
+> Terminology note: The table above describes the world’s structural layers (mode → minigame → node). Node capability tiers (Tier‑1/2/3 behavior scope) are defined separately in `node_tiers.md`. By default, build a minimal viable Tier‑1 node slice first, then escalate capability as needed.
+
 ---
 
 ## 2) 🌀 Seven‑Step Minigame Node Workflow
 
-Create a functional Tier‑3 node using this **7‑step** sequence:
+Create a functional node using this **7‑step** sequence (start with capability Tier‑1 unless explicitly targeting higher capability; see `node_tiers.md`):
 
 ### **Step 1 — Planning Shell**
 
@@ -80,6 +82,8 @@ Create a functional Tier‑3 node using this **7‑step** sequence:
 
 - `integration.py` — Routes input to L, R, or story
 - `integtest.py` — Validates dispatch logic
+
+See also: `docs/return_value_contract_v1.md` (string returns and markers).
 
 ### **Step 3 — Camouflage Layer**
 
@@ -108,7 +112,14 @@ Create a functional Tier‑3 node using this **7‑step** sequence:
 
 > **Consistency note:** All storytelling content lives in `story.py`. Logic lives in `*main.py` files (incl. `storytelling_ai` orchestration when used).
 
-Follow the **Return value contract (handlers & story) — v1** for string markers.
+Follow the **Return value contract (handlers & story) — v1** for string markers (see `docs/return_value_contract_v1.md`).
+
+
+#### Playtest loop (after Step 7)
+
+- Manual pass the node (L/R + story) → log observations and defects in `subtaskmap.md`.
+- Fix quickly, re‑run tests and guards, and repeat until fun/clear.
+- Only then flip portals in `portalmap.md` to Active.
 
 ---
 
@@ -169,10 +180,15 @@ All planning folders must include the canonical files listed in `planning_spaces
 - **VS Code tasks**:
   - `Validate Docs` → linters + schema checks
   - `Audit Gate A–E` → targeted checks per acceptance gate
+  - Local guards: `Lint: disallow [PORTAL:]`, `Lint: disallow non-string returns (handlers/story)`
+  - Tests: `Test: repo root (pytest)` / node‑local test task
+  - Packaging: `Package: make clean ZIP` (uses `git archive --worktree-attributes` + `.gitattributes export-ignore`)
 
 - CI: doc guard — disallow the closed-bracket portal tag variant; use “[PORTAL:” only.
 - CI: code guard — disallow non-string returns in handlers/story.
 - CI (optional): run tests on push/PR (install deps → `pytest -q`).
+
+> Packaging for playtests: prefer the `Package: make clean ZIP` task which honors `.gitattributes` export‑ignore. Ensure `/dist/` and tooling caches are export‑ignored.
 
 ---
 
