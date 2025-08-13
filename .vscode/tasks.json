@@ -1,94 +1,115 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "Test: repo root (pytest)",
-      "type": "shell",
-      "command": "pytest -q",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "group": "test",
-      "problemMatcher": []
-    },
-    {
-      "label": "Test: current node (pytest)",
-      "type": "shell",
-      "command": "pytest -q ${fileDirname}",
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "group": "test",
-      "problemMatcher": []
-    },
-    {
-      "label": "Lint: disallow closed-bracket portal tags",
-      "type": "process",
-      "command": "pwsh",
-      "options": { "cwd": "${workspaceFolder}" },
-      "args": [
-        "-NoProfile",
-        "-File",
-        "${workspaceFolder}/scripts/lint_portal_tags.ps1"
-      ],
-      "group": "test",
-      "problemMatcher": []
-    },
-    {
-      "label": "Lint: disallow non-string returns (handlers/story)",
-      "type": "process",
-      "command": "pwsh",
-      "options": { "cwd": "${workspaceFolder}" },
-      "args": [
-        "-NoProfile",
-  "-Command",
-  "$ErrorActionPreference='Stop'; rg -n --hidden --no-messages -g '!**/.git/**' -g '!**/.venv/**' -g '*.[pP][yY]' -P '^[\\s]*(?!#)[\\s]*return[\\s]*[\\{\\[]' .; $c1=$LASTEXITCODE; if ($c1 -eq 0) { Write-Error 'Found non-string returns (dict/list literal). Handlers and story must return strings.'; exit 1 } elseif ($c1 -ne 1) { Write-Error \"ripgrep error ($c1)\"; exit $c1 }; rg -n --hidden --no-messages -g '!**/.git/**' -g '!**/.venv/**' -g '*.[pP][yY]' -P '^[\\s]*(?!#)[\\s]*return[\\s]*(json\\.(dumps|dump)\\(|ujson\\.dumps\\()' .; $c2=$LASTEXITCODE; if ($c2 -eq 0) { Write-Error 'Found json.dumps return. Return plain strings instead.'; exit 1 } elseif ($c2 -ne 1) { Write-Error \"ripgrep error ($c2)\"; exit $c2 }; exit 0"
-      ],
-      "group": "test",
-      "problemMatcher": []
-    },
-    {
-      "label": "Package: make clean ZIP",
-      "type": "process",
-      "command": "pwsh",
-      "options": { "cwd": "${workspaceFolder}" },
-      "args": [
-        "-NoProfile",
-        "-Command",
-  "$ErrorActionPreference='Stop'; $ws='${workspaceFolder}'; $date=Get-Date -Format 'yyyyMMdd-HHmm'; $dist=Join-Path $ws 'dist'; if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Null }; $zip=Join-Path $dist ('storybook_archipelago-' + $date + '.zip'); $env:GIT_PAGER=''; git --no-pager archive -o $zip --format zip --worktree-attributes HEAD 2>$null; $code=$LASTEXITCODE; if ($code -eq 0) { Write-Host $zip; exit 0 } else { if (Test-Path $zip) { Remove-Item -Force $zip }; $excludes=@('.git','/.git/*','/.venv','/.venv/*'); $items=Get-ChildItem -LiteralPath $ws -Force -Recurse | Where-Object { $_.PSIsContainer -or ($_.FullName -notmatch '\\.git(\\|$)' -and $_.FullName -notmatch '\\.venv(\\|$)' -and $_.FullName -notmatch '\\__pycache__(\\|$)' -and $_.FullName -notmatch '\\.vscode(\\|$)' -and $_.FullName -notmatch '\\.github(\\|$)' ) }; Compress-Archive -Path $items -DestinationPath $zip -Force; Write-Host $zip; exit 0 }"
-      ],
-      "group": "build",
-      "problemMatcher": []
-  },
-    {
-      "label": "History: go 10 (rewrite messages)",
-      "type": "process",
-      "command": "pwsh",
-      "options": { "cwd": "${workspaceFolder}" },
-      "args": [
-        "-NoProfile",
-        "-ExecutionPolicy",
-        "Bypass",
-        "-File",
-        "${workspaceFolder}/scripts/go10.ps1",
-        "-Count",
-        "10"
-      ],
-      "group": "none",
-      "problemMatcher": []
-    },
-    {
-      "label": "History: push rewritten (force-with-lease)",
-      "type": "process",
-      "command": "pwsh",
-      "options": { "cwd": "${workspaceFolder}" },
-      "args": [
-        "-NoProfile",
-        "-Command",
-        "$ErrorActionPreference='Stop'; git --no-pager log --oneline -n 12; git push --force-with-lease origin HEAD:master"
-      ],
-      "group": "none",
-      "problemMatcher": []
-    }
-  ]
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Test: repo root (pytest)",
+			"type": "shell",
+			"command": "pytest -q",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"group": "test",
+			"problemMatcher": []
+		},
+		{
+			"label": "Test: current node (pytest)",
+			"type": "shell",
+			"command": "pytest -q ${fileDirname}",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"group": "test",
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint: disallow closed-bracket portal tags",
+			"type": "process",
+			"command": "pwsh",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"args": [
+				"-NoProfile",
+				"-File",
+				"${workspaceFolder}/scripts/lint_portal_tags.ps1"
+			],
+			"group": "test",
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint: disallow non-string returns (handlers/story)",
+			"type": "process",
+			"command": "pwsh",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$ErrorActionPreference='Stop'; rg -n --hidden --no-messages -g '!**/.git/**' -g '!**/.venv/**' -g '*.[pP][yY]' -P '^[\\s]*(?!#)[\\s]*return[\\s]*[\\{\\[]' .; $c1=$LASTEXITCODE; if ($c1 -eq 0) { Write-Error 'Found non-string returns (dict/list literal). Handlers and story must return strings.'; exit 1 } elseif ($c1 -ne 1) { Write-Error \"ripgrep error ($c1)\"; exit $c1 }; rg -n --hidden --no-messages -g '!**/.git/**' -g '!**/.venv/**' -g '*.[pP][yY]' -P '^[\\s]*(?!#)[\\s]*return[\\s]*(json\\.(dumps|dump)\\(|ujson\\.dumps\\()' .; $c2=$LASTEXITCODE; if ($c2 -eq 0) { Write-Error 'Found json.dumps return. Return plain strings instead.'; exit 1 } elseif ($c2 -ne 1) { Write-Error \"ripgrep error ($c2)\"; exit $c2 }; exit 0"
+			],
+			"group": "test",
+			"problemMatcher": []
+		},
+		{
+			"label": "Package: make clean ZIP",
+			"type": "process",
+			"command": "pwsh",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$ErrorActionPreference='Stop'; $ws='${workspaceFolder}'; $date=Get-Date -Format 'yyyyMMdd-HHmm'; $dist=Join-Path $ws 'dist'; if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Null }; $zip=Join-Path $dist ('storybook_archipelago-' + $date + '.zip'); $env:GIT_PAGER=''; git --no-pager archive -o $zip --format zip --worktree-attributes HEAD 2>$null; $code=$LASTEXITCODE; if ($code -eq 0) { Write-Host $zip; exit 0 } else { if (Test-Path $zip) { Remove-Item -Force $zip }; $excludes=@('.git','/.git/*','/.venv','/.venv/*'); $items=Get-ChildItem -LiteralPath $ws -Force -Recurse | Where-Object { $_.PSIsContainer -or ($_.FullName -notmatch '\\.git(\\|$)' -and $_.FullName -notmatch '\\.venv(\\|$)' -and $_.FullName -notmatch '\\__pycache__(\\|$)' -and $_.FullName -notmatch '\\.vscode(\\|$)' -and $_.FullName -notmatch '\\.github(\\|$)' ) }; Compress-Archive -Path $items -DestinationPath $zip -Force; Write-Host $zip; exit 0 }"
+			],
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "History: go 10 (rewrite messages)",
+			"type": "process",
+			"command": "pwsh",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"${workspaceFolder}/scripts/go10.ps1",
+				"-Count",
+				"10"
+			],
+			"group": "none",
+			"problemMatcher": []
+		},
+		{
+			"label": "History: push rewritten (force-with-lease)",
+			"type": "process",
+			"command": "pwsh",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$ErrorActionPreference='Stop'; git --no-pager log --oneline -n 12; git push --force-with-lease origin HEAD:master"
+			],
+			"group": "none",
+			"problemMatcher": []
+		},
+		{
+			"label": "Run: render choices demo",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"scripts/render_choices_demo.py"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		}
+	]
 }
