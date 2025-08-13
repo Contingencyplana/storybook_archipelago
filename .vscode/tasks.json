@@ -136,6 +136,17 @@
 				"--loop"
 			],
 			"group": "test"
+		},
+		{
+			"label": "Play: current node (runner)",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"${workspaceFolder}/tools/play_node.py",
+				"${relativeFileDirname}",
+				"--loop"
+			],
+			"group": "test"
 		}
 	]
 }
