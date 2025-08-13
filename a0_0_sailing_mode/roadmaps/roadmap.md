@@ -22,12 +22,12 @@ It outlines the order, thematic arc, and function of each minigame, as well as k
 ### 🧱 Stanza 0 – Opening the Archipelago  
 This stanza introduces the recursive rhythm of the game: explore → choose → reflect.
 
-| Minigame Folder                       | Theme                                 |
-|--------------------------------------|---------------------------------------|
-| `a0_0_enchanted_isle_minigame/`      | Magic, stillness, poetic first contact |
-| `a0_1_isle_mode_minigame/`           | Tone layering, soft contrast          |
-| `a0_2_???/`                           | Placeholder – to be revealed          |
-| `a0_3_???/`                           | Placeholder – to be revealed          |
+| Minigame Folder                       | Theme                                  |
+|---------------------------------------|----------------------------------------|
+| `a0_0_enchanted_isle_minigame/`       | Magic, stillness, poetic first contact |
+| `a0_1_isle_mode_minigame/`            | Tone layering, soft contrast           |
+| `a0_2_???/`                           | Placeholder – to be revealed           |
+| `a0_3_???/`                           | Placeholder – to be revealed           |
 
 Planned stanza updates will follow this template in `roadstanza_1.md`, `roadstanza_2.md`, etc.
 
@@ -35,7 +35,7 @@ Planned stanza updates will follow this template in `roadstanza_1.md`, `roadstan
 
 ## 🔀 Traversal Rules
 
-- Each minigame ends in a **Left (L)** or **Right (R)** choice that determines which minigame island comes next
+- Each minigame ends in a **Left (l)** or **Right (r)** choice that determines which minigame island comes next
 - Traversal may be **non-linear**, **loopable**, or **memory-modulated**
 - All node-to-node links are documented in each node's `portalmap.md`
 
@@ -46,8 +46,8 @@ Planned stanza updates will follow this template in `roadstanza_1.md`, `roadstan
 Camouflage layers are expected to escalate subtly across this mode.  
 Anticipated emotional layering:
 
-| Minigame                     | Camouflage Layer         |
-|------------------------------|---------------------------|
+| Minigame                        | Camouflage Layer         |
+|---------------------------------|---------------------------|
 | `a0_0_enchanted_isle_minigame/` | Fog, stillness, childlike awe  |
 | `a0_1_isle_mode_minigame/`      | Echo, playfulness             |
 | `a0_2_???/`                     | Glitch or recursion mist (tentative) |

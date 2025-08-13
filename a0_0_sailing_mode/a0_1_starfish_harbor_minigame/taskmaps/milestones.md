@@ -10,3 +10,5 @@
 - 2025-08-13: Added a0_3_beacon_jetty_node (Tier‑1) with tests; wired portals:
 	- coral_quay_node L → a0_3_beacon_jetty_node
 	- anchor_lane_node R → a0_3_beacon_jetty_node
+
+- 2025-08-13: Playtesting complete; l/r normalized across nodes. Docs updated in taskmaps.

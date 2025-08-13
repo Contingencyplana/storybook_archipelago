@@ -11,3 +11,7 @@ Next:
 
 - Add narrative polish and camouflage layers
 - Expand linked nodes with richer branching
+
+Controls:
+
+- Use lowercase l/r in the terminal runner for choices.

@@ -110,6 +110,21 @@
 			"isBackground": false,
 			"problemMatcher": [],
 			"group": "test"
+		},
+		{
+			"label": "Run: auto-follow runner (coral quay)",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"scripts/auto_follow_runner.py",
+				"--node",
+				"storybook_archipelago/a0_0_sailing_mode/a0_1_starfish_harbor_minigame/a0_1_coral_quay_node/",
+				"--max-steps",
+				"10"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
 		}
 	]
 }
