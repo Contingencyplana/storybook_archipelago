@@ -47,7 +47,7 @@ Below are **example minigames** assigned to each game mode. This table expands a
 
 | Mode               | Minigames                         |
 |--------------------|-----------------------------------|
-| `sailing_mode/`    | `enchanted_isle_minigame/`        |
+| `sailing_mode/`    | `enchanted_isle_minigame/`, `starfish_harbor_minigame/` |
 | `isle_mode/`       | `sunken_chapel_minigame/`         |
 | `memory_mode/`     | `forgotten_forest_minigame/`      |
 | `camouflage_mode/` | `recursion_fog_minigame/`         |
