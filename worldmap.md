@@ -57,6 +57,16 @@ Below are **example minigames** assigned to each game mode. This table expands a
 Each minigame contains its own internal stanza nodes and follows the **Tier 1–3 node structure**.  
 Traversal **between** minigames happens via **portalmap.md** or **cross-mode stanzas**.
 
+### ⛵ Sailing mode spotlight (summary)
+
+- Mode: `a0_0_sailing_mode/`
+- Minigames: `a0_0_enchanted_isle_minigame/`, `a0_1_starfish_harbor_minigame/`
+- Current hub: `a0_1_starfish_harbor_minigame/a0_0_tide_grove_node/`
+- Stanza status: starfish_harbor stanza 1 complete (`a0_0..a0_3`)
+- Portal topology:
+  - tide_grove → L: coral_quay, R: anchor_lane
+  - coral_quay L → beacon_jetty; anchor_lane R → beacon_jetty
+
 ---
 
 ## 🌊 3. Traversal Rules
