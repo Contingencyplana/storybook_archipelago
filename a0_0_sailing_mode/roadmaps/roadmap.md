@@ -25,7 +25,7 @@ This stanza introduces the recursive rhythm of the game: explore → choose → 
 | Minigame Folder                       | Theme                                  |
 |---------------------------------------|----------------------------------------|
 | `a0_0_enchanted_isle_minigame/`       | Magic, stillness, poetic first contact |
-| `a0_1_isle_mode_minigame/`            | Tone layering, soft contrast           |
+| `a0_1_starfish_harbor_minigame/`      | Harbor cadence, ropes and bells        |
 | `a0_2_???/`                           | Placeholder – to be revealed           |
 | `a0_3_???/`                           | Placeholder – to be revealed           |
 
@@ -49,7 +49,7 @@ Anticipated emotional layering:
 | Minigame                        | Camouflage Layer         |
 |---------------------------------|---------------------------|
 | `a0_0_enchanted_isle_minigame/` | Fog, stillness, childlike awe  |
-| `a0_1_isle_mode_minigame/`      | Echo, playfulness             |
+| `a0_1_starfish_harbor_minigame/`| Echo, harbor rhythm           |
 | `a0_2_???/`                     | Glitch or recursion mist (tentative) |
 | `a0_3_???/`                     | Silence or narrative doubling |
 
@@ -58,7 +58,8 @@ Anticipated emotional layering:
 ## 🧠 Testing Notes
 
 All minigames in this mode must:
-- Pass L, R, and Story test coverage
+
+- Pass l, r, and Story test coverage (lowercase inputs normalized)
 - Validate camouflage trigger behavior
 - Conform to integration + orchestration routing
 - Provide fun, intuitive choices that reflect memory echoes
@@ -70,6 +71,7 @@ Fallbacks (if any) are to be routed through `mirror_decisions/` and marked in `s
 ## 🧬 Meta-Recursive Purpose
 
 `sailing_mode/` serves as the **onboarding recursion**:
+
 - It teaches without tutorializing
 - It reveals recursive structure through storytelling
 - It invites the player to loop, choose, and wonder
