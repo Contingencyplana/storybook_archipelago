@@ -3,8 +3,10 @@
 Tiny CLI to playtest a node's integration.route_input() loop with L/R or list numbers.
 
 Usage examples:
-  python tools/play_node.py a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_0_whispering_grove_node/ --loop
-  python tools/play_node.py a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node/ -i L R L
+    python tools/play_node.py a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_0_whispering_grove_node --loop
+    python tools/play_node.py a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_1_drifting_glade_node -i L R L
+    # Windows separators also work:
+    python tools/play_node.py a0_0_sailing_mode\\a0_0_enchanted_isle_minigame\\a0_0_whispering_grove_node --loop
 
 Contract assumptions:
 - Each node exposes integration.route_input(user_input, memory) -> str
@@ -57,13 +59,22 @@ def load_integration(node_rel_path: str):
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Playtest a node by sending inputs to integration.route_input")
-    parser.add_argument("node", help="Four-part relative path starting at repo root, e.g. a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_0_whispering_grove_node/")
+    parser.add_argument("node", help="Four-part relative path starting at repo root, e.g. a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_0_whispering_grove_node (trailing slash optional; Windows backslashes ok)")
     parser.add_argument("-i", "--inputs", nargs="*", default=None, help="Sequence of inputs to send (e.g., L R 1). If omitted with --loop, interactive mode starts.")
     parser.add_argument("--loop", action="store_true", help="Interactive loop: type inputs repeatedly until Ctrl+C.")
     args = parser.parse_args(argv)
 
-    # Normalize node path
-    node_rel = args.node.strip("/") + "/"
+    # Normalize node path: accept forward/back slashes and optional trailing slash
+    node_rel = args.node.replace("\\", "/").strip("/")
+
+    # If a minigame folder is provided (no integration.py here), pick the first *_node child with integration.py
+    candidate_dir = REPO_ROOT / node_rel
+    if candidate_dir.is_dir() and not (candidate_dir / "integration.py").exists():
+        node_dirs = sorted([p for p in candidate_dir.iterdir() if p.is_dir() and p.name.endswith("_node")])
+        for nd in node_dirs:
+            if (nd / "integration.py").exists():
+                node_rel = str(nd.relative_to(REPO_ROOT)).replace("\\", "/")
+                break
 
     integ = load_integration(node_rel)
 

@@ -125,6 +125,17 @@
 			"isBackground": false,
 			"problemMatcher": [],
 			"group": "test"
+		},
+		{
+			"label": "Play: current node (runner)",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"tools/play_node.py",
+				"${relativeFileDirname}",
+				"--loop"
+			],
+			"group": "test"
 		}
 	]
 }
