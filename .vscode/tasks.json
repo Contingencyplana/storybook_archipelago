@@ -59,6 +59,36 @@
       ],
       "group": "build",
       "problemMatcher": []
+  },
+    {
+      "label": "History: go 10 (rewrite messages)",
+      "type": "process",
+      "command": "pwsh",
+      "options": { "cwd": "${workspaceFolder}" },
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/scripts/go10.ps1",
+        "-Count",
+        "10"
+      ],
+      "group": "none",
+      "problemMatcher": []
+    },
+    {
+      "label": "History: push rewritten (force-with-lease)",
+      "type": "process",
+      "command": "pwsh",
+      "options": { "cwd": "${workspaceFolder}" },
+      "args": [
+        "-NoProfile",
+        "-Command",
+        "$ErrorActionPreference='Stop'; git --no-pager log --oneline -n 12; git push --force-with-lease origin HEAD:master"
+      ],
+      "group": "none",
+      "problemMatcher": []
     }
   ]
 }
