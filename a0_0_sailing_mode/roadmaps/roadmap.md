@@ -26,7 +26,7 @@ This stanza introduces the recursive rhythm of the game: explore → choose → 
 |---------------------------------------|----------------------------------------|
 | `a0_0_enchanted_isle_minigame/`       | Magic, stillness, poetic first contact |
 | `a0_1_starfish_harbor_minigame/`      | Harbor cadence, ropes and bells        |
-| `a0_2_???/`                           | Placeholder – to be revealed           |
+| `a0_2_lantern_channel_minigame/`      | Twilight passage, drifting lanterns    |
 | `a0_3_???/`                           | Placeholder – to be revealed           |
 
 Planned stanza updates will follow this template in `roadstanza_1.md`, `roadstanza_2.md`, etc.
@@ -50,7 +50,7 @@ Anticipated emotional layering:
 |---------------------------------|---------------------------|
 | `a0_0_enchanted_isle_minigame/` | Fog, stillness, childlike awe  |
 | `a0_1_starfish_harbor_minigame/`| Echo, harbor rhythm           |
-| `a0_2_???/`                     | Glitch or recursion mist (tentative) |
+| `a0_2_lantern_channel_minigame/` | Twilight tint, bell/foghorn cues     |
 | `a0_3_???/`                     | Silence or narrative doubling |
 
 ---
