@@ -6,4 +6,4 @@
 - Camouflage ✓
 - Orchestration ✓
 - Tests ✓
-- Portals Pending
+- Portals Active
