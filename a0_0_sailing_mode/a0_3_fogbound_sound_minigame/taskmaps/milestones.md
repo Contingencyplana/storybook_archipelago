@@ -2,9 +2,11 @@
 
 Status
 
-- Planned: Tier‑1 shell scaffolded (READMEs, nodestanza, taskmap)
+- Tier‑1 shell scaffolded (READMEs, nodestanza, taskmap)
+- Nodes created and green: a0_0_listening_bank_node, a0_1_bell_buoy_node, a0_2_foghorn_edge_node, a0_3_blind_channel_node
+- Portalmaps: listening_bank Active; bell_buoy Active; foghorn_edge Active; blind_channel Active
 
 Next
 
-- Create first node (a0_0_listening_bank_node) with Tier‑1 minimal slice and tests.
-- Keep portalmap targets Pending until tests pass; use four-part paths only.
+- Expand Tier‑2 behaviors later; keep handlers/story returning strings
+- Maintain four-part paths; update portalmaps on any renames
