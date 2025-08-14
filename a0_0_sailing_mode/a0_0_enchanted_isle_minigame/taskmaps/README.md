@@ -1,5 +1,8 @@
-# 🧭 README.md  
-**Minigame Overview – a0_0_enchanted_isle_minigame**
+# 🧭 README.md
+
+[Back to minigame README](../README.md)
+
+## Minigame Overview – a0_0_enchanted_isle_minigame
 
 > _“An island that speaks only when the player listens.”_
 

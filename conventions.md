@@ -81,6 +81,22 @@ All planning folders must be Python modules (include `__init__.py`).
 
 ---
 
+## 4.1 Minigame README placement (dual-README pattern)
+
+For each `*_minigame/`, maintain two complementary READMEs:
+
+- Root minigame `README.md` (audience: player/dev overview)
+	- Include: theme, current nodes, four-part path map (ingress/loop), quick playtesting/task links, link to `taskmaps/`.
+- `taskmaps/README.md` (audience: authors/planning)
+	- Include: nodestanza links, milestones, subtaskmaps, workflow notes, planning checklists. Cross-link back to the root README.
+
+Guidelines:
+
+- Avoid duplication: root README should not restate planning details; taskmaps README should only reference theme/loop maps minimally.
+- Cross-link the two READMEs ("Quick links" in root; "Back to minigame README" in taskmaps).
+
+This pattern improves discoverability and keeps overview vs. planning separate while aligning with tooling and tests.
+
 ## 5. 🧬 Recursive Tier Structure
 
 | Tier | Folder Ends In   | Contents                                     |

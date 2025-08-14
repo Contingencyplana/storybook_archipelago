@@ -1,0 +1,71 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests-and-guards:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: requirements.txt
+
+      - name: Install ripgrep (guard dependency)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ripgrep
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Guard — disallow closed-bracket portal tags
+        shell: bash
+        run: |
+          set -euo pipefail
+          rg -n --hidden --no-messages -g '!**/.git/**' -g '*.[mM][dD]' -P '\[PORTAL:[^\]]*\]' .
+          c1=$?
+          if [ "$c1" -eq 0 ]; then
+            echo 'Found closed-bracket portal tags. Use the open form "[PORTAL:" only.' 1>&2
+            exit 1
+          elif [ "$c1" -ne 1 ]; then
+            echo "ripgrep error ($c1)" 1>&2
+            exit "$c1"
+          fi
+
+      - name: Guard — disallow non-string returns (handlers/story)
+        shell: bash
+        run: |
+          set -euo pipefail
+          rg -n --hidden --no-messages -g '!**/.git/**' -g '!**/.venv/**' -g '*.[pP][yY]' -P '^[\s]*(?!#)[\s]*return[\s]*[\{\[]' .
+          c1=$?
+          if [ "$c1" -eq 0 ]; then
+            echo 'Found non-string returns (dict/list literal). Handlers and story must return strings.' 1>&2
+            exit 1
+          elif [ "$c1" -ne 1 ]; then
+            echo "ripgrep error ($c1)" 1>&2
+            exit "$c1"
+          fi
+
+          rg -n --hidden --no-messages -g '!**/.git/**' -g '!**/.venv/**' -g '*.[pP][yY]' -P '^[\s]*(?!#)[\s]*return[\s]*(json\.(dumps|dump)\(|ujson\.dumps\()' .
+          c2=$?
+          if [ "$c2" -eq 0 ]; then
+            echo 'Found json.dumps return. Return plain strings instead.' 1>&2
+            exit 1
+          elif [ "$c2" -ne 1 ]; then
+            echo "ripgrep error ($c2)" 1>&2
+            exit "$c2"
+          fi
+
+      - name: Run tests (pytest)
+        run: pytest -q

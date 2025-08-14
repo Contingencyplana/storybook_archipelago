@@ -28,13 +28,13 @@ This game mode introduces:
 
 ## 🧱 Included Files (Canonical)
 
-| File             | Purpose                                      |
-|------------------|----------------------------------------------|
+| File             | Purpose                                        |
+|------------------|------------------------------------------------|
 | `roadmap.md`     | Strategic flow and traversal plan for the mode |
-| `milestones.md`  | Progress log for minigames and stanzas       |
-| `roadstanza_0.md`| First stanza of minigames (4 total)          |
-| `README.md`      | You are here                                 |
-| `__init__.py`    | Required for introspection and automation    |
+| `milestones.md`  | Progress log for minigames and stanzas         |
+| `roadstanza_0.md`| First stanza of minigames (4 total)            |
+| `README.md`      | You are here                                   |
+| `__init__.py`    | Required for introspection and automation      |
 
 ---
 
@@ -43,9 +43,9 @@ This game mode introduces:
 Each stanza contains four minigames.  
 The first stanza is:
 - `a0_0_enchanted_isle_minigame/`
-- `a0_1_isle_mode_minigame/` *(name pending)*
-- `a0_2_...` *(placeholder)*
-- `a0_3_...` *(placeholder)*
+- `a0_1_starfish_harbor_minigame/`
+- `a0_2_lantern_channel_minigame/`
+- `a0_3_fogbound_sound_minigame/` _(new)_
 
 Additional stanzas will be documented in `roadstanza_1.md`, `roadstanza_2.md`, etc.
 

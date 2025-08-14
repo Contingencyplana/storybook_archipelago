@@ -1,5 +1,3 @@
-<!-- Save to: storybook_archipelago/workflow.md -->
-
 ---
 id: workflow
 title: Canonical Build and Recursion Workflow
@@ -19,7 +17,8 @@ links:
 ---
 
 # 🧱 workflow.md
-**Canonical Build and Recursion Workflow – Storybook Archipelago**
+
+## Canonical Build and Recursion Workflow – Storybook Archipelago
 
 > _“To build is to recurse with care. To recurse is to build with order.”_
 
@@ -79,6 +78,8 @@ Create a functional node using this **7‑step** sequence (start with capability
 - `README.md` — Node purpose, camouflage intent, tone
 - `portalmap.md` — L/R links using **four‑part paths** (placeholders allowed initially)
 - `subtaskmap.md` — Checklist of implementation progress
+
+> Note: For minigames, follow the dual‑README pattern and cross‑linking described in `conventions.md` (root README for overview; `taskmaps/README` for planning, with a “Back to minigame README” link at the top).
 
 ### **Step 2 — Input Router**
 

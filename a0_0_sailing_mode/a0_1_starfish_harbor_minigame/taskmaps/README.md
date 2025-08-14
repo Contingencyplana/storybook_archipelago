@@ -1,6 +1,8 @@
 
 # Starfish Harbor – taskmaps
 
+[Back to minigame README](../README.md)
+
 ## 🎮 Controls
 
 - Use lowercase l and r for choices in the terminal runner.
