@@ -12,3 +12,17 @@ Conventions
 
 - Four‑part relative paths only; no OS‑absolute paths
 - Handlers/story return strings (see return_value_contract_v1)
+
+Node index (stanza 0)
+
+- a0_0_listening_bank_node  
+	path: `storybook_archipelago/a0_0_sailing_mode/a0_3_fogbound_sound_minigame/a0_0_listening_bank_node/`
+
+- a0_1_bell_buoy_node  
+	path: `storybook_archipelago/a0_0_sailing_mode/a0_3_fogbound_sound_minigame/a0_1_bell_buoy_node/`
+
+- a0_2_foghorn_edge_node  
+	path: `storybook_archipelago/a0_0_sailing_mode/a0_3_fogbound_sound_minigame/a0_2_foghorn_edge_node/`
+
+- a0_3_blind_channel_node  
+	path: `storybook_archipelago/a0_0_sailing_mode/a0_3_fogbound_sound_minigame/a0_3_blind_channel_node/`

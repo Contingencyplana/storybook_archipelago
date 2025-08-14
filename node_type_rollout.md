@@ -8,10 +8,10 @@ Key: This doc concerns Tier‑1 subtypes only. Tier 2–3 nodes are AI‑generat
 
 ## Recommended Staging
 
-- Roadstanza 1 (RS1): Type 1 only (no lists)
-- Roadstanza 2 (RS2): Type 1 + limited Type 2 (Left list)
-- Roadstanza 3 (RS3): Type 1–3 (introduce Type 3: Right list) sparingly
-- Roadstanza 4 (RS4): Type 1–4; Type 4 rare, only after strong telemetry
+- Roadstanza 1 (RS1 - minigames 1-4): Type 1 only (no lists)
+- Roadstanza 2 (RS2 - minigames 5-8): Type 1 + limited Type 2 (Left list)
+- Roadstanza 3 (RS3 - minigames 9-12): Type 1–3 (introduce Type 3: Right list) sparingly
+- Roadstanza 4 (RS4 - minigames 13-16): Type 1–4; Type 4 rare, only after strong telemetry
 
 ### Suggested ratios (guideline)
 
@@ -41,6 +41,7 @@ Introduce a new Type only when all apply:
 - Keep Type 4 uncommon. Use it for deliberate spikes in agency/complexity.
 - Do not embed closed‑bracket portal tags in Markdown; hint only in runtime strings.
 - Align node subtype labeling in `subtaskmap.md` (e.g., `subtype: type_1`).
+- Current status: Fogbound Sound (minigame 4, RS1) remains `subtype: type_1` across all nodes.
 - If telemetry shows confusion or churn, shift back toward Type 1.
 
 ---
