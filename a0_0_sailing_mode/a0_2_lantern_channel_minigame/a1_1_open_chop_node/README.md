@@ -4,8 +4,8 @@ Status: Active (Tier‑1)
 
 Behavior
 
-- L: heads toward crescent_moor — includes a [PORTAL:] hint
-- R: heads toward still_pool — includes a [PORTAL:] hint
+- L: heads toward crescent_moor — includes a [PORTAL: hint
+- R: heads toward still_pool — includes a [PORTAL: hint
 
 Portals (four‑part paths)
 
