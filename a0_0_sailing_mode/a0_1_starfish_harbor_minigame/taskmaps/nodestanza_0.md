@@ -7,4 +7,3 @@
 Play loop (per node):
 
 - Enter to see the scene → l → r → Ctrl+C
-
