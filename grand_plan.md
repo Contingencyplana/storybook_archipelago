@@ -61,7 +61,7 @@ References: `camouflage_layers.md`, `return_value_contract_v1.md`, `portals_and_
 ## Playtest loop
 
 - Cadence: per node (1–2 min), per stanza smoke (5–8 min).
-- Signals: scene includes "grove"; `[LEFT]`/`[RIGHT]` markers present; no `[PORTAL:` in story; tone notes captured.
+- Signals: scene includes "grove"; `[LEFT]`/`[RIGHT]` markers present; no `[PORTAL:` in story; page previews labeled "[LEFT PAGE]"/"[RIGHT PAGE]"; tone notes captured.
 
 See: `testplayers.md` for who/when to invite and readiness gates.
 
@@ -72,7 +72,7 @@ See: `testplayers.md` for who/when to invite and readiness gates.
 
 ## Tier‑1 page UX policy (Type‑1..4)
 
-- Inputs: Enter shows the scene via `story.describe_scene` (look/recap). L triggers Left, R triggers Right. Numeric keys (1–9) are preview‑only; they do not select. Hint: "Numbers preview only; use L/R or Enter."
+- Inputs: Enter shows the scene via `story.describe_scene` (look/recap). L triggers Left, R triggers Right. Numeric keys (1–9) are preview‑only; they do not select. Inputs are case‑insensitive (document as L/R). Ctrl+C exits (playtester only). Hint: "Numbers preview only; use L/R or Enter."
 - Page previews: Always label pages explicitly as "[LEFT PAGE]" and "[RIGHT PAGE]" for accessibility.
   - Type‑1: illustrations/text on both sides (no lists).
   - Type‑2: numbered list on Left above text; Right shows illustration/text. Detect list items permissively: `1)`, `1.`, or `1-`. Keep lists small (≈3–6 items).
