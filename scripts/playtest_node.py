@@ -103,7 +103,7 @@ def main():
             try:
                 # Show page preview before prompt
                 render_preview()
-                user = input("\nInput [L/R/<Enter>]: ").strip()
+                user = input("\nInput [L/R/Enter]: ").strip()
             except EOFError:
                 # Allow non-interactive/piped runs to end cleanly
                 print("\n[EOF] Exiting playtest.")
@@ -117,13 +117,15 @@ def main():
                 # Do not invoke the node on number input; continue to next loop
                 continue
             else:
-                out = integration.route_input(user, memory)
+                # Normalize case for L/R without constraining nodes; story/other inputs pass through uppercased
+                out = integration.route_input(user.upper(), memory)
             if not isinstance(out, str):
                 print("[ERROR] Non-string output from node. Aborting.")
                 sys.exit(3)
             print("\n--- OUTPUT ---\n" + out + "\n---------------\n")
     except KeyboardInterrupt:
         print("\nExiting playtest.")
+        sys.exit(0)
 
 if __name__ == '__main__':
     main()

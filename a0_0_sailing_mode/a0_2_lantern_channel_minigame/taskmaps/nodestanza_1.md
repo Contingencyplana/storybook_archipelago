@@ -13,3 +13,7 @@ Nodestanza 1 — completed nodes (Tier‑1 slices) for this minigame:
 - a1_1_open_chop_node — The chop that tests balance — Status: Active (Tier‑1)
 - a1_2_crescent_moor_node — The moor that curves choices — Status: Active (Tier‑1)
 - a1_3_shoal_bend_node — The bend that hums of shoals — Status: Active (Tier‑1)
+
+## playtest pointer
+
+For quick local checks of these Tier‑1 slices, see `a0_0_sailing_mode/a0_2_lantern_channel_minigame/playtest.md`.
