@@ -160,5 +160,32 @@
 			],
 			"group": "test"
 		}
+		,
+		{
+			"label": "Auto-follow: Lantern Pass (10 steps)",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"${workspaceFolder}/scripts/auto_follow_runner.py",
+				"--node",
+				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_0_lantern_pass_node/",
+				"--max-steps",
+				"10"
+			],
+			"group": "test"
+		},
+		{
+			"label": "Auto-follow: Still Pool (10 steps)",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"${workspaceFolder}/scripts/auto_follow_runner.py",
+				"--node",
+				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_0_still_pool_node/",
+				"--max-steps",
+				"10"
+			],
+			"group": "test"
+		}
 	]
 }
