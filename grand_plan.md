@@ -67,8 +67,20 @@ See: `testplayers.md` for who/when to invite and readiness gates.
 
 ## Builder scope
 
-- Now: route creation, edit `story.py` text, trigger tests, mark portals Pending.
-- Later: numbered lists, scaffold new nodes, cross‑workspace promotions.
+- Now: route creation, edit `story.py` text, trigger tests, mark portals Pending, page previews ("[LEFT PAGE]"/"[RIGHT PAGE]"), and numbered lists as preview content only.
+- Later: numeric selection (post‑Tier‑1), scaffold new nodes, cross‑workspace promotions.
+
+## Tier‑1 page UX policy (Type‑1..4)
+
+- Inputs: Enter shows the scene via `story.describe_scene` (look/recap). L triggers Left, R triggers Right. Numeric keys (1–9) are preview‑only; they do not select. Hint: "Numbers preview only; use L/R or Enter."
+- Page previews: Always label pages explicitly as "[LEFT PAGE]" and "[RIGHT PAGE]" for accessibility.
+  - Type‑1: illustrations/text on both sides (no lists).
+  - Type‑2: numbered list on Left above text; Right shows illustration/text. Detect list items permissively: `1)`, `1.`, or `1-`. Keep lists small (≈3–6 items).
+  - Type‑3: mirror of Type‑2 (numbered list on Right).
+  - Type‑4: numbered lists on both sides (use sparingly at Tier‑1).
+- Error handling: On unknown input, print a compact one‑time help line per session.
+- Telemetry: In the playtester, track frequency of numeric presses and Enter vs L/R to inform if/when numeric selection should be enabled later.
+- Pause/Save: Reserve Esc/P for future Pause/Save UI; do not bind to Enter at Tier‑1.
 
 ## Rollback and anomalies
 
