@@ -1,6 +1,6 @@
 # a1_3_shoal_bend_node — Lantern Channel
 
-Status: Pending (Tier‑1)
+Status: Active (Tier‑1)
 
 Behavior
 
