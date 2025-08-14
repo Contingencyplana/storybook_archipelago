@@ -1,4 +1,4 @@
-# Portal Map — tolling_gate_node
+# Portal Map — crescent_moor_node
 
 Status: Active
 
