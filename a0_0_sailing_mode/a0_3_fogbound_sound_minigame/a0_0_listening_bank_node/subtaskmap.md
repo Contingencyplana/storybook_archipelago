@@ -1,5 +1,7 @@
 # subtaskmap.md — listening_bank
 
+subtype: type_1
+
 - Routing: confirm left/right markers present in handlers
 - Portal placeholders set to Pending with four‑part paths
 - Camouflage: apply_mood(text, memory) is a pass‑through
