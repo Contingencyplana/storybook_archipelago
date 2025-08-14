@@ -67,6 +67,13 @@ def main(argv: list[str] | None = None) -> int:
     # Normalize node path: accept forward/back slashes and optional trailing slash
     node_rel = args.node.replace("\\", "/").strip("/")
 
+    # Allow leading workspace folder name (repo basename) in four-part paths,
+    # e.g., "storybook_archipelago/a0_0_sailing_mode/..." → "a0_0_sailing_mode/..."
+    if node_rel:
+        first_seg = node_rel.split("/", 1)[0]
+        if first_seg.lower() == REPO_ROOT.name.lower():
+            node_rel = node_rel.split("/", 1)[1] if "/" in node_rel else ""
+
     # If a minigame folder is provided (no integration.py here), pick the first *_node child with integration.py
     candidate_dir = REPO_ROOT / node_rel
     if candidate_dir.is_dir() and not (candidate_dir / "integration.py").exists():

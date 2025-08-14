@@ -213,5 +213,31 @@
 			],
 			"group": "test"
 		}
+		,
+		{
+			"label": "Play: Tolling Gate",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"${workspaceFolder}/tools/play_node.py",
+				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_3_tolling_gate_node/",
+				"--loop"
+			],
+			"group": "test"
+		}
+		,
+		{
+			"label": "Auto-follow: Tolling Gate (10 steps)",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"${workspaceFolder}/scripts/auto_follow_runner.py",
+				"--node",
+				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_3_tolling_gate_node/",
+				"--max-steps",
+				"10"
+			],
+			"group": "test"
+		}
 	]
 }
