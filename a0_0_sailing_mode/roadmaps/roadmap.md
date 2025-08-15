@@ -31,13 +31,13 @@ This stanza introduces the recursive rhythm of the game: explore → choose → 
 | `a0_2_lantern_channel_minigame/`      | Twilight passage, drifting lanterns    |
 | `a0_3_fogbound_sound_minigame/`       | Low-visibility navigation by sound     |
 
-### 🧱 Stanza 1 –   
+### 🧱 Stanza 1 – TBD  
 
 This stanza introduces the recursive rhythm of the game: explore → choose → reflect.
 
-| Minigame Folder                       | Theme                                  |
-|---------------------------------------|----------------------------------------|
-| `a0_0_tideline_market_minigame/`       |      |
+| Minigame Folder                        | Theme                                     |
+|----------------------------------------|-------------------------------------------|
+| `a0_0_tideline_market_minigame/`       |  Shoreline market, shells, barter, memory |
 
 Planned stanza updates will follow this template in `roadstanza_1.md`, `roadstanza_2.md`, etc.
 
@@ -62,6 +62,7 @@ Anticipated emotional layering:
 | `a0_1_starfish_harbor_minigame/` | Echo, harbor rhythm           |
 | `a0_2_lantern_channel_minigame/` | Twilight tint, bell/foghorn cues     |
 | `a0_3_fogbound_sound_minigame/`  | Silence, echo-location, horn cues |
+| `a0_0_tideline_market_minigame/` | bustle, shifting sands, echo of barter  |
 
 ---
 

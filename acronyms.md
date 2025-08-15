@@ -84,6 +84,8 @@ Canonical Acronyms and Shortforms – Storybook Archipelago
 
 ## T
 
+**TBD** – To Be Determined.
+
 **TMP** – Template. Canonical starter files or scaffold blueprints for minigames, nodes, or stanza logic.
 
 **TST** – Test File. Suffix used to indicate validation or logic tests (e.g., `camoutest.py`, `storytest.py`, `integtest.py`).
