@@ -62,6 +62,11 @@ Canonical Acronyms and Shortforms – Storybook Archipelago
 
 **RT** – Recursive Tier. Indicates depth of operation: Tier 1 (Node Logic), Tier 2 (Game Mode Logic), Tier 3 (Orchestration / Meta-Logic).
 
+**RS0** Roadstanza 0 (RS0 – minigames 1–4): Type 1 only (no lists)
+**RS1** Roadstanza 1 (RS1 – minigames 5–8): Type 1 + limited Type 2 (Left list)
+**RS2** Roadstanza 2 (RS2 – minigames 9–12): Type 1–3 (introduce Type 3: Right list) sparingly
+**RS3** Roadstanza 3 (RS3 – minigames 13–16): Type 1–4; Type 4 rare, only after strong telemetry
+
 ---
 
 ## S

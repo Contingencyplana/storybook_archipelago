@@ -45,7 +45,10 @@ The first stanza is:
 - `a0_0_enchanted_isle_minigame/`
 - `a0_1_starfish_harbor_minigame/`
 - `a0_2_lantern_channel_minigame/`
-- `a0_3_fogbound_sound_minigame/` _(new)_
+- `a0_3_fogbound_sound_minigame/`
+
+The second stanza is:
+- `a0_0_tideline_market_minigame/` _(new)_
 
 Additional stanzas will be documented in `roadstanza_1.md`, `roadstanza_2.md`, etc.
 
