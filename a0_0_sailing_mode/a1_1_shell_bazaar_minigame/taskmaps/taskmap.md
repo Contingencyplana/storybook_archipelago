@@ -1,7 +1,7 @@
-# Taskmap: Shell Stalls Minigame
+# Taskmap: Shell Bazaar Minigame
 
 ## Purpose
-Map out the core tasks, flows, and checkpoints for the shell stalls minigame. Adapted from template_minigame/taskmaps/taskmap.md.
+Map out the core tasks, flows, and checkpoints for the shell bazaar minigame. Adapted from template_minigame/taskmaps/taskmap.md.
 
 ## Core Tasks
 - Define the unique mechanics and player actions for each node (stall).
@@ -10,10 +10,10 @@ Map out the core tasks, flows, and checkpoints for the shell stalls minigame. Ad
 - Integrate shell stall theme into all node logic and story.
 
 ## Node Breakdown
-- a0_0_shell_stalls_node: [Describe its unique task or challenge]
-- a0_1_barter_lane_node: [Describe its unique task or challenge]
-- a0_2_weighing_scales_node: [Describe its unique task or challenge]
-- a0_3_tide_counter_node: [Describe its unique task or challenge]
+- a0_0_bazaar_gate_node: [Describe its unique task or challenge]
+- a0_1_pearl_auction_node: [Describe its unique task or challenge]
+- a0_2_coral_counter_node: [Describe its unique task or challenge]
+- a0_3_nautilus_nook_node: [Describe its unique task or challenge]
 
 ## Playtest Checklist
 - All node logic and story return strings as per contract.

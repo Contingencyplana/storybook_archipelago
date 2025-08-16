@@ -1,6 +1,6 @@
-# Taskmaps Folder — Shell Stalls Minigame
+# Taskmaps Folder — Shell Bazaar Minigame
 
-This folder contains planning and tracking files for the shell stalls minigame, including:
+This folder contains planning and tracking files for the shell bazaar minigame, including:
 - `taskmap.md`: Core tasks, flows, and checkpoints
 - `milestones.md`: Milestone tracking and progress
 

@@ -1,8 +1,8 @@
-# Milestones: Shell Stalls Minigame
+# Milestones: Shell Bazaar Minigame
 
 ## Initial Planning
 - [x] Scaffold all four node folders and files
-- [ ] Draft taskmap and milestones for shell stalls
+- [ ] Draft taskmap and milestones for bazaar stalls
 
 ## Node Logic & Story
 - [ ] Implement and test left/right logic for each node
