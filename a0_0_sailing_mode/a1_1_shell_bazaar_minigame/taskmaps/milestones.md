@@ -1,22 +1,26 @@
 # Milestones: Shell Bazaar Minigame
 
 ## Initial Planning
+
 - [x] Scaffold all four node folders and files
-- [ ] Draft taskmap and milestones for bazaar stalls
+- [x] Draft taskmap and milestones for bazaar stalls
 
 ## Node Logic & Story
-- [ ] Implement and test left/right logic for each node
-- [ ] Write and test story surface for each node
-- [ ] Integrate shell stall theme throughout
+
+- [x] Implement and test left/right logic for each node
+- [x] Write and test story surface for each node
+- [x] Integrate shell stall theme throughout
 
 ## Playtesting
-- [ ] Run all node tests and playtest flows
+
+- [x] Run all node tests and playtest flows
 - [ ] Refine based on feedback and test results
 
 ## Integration
-- [ ] Update portalmap and subtaskmap as needed
+
+- [x] Update portalmap and subtaskmap as needed
 - [ ] Link to worldmap and higher-level planning docs
 
 ## Notes
-- Mark milestones as you complete them.
-- Revise as the minigame evolves.
+
+- Playtest complete as of August 17, 2025. All nodes contract-compliant and tested. Ready for polish or expansion.

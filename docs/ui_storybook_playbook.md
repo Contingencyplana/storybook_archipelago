@@ -55,6 +55,7 @@ Guidance for the L/R page‑turn UI used across modes/minigames. Keep strings st
 See also:
 - docs/ui_hooks_example.md for minimal JS/React and Python snippets.
 - VS Code task: "Run: render choices demo" to print an annotated HTML list quickly.
+- [Bare Bones Skeletal of Text](../bare_bones_skeletal_of_text.md) — for the philosophy and contract of text-first scaffolding that underpins this UI playbook.
 
 ## Out-of-scope (for this doc)
 
