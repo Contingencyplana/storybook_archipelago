@@ -1,4 +1,4 @@
-# Roadstanza 0 — a0_0_sailing_mode
+# roadstanza_0.md — a0_0_sailing_mode
 
 | Minigame Folder                 | Status        | Notes                             |
 |---------------------------------|---------------|-----------------------------------|
