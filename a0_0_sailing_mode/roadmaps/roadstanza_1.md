@@ -1,8 +1,10 @@
 # roadstanza_1.md — a0_0_sailing_mode
 
+
 | Minigame Folder                 | Status        | Notes                             |
 |---------------------------------|---------------|-----------------------------------|
 | a1_0_tideline_market_minigame/  | Active (T1/2) | RS2 entry; Type 1 + limited Type 2|
+| a1_1_shell_bazaar_minigame/     | Active (T1)   | Spiral stalls, L/R traversal, story|
 
 ## Recommended Staging
 

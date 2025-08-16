@@ -28,29 +28,30 @@ This game mode introduces:
 
 ## 🧱 Included Files (Canonical)
 
-| File             | Purpose                                        |
-|------------------|------------------------------------------------|
-| `roadmap.md`     | Strategic flow and traversal plan for the mode |
-| `milestones.md`  | Progress log for minigames and stanzas         |
-| `roadstanza_0.md`| First stanza of minigames (4 total)            |
-| `README.md`      | You are here                                   |
-| `__init__.py`    | Required for introspection and automation      |
+| File                 | Purpose                                        |
+|----------------------|------------------------------------------------|
+| `roadmap.md`         | Strategic flow and traversal plan for the mode |
+| `milestones.md`      | Progress log for minigames and stanzas         |
+| `roadstanza_0.md`    | First stanza of minigames (4 total)            |
+| `roadstanza_1.md`    | Second stanza (minigames 5-6)                  |
+| `README.md`          | You are here                                   |
+| `__init__.py`        | Required for introspection and automation      |
 
 ---
 
 ## 🧩 Planned Stanzas
 
-Each stanza contains four minigames.  
-The first stanza is:
+Stanza 0 (Opening):
 - `a0_0_enchanted_isle_minigame/`
 - `a0_1_starfish_harbor_minigame/`
 - `a0_2_lantern_channel_minigame/`
 - `a0_3_fogbound_sound_minigame/`
 
-The second stanza is:
-- `a0_0_tideline_market_minigame/` _(new)_
+Stanza 1 (Market/Bazaar):
+- `a1_0_tideline_market_minigame/`
+- `a1_1_shell_bazaar_minigame/`
 
-Additional stanzas will be documented in `roadstanza_1.md`, `roadstanza_2.md`, etc.
+Additional stanzas will be documented in `roadstanza_2.md`, etc.
 
 ---
 

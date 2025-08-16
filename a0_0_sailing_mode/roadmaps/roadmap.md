@@ -22,8 +22,6 @@ It outlines the order, thematic arc, and function of each minigame, as well as k
 
 ### 🧱 Stanza 0 – Opening the Archipelago  
 
-This stanza introduces the recursive rhythm of the game: explore → choose → reflect.
-
 | Minigame Folder                       | Theme                                  |
 |---------------------------------------|----------------------------------------|
 | `a0_0_enchanted_isle_minigame/`       | Magic, stillness, poetic first contact |
@@ -31,16 +29,14 @@ This stanza introduces the recursive rhythm of the game: explore → choose → 
 | `a0_2_lantern_channel_minigame/`      | Twilight passage, drifting lanterns    |
 | `a0_3_fogbound_sound_minigame/`       | Low-visibility navigation by sound     |
 
-### 🧱 Stanza 1 – Tideline and Barrier Reef  
-
-This stanza introduces the recursive rhythm of the game: explore → choose → reflect.
+### 🧱 Stanza 1 – Market and Bazaar
 
 | Minigame Folder                        | Theme                                     |
 |----------------------------------------|-------------------------------------------|
-| `a1_0_tideline_market_minigame/`       |  Shoreline market, shells, barter, memory |
+| `a1_0_tideline_market_minigame/`       | Shoreline market, shells, barter, memory  |
+| `a1_1_shell_bazaar_minigame/`          | Spiral stalls, trade, recursion, shimmer   |
 
-
-Planned stanza updates will follow this template in `roadstanza_1.md`, `roadstanza_2.md`, etc.
+Planned stanza updates will follow this template in `roadstanza_2.md`, etc.
 
 ---
 
