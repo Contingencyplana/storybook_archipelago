@@ -1,2 +1,8 @@
 def handle_right(memory: dict) -> str:
-    return "You listen to the quiet ticking of salt and trade. [RIGHT]"
+    return (
+        "[LEFT PAGE]\n"
+        "Illustration: The scales tip, the market quiets.\n"
+        "\n[RIGHT PAGE]\n"
+        "You listen to the quiet ticking of salt and trade.\n"
+        "\n[RIGHT]"
+    )

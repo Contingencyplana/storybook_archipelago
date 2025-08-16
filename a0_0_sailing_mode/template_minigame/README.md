@@ -14,6 +14,11 @@ This is a scaffold for new minigames. Pair this root README (overview) with `tas
 7. Only activate portals after all tests pass.
 8. Keep documentation up to date for future reference.
 
+
+## Bare Bones Skeletal of Text
+
+This template uses a minimal, text-first scaffold for all nodes, with explicit labels and placeholders for future graphics, sound, and UI. See ../../bare_bones_skeletal_of_text.md for the full philosophy and guidelines.
+
 Quick links
 
 - taskmaps/README.md — author/planning index

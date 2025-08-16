@@ -66,7 +66,12 @@ Additional helpers (e.g., `camouflage.py`, `orchestration.py`) may appear in adv
 
 ---
 
+
 ## 5. 🧬 Development Philosophy
+
+### Bare Bones Skeletal of Text
+
+All nodes and scenes begin as a minimal, text-first scaffold, using explicit labels (e.g., [LEFT PAGE], [RIGHT PAGE], numbered lists, illustration cues). This makes it easy to add graphics, sound, and richer UI later, without rewriting core logic. See [bare_bones_skeletal_of_text.md](bare_bones_skeletal_of_text.md) for details.
 
 Storybook Archipelago follows several key principles:
 

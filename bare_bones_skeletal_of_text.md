@@ -1,0 +1,27 @@
+# Bare Bones Skeletal of Text
+
+## Philosophy
+
+Storybook Archipelago is built from the inside out, starting with a minimal, text-first scaffold for every node and scene. This "bare bones" approach ensures that all logic, story, and player interaction is fully playable and testable from the start—while making it easy to add graphics, sound, and richer UI later, without rewriting core logic.
+
+## Why This Matters
+
+- **Future-Proof:** By labeling and structuring output (e.g., with [LEFT PAGE], [RIGHT PAGE], numbered lists, and illustration cues), we make it trivial to swap in visuals, audio, or new input modes later.
+- **Testable:** All features are accessible and testable via text, supporting rapid iteration and robust CI.
+- **Accessible:** The game is always playable in a terminal or basic UI, ensuring accessibility and broad compatibility.
+- **Collaborative:** Writers, designers, and developers can work in parallel, knowing the text scaffold is the single source of truth.
+
+## Practical Guidelines
+
+- Use explicit labels like `[LEFT PAGE]`, `[RIGHT PAGE]`, and content cues ("Illustration:", "Numbered list:") in all story and logic outputs.
+- Keep prompts and help text minimal and consistent.
+- Avoid hard-coding graphics or sound; instead, leave clear placeholders in the output.
+- Structure all node files (integration, story, leftmain, rightmain, etc.) to support overlays and future enhancements.
+
+## See Also
+- Grand Plan (grand_plan.md)
+- Template Minigame (a0_0_sailing_mode/template_minigame/README.md)
+- Node Tiers (node_tiers.md)
+- Storybook UI Playbook (docs/ui_storybook_playbook.md) — for detailed UI/UX, accessibility, and implementation guidance building on this text scaffold.
+
+This approach is core to the project's doctrine and should be followed for all new nodes, minigames, and workspaces.

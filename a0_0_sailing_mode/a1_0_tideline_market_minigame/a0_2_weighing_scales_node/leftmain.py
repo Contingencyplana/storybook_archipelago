@@ -1,8 +1,10 @@
 def handle_left(memory: dict) -> str:
-    items = [
-        "Weigh the tideglass for a fairer price",
-        "Balance shells and stories on even pans",
-        "Mark the chalk with each small trade",
-    ]
-    numbered = "\n".join(f"{i+1}) {it}" for i, it in enumerate(items))
-    return f"[LEFT]\n{numbered}"
+    return (
+        "[LEFT PAGE]\n"
+        "1) Weigh the tideglass for a fairer price\n"
+        "2) Balance shells and stories on even pans\n"
+        "3) Mark the chalk with each small trade\n"
+        "\n[RIGHT PAGE]\n"
+        "Illustration: The weighing scales and listening stalls.\n"
+        "\n[LEFT]"
+    )
