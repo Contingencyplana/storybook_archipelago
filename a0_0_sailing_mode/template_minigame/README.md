@@ -1,6 +1,18 @@
+
 # template_minigame
 
 This is a scaffold for new minigames. Pair this root README (overview) with `taskmaps/README.md` (planning index).
+
+## How to use this template
+
+1. Copy the entire template_minigame folder to your new minigame location and rename appropriately.
+2. Rename all node folders and files to match your minigame's theme and node names.
+3. Update README.md files for the minigame and each node with theme and description.
+4. Fill out taskmaps/taskmap.md with your minigame's specific tasks and checkboxes.
+5. Log progress and blockers in taskmaps/milestones.md as you work.
+6. Implement logic and test files for each node, following the template contracts.
+7. Only activate portals after all tests pass.
+8. Keep documentation up to date for future reference.
 
 Quick links
 
