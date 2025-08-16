@@ -1,6 +1,6 @@
 # a1_1_shell_stalls_minigame
 
-This minigame is part of Roadstanza 1 (Tideline Market arc).
+This minigame is part of Roadstanza 1 (Tideline Market Arc).
 
 Theme: Market stalls made of shells, shoreline barter, memory echoes.
 
