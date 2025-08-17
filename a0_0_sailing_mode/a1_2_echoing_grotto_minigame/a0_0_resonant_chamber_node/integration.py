@@ -1,4 +1,3 @@
-
 from .leftmain import handle_left
 from .rightmain import handle_right
 from .story import describe_scene
