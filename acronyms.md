@@ -18,6 +18,8 @@ Canonical Acronyms and Shortforms – Storybook Archipelago
 
 ## C
 
+**CI** – Continuous Integration. Automated process that runs tests, guards, and build steps on code changes (push/tag) to ensure code quality and release integrity.
+
 **CMD** – Camouflage Mode Drift. A state where player tone perception no longer matches logical state, triggering escalation via `camouflage.py`.
 
 **CGL** – Camouflage Glitch Layer. A recursive test layer where visual or narrative glitches are reinterpreted as poetic signals.
@@ -87,6 +89,8 @@ Canonical Acronyms and Shortforms – Storybook Archipelago
 ## T
 
 **TBD** – To Be Determined.
+
+**TL;DR** – Too Long; Didn’t Read. A concise summary or quick takeaway for longer content.
 
 **TMP** – Template. Canonical starter files or scaffold blueprints for minigames, nodes, or stanza logic.
 

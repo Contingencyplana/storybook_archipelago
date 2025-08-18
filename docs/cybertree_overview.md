@@ -5,8 +5,8 @@
 **Status:** Draft v0.1 • **Owner:** Mark R. Gillam • **Last updated:** 2025-08-18
 
 ## TL;DR
-CLAIMVIG’s “Towering Cybertree” grows as **hundreds of small, interconnected multiplayer games (“Cyberleaves”)**.  
-The **first four leaves** are:
+CLAIMVIG’s “Towering Cybertree” grows as **hundreds of small, interconnected multiplayer games (“Cyberbranches”)**.  
+The **first four cyberbranches** are:
 1) Storybook Archipelago (cybernurse)  
 2) Primordial Pool (cyberdoc)  
 3) Storybook (game maker)  
