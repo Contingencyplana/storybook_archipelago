@@ -24,7 +24,7 @@ Canonical Acronyms and Shortforms – Storybook Archipelago
 
 **CGL** – Camouflage Glitch Layer. A recursive test layer where visual or narrative glitches are reinterpreted as poetic signals.
 
-**CLAIMVIG** – Computer Language Artificial Intelligence VIdeo Game. The Heart and Soul (Main Submultiverse) of SHAGI Multiverse's Hivemind's thousands of interconnected multiplayer video games.
+**CLAIMVIG** – Computer Language Artificial Intelligence VIdeo Game. The Heart and Soul (Main Submultiverse) of SHAGI Multiverse's Hivemind's thousands of interconnected multiplayer video games. Or a quick, simple and easy; generally user-friendly, generally TONS-of-FUN, generally commercially viable video game variant of LLVM.
 
 ---
 
