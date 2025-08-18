@@ -76,7 +76,7 @@
       "args": [
         "-NoProfile",
         "-Command",
-        "$ErrorActionPreference='Stop'; git --no-pager log --oneline -n 12; git push --force-with-lease origin HEAD:master"
+        "$ErrorActionPreference='Stop'; $ws='${workspaceFolder}'; $dateDay=Get-Date -Format 'yyyyMMdd'; $dist=Join-Path $ws 'dist'; if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Null }; $zipClean=Join-Path $dist 'storybook_archipelago_clean.zip'; $zipDaily=Join-Path $dist ('storybook_archipelago-' + $dateDay + '.zip'); if (Test-Path $zipClean) { Remove-Item -Force $zipClean }; $items=Get-ChildItem -LiteralPath $ws -Force -Recurse | Where-Object { $_.PSIsContainer -or ($_.FullName -notmatch '\\.?git' -and $_.FullName -notmatch '\\.?venv' -and $_.FullName -notmatch '__pycache__' -and $_.FullName -notmatch '\\.?vscode' -and $_.FullName -notmatch '\\.?github') }; Compress-Archive -Path $items -DestinationPath $zipClean -Force; Start-Sleep -Seconds 2; Copy-Item -Force $zipClean $zipDaily; Write-Host ('Created: ' + $zipClean + ' and ' + $zipDaily')"
       ],
       "group": "none",
       "problemMatcher": []
