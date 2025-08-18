@@ -1,12 +1,11 @@
-# integration.py — input router for mirror pool node
+# integration.py — simple input router for the node; returns a string.
 
-from .leftmain import handle_left
-from .story import describe_scene
+from .orchestration import orchestrate
 
-def route_input(user_input, memory):
-    if user_input == "L":
-        return handle_left(memory)
-    elif user_input == "R":
-        return "[RIGHT] The pool ripples with your reflection."
-    else:
-        return describe_scene(memory)
+def run(user_text: str | None = None, memory: dict | None = None) -> str:
+    t = (user_text or "").strip().lower()
+    if t in ("l", "left"):
+        return orchestrate(memory, "left")
+    if t in ("r", "right"):
+        return orchestrate(memory, "right")
+    return orchestrate(memory, None)
