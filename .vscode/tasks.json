@@ -68,11 +68,11 @@
         "if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Null }; " +
         "$zipClean=Join-Path $dist 'storybook_archipelago_clean.zip'; " +
         "$zipDaily=Join-Path $dist ('storybook_archipelago-' + $dateDay + '.zip'); " +
-        "$items=Get-ChildItem -LiteralPath $ws -Force -Recurse | Where-Object { $_.PSIsContainer -or ($_.FullName -notmatch '\\.git(\\|$)' -and $_.FullName -notmatch '\\.venv(\\|$)' -and $_.FullName -notmatch '\\__pycache__(\\|$)' -and $_.FullName -notmatch '\\.vscode(\\|$)' -and $_.FullName -notmatch '\\.github(\\|$)' ) }; " +
+        "$items=Get-ChildItem -LiteralPath $ws -Force -Recurse | Where-Object { $_.PSIsContainer -or ($_.FullName -notmatch '\\.git' -and $_.FullName -notmatch '\\.venv' -and $_.FullName -notmatch '__pycache__' -and $_.FullName -notmatch '\\.vscode' -and $_.FullName -notmatch '\\.github') }; " +
         "Compress-Archive -Path $items -DestinationPath $zipClean -Force; " +
         "Copy-Item -Force $zipClean $zipDaily; " +
         "Write-Host ('Created: ' + $zipClean + ' and ' + $zipDaily)"
-      ],
+      ]
       "group": "build",
       "problemMatcher": []
     },
