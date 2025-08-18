@@ -1,347 +1,324 @@
 {
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"label": "Test: repo root (pytest)",
-			"type": "shell",
-			"command": "pytest -q",
-			"options": {
-				"cwd": "${workspaceFolder}"
-			},
-			"group": "test",
-			"problemMatcher": []
-		},
-		{
-			"label": "Test: current node (pytest)",
-			"type": "shell",
-			"command": "pytest -q ${fileDirname}",
-			"options": {
-				"cwd": "${fileDirname}"
-			},
-			"group": "test",
-			"problemMatcher": []
-		},
-		{
-			"label": "Lint: disallow closed-bracket portal tags",
-			"type": "process",
-			"command": "pwsh",
-			"options": {
-				"cwd": "${workspaceFolder}"
-			},
-			"args": [
-				"-NoProfile",
-				"-File",
-				"${workspaceFolder}/scripts/lint_portal_tags.ps1"
-			],
-			"group": "test",
-			"problemMatcher": []
-		},
-		{
-			"label": "Lint: disallow non-string returns (handlers/story)",
-			"type": "process",
-			"command": "pwsh",
-			"options": {
-				"cwd": "${workspaceFolder}"
-			},
-			"args": [
-				"-NoProfile",
-				"-Command",
-				"$ErrorActionPreference='Stop'; rg -n --hidden --no-messages -g '!**/.git/**' -g '!**/.venv/**' -g '*.[pP][yY]' -P '^[\\s]*(?!#)[\\s]*return[\\s]*[\\{\\[]' .; $c1=$LASTEXITCODE; if ($c1 -eq 0) { Write-Error 'Found non-string returns (dict/list literal). Handlers and story must return strings.'; exit 1 } elseif ($c1 -ne 1) { Write-Error \"ripgrep error ($c1)\"; exit $c1 }; rg -n --hidden --no-messages -g '!**/.git/**' -g '!**/.venv/**' -g '*.[pP][yY]' -P '^[\\s]*(?!#)[\\s]*return[\\s]*(json\\.(dumps|dump)\\(|ujson\\.dumps\\()' .; $c2=$LASTEXITCODE; if ($c2 -eq 0) { Write-Error 'Found json.dumps return. Return plain strings instead.'; exit 1 } elseif ($c2 -ne 1) { Write-Error \"ripgrep error ($c2)\"; exit $c2 }; exit 0"
-			],
-			"group": "test",
-			"problemMatcher": []
-		},
-		{
-			"label": "Package: make clean ZIP",
-			"type": "process",
-			"command": "pwsh",
-			"options": {
-				"cwd": "${workspaceFolder}"
-			},
-			"args": [
-				"-NoProfile",
-				"-Command",
-				"$ErrorActionPreference='Stop'; $ws='${workspaceFolder}'; $date=Get-Date -Format 'yyyyMMdd-HHmm'; $dist=Join-Path $ws 'dist'; if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Null }; $zip=Join-Path $dist ('storybook_archipelago-' + $date + '.zip'); $env:GIT_PAGER=''; git --no-pager archive -o $zip --format zip --worktree-attributes HEAD 2>$null; $code=$LASTEXITCODE; if ($code -eq 0) { Write-Host $zip; exit 0 } else { if (Test-Path $zip) { Remove-Item -Force $zip }; $excludes=@('.git','/.git/*','/.venv','/.venv/*'); $items=Get-ChildItem -LiteralPath $ws -Force -Recurse | Where-Object { $_.PSIsContainer -or ($_.FullName -notmatch '\\.git(\\|$)' -and $_.FullName -notmatch '\\.venv(\\|$)' -and $_.FullName -notmatch '\\__pycache__(\\|$)' -and $_.FullName -notmatch '\\.vscode(\\|$)' -and $_.FullName -notmatch '\\.github(\\|$)' ) }; Compress-Archive -Path $items -DestinationPath $zip -Force; Write-Host $zip; exit 0 }"
-			],
-			"group": "build",
-			"problemMatcher": []
-		},
-		{
-			"label": "History: go 10 (rewrite messages)",
-			"type": "process",
-			"command": "pwsh",
-			"options": {
-				"cwd": "${workspaceFolder}"
-			},
-			"args": [
-				"-NoProfile",
-				"-ExecutionPolicy",
-				"Bypass",
-				"-File",
-				"${workspaceFolder}/scripts/go10.ps1",
-				"-Count",
-				"10"
-			],
-			"group": "none",
-			"problemMatcher": []
-		},
-		{
-			"label": "History: push rewritten (force-with-lease)",
-			"type": "process",
-			"command": "pwsh",
-			"options": {
-				"cwd": "${workspaceFolder}"
-			},
-			"args": [
-				"-NoProfile",
-				"-Command",
-				"$ErrorActionPreference='Stop'; git --no-pager log --oneline -n 12; git push --force-with-lease origin HEAD:master"
-			],
-			"group": "none",
-			"problemMatcher": []
-		},
-		{
-			"label": "Run: render choices demo",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"scripts/render_choices_demo.py"
-			],
-			"isBackground": false,
-			"problemMatcher": [],
-			"group": "test"
-		},
-		{
-			"label": "Run: auto-follow runner (coral quay)",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"scripts/auto_follow_runner.py",
-				"--node",
-				"storybook_archipelago/a0_0_sailing_mode/a0_1_starfish_harbor_minigame/a0_1_coral_quay_node/",
-				"--max-steps",
-				"10"
-			],
-			"isBackground": false,
-			"problemMatcher": [],
-			"group": "test"
-		},
-		{
-			"label": "Play: current node (runner)",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"${workspaceFolder}/tools/play_node.py",
-				"${relativeFileDirname}",
-				"--loop"
-			],
-			"group": "test"
-		}
-		,
-		{
-			"label": "Play: Lantern Pass (entry)",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"${workspaceFolder}/tools/play_node.py",
-				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_0_lantern_pass_node/",
-				"--loop"
-			],
-			"group": "test"
-		},
-		{
-			"label": "Play: Still Pool",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"${workspaceFolder}/tools/play_node.py",
-				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_0_still_pool_node/",
-				"--loop"
-			],
-			"group": "test"
-		}
-		,
-		{
-			"label": "Auto-follow: Lantern Pass (10 steps)",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"${workspaceFolder}/scripts/auto_follow_runner.py",
-				"--node",
-				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_0_lantern_pass_node/",
-				"--max-steps",
-				"10"
-			],
-			"group": "test"
-		},
-		{
-			"label": "Auto-follow: Still Pool (10 steps)",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"${workspaceFolder}/scripts/auto_follow_runner.py",
-				"--node",
-				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_0_still_pool_node/",
-				"--max-steps",
-				"10"
-			],
-			"group": "test"
-		}
-		,
-		{
-			"label": "Play: Shoal Bend",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"${workspaceFolder}/tools/play_node.py",
-				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_3_shoal_bend_node/",
-				"--loop"
-			],
-			"group": "test"
-		}
-		,
-		{
-			"label": "Auto-follow: Shoal Bend (10 steps)",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"${workspaceFolder}/scripts/auto_follow_runner.py",
-				"--node",
-				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_3_shoal_bend_node/",
-				"--max-steps",
-				"10"
-			],
-			"group": "test"
-		}
-		,
-		{
-			"label": "Play: Tolling Gate",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"${workspaceFolder}/tools/play_node.py",
-				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_3_tolling_gate_node/",
-				"--loop"
-			],
-			"group": "test"
-		}
-		,
-		{
-			"label": "Play: Count of Light",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"${workspaceFolder}/tools/play_node.py",
-				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_2_count_of_light_node/",
-				"--loop"
-			],
-			"group": "test"
-		}
-		,
-		{
-			"label": "Auto-follow: Tolling Gate (10 steps)",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"${workspaceFolder}/scripts/auto_follow_runner.py",
-				"--node",
-				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_3_tolling_gate_node/",
-				"--max-steps",
-				"10"
-			],
-			"group": "test"
-		}
-		,
-		{
-			"label": "Auto-follow: Count of Light (10 steps)",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"${workspaceFolder}/scripts/auto_follow_runner.py",
-				"--node",
-				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_2_count_of_light_node/",
-				"--max-steps",
-				"10"
-			],
-			"group": "test"
-		}
-		,
-		{
-			"label": "Play: Braided Seam",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"${workspaceFolder}/tools/play_node.py",
-				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_1_braided_seam_node/",
-				"--loop"
-			],
-			"group": "test"
-		}
-		,
-		{
-			"label": "Play: Open Chop",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"${workspaceFolder}/tools/play_node.py",
-				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_1_open_chop_node/",
-				"--loop"
-			],
-			"group": "test"
-		}
-		,
-		{
-			"label": "Auto-follow: Braided Seam (10 steps)",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"${workspaceFolder}/scripts/auto_follow_runner.py",
-				"--node",
-				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_1_braided_seam_node/",
-				"--max-steps",
-				"10"
-			],
-			"group": "test"
-		}
-		,
-		{
-			"label": "Auto-follow: Open Chop (10 steps)",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"${workspaceFolder}/scripts/auto_follow_runner.py",
-				"--node",
-				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_1_open_chop_node/",
-				"--max-steps",
-				"10"
-			],
-			"group": "test"
-		}
-		,
-		{
-			"label": "Play: Crescent Moor",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"${workspaceFolder}/tools/play_node.py",
-				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_2_crescent_moor_node/",
-				"--loop"
-			],
-			"group": "test"
-		}
-		,
-		{
-			"label": "Auto-follow: Crescent Moor (10 steps)",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"${workspaceFolder}/scripts/auto_follow_runner.py",
-				"--node",
-				"storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_2_crescent_moor_node/",
-				"--max-steps",
-				"10"
-			],
-			"group": "test"
-		}
-	]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Test: repo root (pytest)",
+      "type": "shell",
+      "command": "pytest -q",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Test: current node (pytest)",
+      "type": "shell",
+      "command": "pytest -q ${fileDirname}",
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Lint: disallow closed-bracket portal tags",
+      "type": "process",
+      "command": "pwsh",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "args": [
+        "-NoProfile",
+        "-File",
+        "${workspaceFolder}/scripts/lint_portal_tags.ps1"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Lint: disallow non-string returns (handlers/story)",
+      "type": "process",
+      "command": "pwsh",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "args": [
+        "-NoProfile",
+        "-Command",
+        "$ErrorActionPreference='Stop'; rg -n --hidden --no-messages -g '!**/.git/**' -g '!**/.venv/**' -g '*.[pP][yY]' -P '^[\\s]*(?!#)[\\s]*return[\\s]*[\\{\\[]' .; $c1=$LASTEXITCODE; if ($c1 -eq 0) { Write-Error 'Found non-string returns (dict/list literal). Handlers and story must return strings.'; exit 1 } elseif ($c1 -ne 1) { Write-Error \"ripgrep error ($c1)\"; exit $c1 }; rg -n --hidden --no-messages -g '!**/.git/**' -g '!**/.venv/**' -g '*.[pP][yY]' -P '^[\\s]*(?!#)[\\s]*return[\\s]*(json\\.(dumps|dump)\\(|ujson\\.dumps\\()' .; $c2=$LASTEXITCODE; if ($c2 -eq 0) { Write-Error 'Found json.dumps return. Return plain strings instead.'; exit 1 } elseif ($c2 -ne 1) { Write-Error \"ripgrep error ($c2)\"; exit $c2 }; exit 0"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Package: make clean ZIP",
+      "type": "process",
+      "command": "pwsh",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "args": [
+        "-NoProfile",
+        "-Command",
+        "$ErrorActionPreference='Stop'; " +
+        "$ws='${workspaceFolder}'; " +
+        "$dateDay=Get-Date -Format 'yyyyMMdd'; " +
+        "$dist=Join-Path $ws 'dist'; " +
+        "if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Null }; " +
+        "$zipClean=Join-Path $dist 'storybook_archipelago_clean.zip'; " +
+        "$zipDaily=Join-Path $dist ('storybook_archipelago-' + $dateDay + '.zip'); " +
+        "$items=Get-ChildItem -LiteralPath $ws -Force -Recurse | Where-Object { $_.PSIsContainer -or ($_.FullName -notmatch '\\.git(\\|$)' -and $_.FullName -notmatch '\\.venv(\\|$)' -and $_.FullName -notmatch '\\__pycache__(\\|$)' -and $_.FullName -notmatch '\\.vscode(\\|$)' -and $_.FullName -notmatch '\\.github(\\|$)' ) }; " +
+        "Compress-Archive -Path $items -DestinationPath $zipClean -Force; " +
+        "Copy-Item -Force $zipClean $zipDaily; " +
+        "Write-Host ('Created: ' + $zipClean + ' and ' + $zipDaily)"
+      ],
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "History: push rewritten (force-with-lease)",
+      "type": "process",
+      "command": "pwsh",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "args": [
+        "-NoProfile",
+        "-Command",
+        "$ErrorActionPreference='Stop'; git --no-pager log --oneline -n 12; git push --force-with-lease origin HEAD:master"
+      ],
+      "group": "none",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run: render choices demo",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "scripts/render_choices_demo.py"
+      ],
+      "isBackground": false,
+      "problemMatcher": [],
+      "group": "test"
+    },
+    {
+      "label": "Run: auto-follow runner (coral quay)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "scripts/auto_follow_runner.py",
+        "--node",
+        "storybook_archipelago/a0_0_sailing_mode/a0_1_starfish_harbor_minigame/a0_1_coral_quay_node/",
+        "--max-steps",
+        "10"
+      ],
+      "isBackground": false,
+      "problemMatcher": [],
+      "group": "test"
+    },
+    {
+      "label": "Play: current node (runner)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/tools/play_node.py",
+        "${relativeFileDirname}",
+        "--loop"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Play: Lantern Pass (entry)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/tools/play_node.py",
+        "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_0_lantern_pass_node/",
+        "--loop"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Play: Still Pool",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/tools/play_node.py",
+        "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_0_still_pool_node/",
+        "--loop"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Auto-follow: Lantern Pass (10 steps)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/scripts/auto_follow_runner.py",
+        "--node",
+        "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_0_lantern_pass_node/",
+        "--max-steps",
+        "10"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Auto-follow: Still Pool (10 steps)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/scripts/auto_follow_runner.py",
+        "--node",
+        "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_0_still_pool_node/",
+        "--max-steps",
+        "10"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Play: Shoal Bend",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/tools/play_node.py",
+        "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_3_shoal_bend_node/",
+        "--loop"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Auto-follow: Shoal Bend (10 steps)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/scripts/auto_follow_runner.py",
+        "--node",
+        "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_3_shoal_bend_node/",
+        "--max-steps",
+        "10"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Play: Tolling Gate",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/tools/play_node.py",
+        "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_3_tolling_gate_node/",
+        "--loop"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Play: Count of Light",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/tools/play_node.py",
+        "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_2_count_of_light_node/",
+        "--loop"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Auto-follow: Tolling Gate (10 steps)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/scripts/auto_follow_runner.py",
+        "--node",
+        "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_3_tolling_gate_node/",
+        "--max-steps",
+        "10"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Auto-follow: Count of Light (10 steps)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/scripts/auto_follow_runner.py",
+        "--node",
+        "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_2_count_of_light_node/",
+        "--max-steps",
+        "10"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Play: Braided Seam",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/tools/play_node.py",
+        "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_1_braided_seam_node/",
+        "--loop"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Play: Open Chop",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/tools/play_node.py",
+        "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_1_open_chop_node/",
+        "--loop"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Auto-follow: Braided Seam (10 steps)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/scripts/auto_follow_runner.py",
+        "--node",
+        "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_1_braided_seam_node/",
+        "--max-steps",
+        "10"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Auto-follow: Open Chop (10 steps)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/scripts/auto_follow_runner.py",
+        "--node",
+        "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_1_open_chop_node/",
+        "--max-steps",
+        "10"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Play: Crescent Moor",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/tools/play_node.py",
+        "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_2_crescent_moor_node/",
+        "--loop"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Auto-follow: Crescent Moor (10 steps)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/scripts/auto_follow_runner.py",
+        "--node",
+        "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_2_crescent_moor_node/",
+        "--max-steps",
+        "10"
+      ],
+      "group": "test"
+    }
+  ]
 }
