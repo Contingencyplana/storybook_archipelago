@@ -14,7 +14,7 @@
     {
       "label": "Test: current node (pytest)",
       "type": "shell",
-      "command": "pytest -q ${fileDirname}",
+      "command": "pytest -q",
       "options": {
         "cwd": "${fileDirname}"
       },
