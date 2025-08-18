@@ -14,7 +14,7 @@
     {
       "label": "Test: current node (pytest)",
       "type": "shell",
-      "command": "pytest -q",
+      "command": "pytest -q ${fileDirname}",
       "options": {
         "cwd": "${fileDirname}"
       },
@@ -51,6 +51,7 @@
       "group": "test",
       "problemMatcher": []
     },
+
     {
       "label": "Package: make clean ZIP",
       "type": "process",
@@ -61,27 +62,12 @@
       "args": [
         "-NoProfile",
         "-Command",
-        "$ErrorActionPreference='Stop'; $ws='${workspaceFolder}'; $dateDay=Get-Date -Format 'yyyyMMdd'; $dist=Join-Path $ws 'dist'; if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Null }; $zipDaily=Join-Path $dist ('storybook_archipelago-' + $dateDay + '.zip'); $zipClean=Join-Path $dist 'storybook_archipelago_clean.zip'; if (Test-Path $zipDaily) { Remove-Item -Force $zipDaily }; $items=Get-ChildItem -LiteralPath $ws -Force -Recurse | Where-Object { $_.PSIsContainer -or ($_.FullName -notmatch '\\.?git' -and $_.FullName -notmatch '\\.?venv' -and $_.FullName -notmatch '__pycache__' -and $_.FullName -notmatch '\\.?vscode' -and $_.FullName -notmatch '\\.?github') }; Compress-Archive -Path $items -DestinationPath $zipDaily -Force; Start-Sleep -Seconds 2; Copy-Item -Force $zipDaily $zipClean; Write-Host ('Created: ' + $zipDaily + ' and ' + $zipClean')"
-      ],
-      "group": "none",
-      "problemMatcher": []
-    },
-    {
-      "label": "Package: make clean ZIP",
-      "type": "process",
-      "command": "pwsh",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "args": [
-        "-NoProfile",
-        "-Command",
-        "$ErrorActionPreference='Stop'; $ws='${workspaceFolder}'; $dateDay=Get-Date -Format 'yyyyMMdd'; $dist=Join-Path $ws 'dist'; if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Null }; $zipClean=Join-Path $dist 'storybook_archipelago_clean.zip'; $zipDaily=Join-Path $dist ('storybook_archipelago-' + $dateDay + '.zip'); $items=Get-ChildItem -LiteralPath $ws -Force -Recurse | Where-Object { $_.PSIsContainer -or ($_.FullName -notmatch '\\.?git' -and $_.FullName -notmatch '\\.?venv' -and $_.FullName -notmatch '__pycache__' -and $_.FullName -notmatch '\\.?vscode' -and $_.FullName -notmatch '\\.?github') }; Compress-Archive -Path $items -DestinationPath $zipClean -Force; Copy-Item -Force $zipClean $zipDaily; Write-Host ('Created: ' + $zipClean + ' and ' + $zipDaily)"
-  "$ErrorActionPreference='Stop'; $ws='${workspaceFolder}'; $dateDay=Get-Date -Format 'yyyyMMdd'; $dist=Join-Path $ws 'dist'; if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Null }; $zipClean=Join-Path $dist 'storybook_archipelago_clean.zip'; $zipDaily=Join-Path $dist ('storybook_archipelago-' + $dateDay + '.zip'); if (Test-Path $zipDaily) { Remove-Item -Force $zipDaily; Start-Sleep -Seconds 1 }; $items=Get-ChildItem -LiteralPath $ws -Force -Recurse | Where-Object { $_.PSIsContainer -or ($_.FullName -notmatch '\\.?git' -and $_.FullName -notmatch '\\.?venv' -and $_.FullName -notmatch '__pycache__' -and $_.FullName -notmatch '\\.?vscode' -and $_.FullName -notmatch '\\.?github') }; Compress-Archive -Path $items -DestinationPath $zipDaily -Force; Copy-Item -Force $zipDaily $zipClean; Write-Host ('Created: ' + $zipDaily + ' and ' + $zipClean)"
+        "$ErrorActionPreference='Stop'; $ws='${workspaceFolder}'; $dateDay=Get-Date -Format 'yyyyMMdd'; $dist=Join-Path $ws 'dist'; if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Null }; $zipDaily=Join-Path $dist ('storybook_archipelago-' + $dateDay + '.zip'); $zipClean=Join-Path $dist 'storybook_archipelago_clean.zip'; if (Test-Path $zipDaily) { Remove-Item -Force $zipDaily -ErrorAction SilentlyContinue }; if (Test-Path $zipClean) { Remove-Item -Force $zipClean -ErrorAction SilentlyContinue }; $items=Get-ChildItem -LiteralPath $ws -Force -Recurse | Where-Object { $_.FullName -notlike ($dist + '*') -and $_.FullName -notmatch '\\.git' -and $_.FullName -notmatch '\\.venv' -and $_.FullName -notmatch '__pycache__' -and $_.FullName -notmatch '\\.vscode' -and $_.FullName -notmatch '\\.github' }; Compress-Archive -Path $items -DestinationPath $zipDaily -Force; for ($i=0; $i -lt 10; $i++) { try { Copy-Item -Force $zipDaily $zipClean; break } catch { Start-Sleep -Milliseconds 500 } }; if (-not (Test-Path $zipClean)) { Write-Error 'Failed to create clean zip after retries.'; exit 1 }; Write-Host ('Created: ' + $zipDaily + ' and ' + $zipClean)"
       ],
       "group": "build",
       "problemMatcher": []
     },
+
     {
       "label": "History: push rewritten (force-with-lease)",
       "type": "process",
@@ -92,18 +78,17 @@
       "args": [
         "-NoProfile",
         "-Command",
-        "$ErrorActionPreference='Stop'; $ws='${workspaceFolder}'; $dateDay=Get-Date -Format 'yyyyMMdd'; $dist=Join-Path $ws 'dist'; if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Null }; $zipDaily=Join-Path $dist ('storybook_archipelago-' + $dateDay + '.zip'); $zipClean=Join-Path $dist 'storybook_archipelago_clean.zip'; if (Test-Path $zipDaily) { Remove-Item -Force $zipDaily }; $items=Get-ChildItem -LiteralPath $ws -Force -Recurse | Where-Object { $_.PSIsContainer -or ($_.FullName -notmatch '\\.?git' -and $_.FullName -notmatch '\\.?venv' -and $_.FullName -notmatch '__pycache__' -and $_.FullName -notmatch '\\.?vscode' -and $_.FullName -notmatch '\\.?github') }; Compress-Archive -Path $items -DestinationPath $zipDaily -Force; Copy-Item -Force $zipDaily $zipClean; Write-Host ('Created: ' + $zipClean + ' and ' + $zipDaily)"
+        "$ErrorActionPreference='Stop'; git --no-pager log --oneline -n 12; git push --force-with-lease origin HEAD:master"
       ],
       "group": "none",
       "problemMatcher": []
     },
+
     {
       "label": "Run: render choices demo",
       "type": "shell",
       "command": "python",
-      "args": [
-        "scripts/render_choices_demo.py"
-      ],
+      "args": ["scripts/render_choices_demo.py"],
       "isBackground": false,
       "problemMatcher": [],
       "group": "test"
@@ -116,13 +101,13 @@
         "scripts/auto_follow_runner.py",
         "--node",
         "storybook_archipelago/a0_0_sailing_mode/a0_1_starfish_harbor_minigame/a0_1_coral_quay_node/",
-        "--max-steps",
-        "10"
+        "--max-steps", "10"
       ],
       "isBackground": false,
       "problemMatcher": [],
       "group": "test"
     },
+
     {
       "label": "Play: current node (runner)",
       "type": "shell",
@@ -164,8 +149,7 @@
         "${workspaceFolder}/scripts/auto_follow_runner.py",
         "--node",
         "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_0_lantern_pass_node/",
-        "--max-steps",
-        "10"
+        "--max-steps", "10"
       ],
       "group": "test"
     },
@@ -177,8 +161,7 @@
         "${workspaceFolder}/scripts/auto_follow_runner.py",
         "--node",
         "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_0_still_pool_node/",
-        "--max-steps",
-        "10"
+        "--max-steps", "10"
       ],
       "group": "test"
     },
@@ -201,8 +184,7 @@
         "${workspaceFolder}/scripts/auto_follow_runner.py",
         "--node",
         "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_3_shoal_bend_node/",
-        "--max-steps",
-        "10"
+        "--max-steps", "10"
       ],
       "group": "test"
     },
@@ -236,8 +218,7 @@
         "${workspaceFolder}/scripts/auto_follow_runner.py",
         "--node",
         "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_3_tolling_gate_node/",
-        "--max-steps",
-        "10"
+        "--max-steps", "10"
       ],
       "group": "test"
     },
@@ -249,8 +230,7 @@
         "${workspaceFolder}/scripts/auto_follow_runner.py",
         "--node",
         "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_2_count_of_light_node/",
-        "--max-steps",
-        "10"
+        "--max-steps", "10"
       ],
       "group": "test"
     },
@@ -284,8 +264,7 @@
         "${workspaceFolder}/scripts/auto_follow_runner.py",
         "--node",
         "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a0_1_braided_seam_node/",
-        "--max-steps",
-        "10"
+        "--max-steps", "10"
       ],
       "group": "test"
     },
@@ -297,8 +276,7 @@
         "${workspaceFolder}/scripts/auto_follow_runner.py",
         "--node",
         "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_1_open_chop_node/",
-        "--max-steps",
-        "10"
+        "--max-steps", "10"
       ],
       "group": "test"
     },
@@ -321,8 +299,7 @@
         "${workspaceFolder}/scripts/auto_follow_runner.py",
         "--node",
         "storybook_archipelago/a0_0_sailing_mode/a0_2_lantern_channel_minigame/a1_2_crescent_moor_node/",
-        "--max-steps",
-        "10"
+        "--max-steps", "10"
       ],
       "group": "test"
     }
