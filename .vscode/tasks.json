@@ -62,12 +62,11 @@
       "args": [
         "-NoProfile",
         "-Command",
-        "$ErrorActionPreference='Stop'; $ws='${workspaceFolder}'; $dateDay=Get-Date -Format 'yyyyMMdd'; $dist=Join-Path $ws 'dist'; if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Null }; $zipDaily=Join-Path $dist ('storybook_archipelago-' + $dateDay + '.zip'); $zipClean=Join-Path $dist 'storybook_archipelago_clean.zip'; if (Test-Path $zipDaily) { Remove-Item -Force $zipDaily -ErrorAction SilentlyContinue }; if (Test-Path $zipClean) { Remove-Item -Force $zipClean -ErrorAction SilentlyContinue }; $items=Get-ChildItem -LiteralPath $ws -Force -Recurse | Where-Object { $_.FullName -notlike ($dist + '*') -and $_.FullName -notmatch '\\.git' -and $_.FullName -notmatch '\\.venv' -and $_.FullName -notmatch '__pycache__' -and $_.FullName -notmatch '\\.vscode' -and $_.FullName -notmatch '\\.github' }; Compress-Archive -Path $items -DestinationPath $zipDaily -Force; for ($i=0; $i -lt 10; $i++) { try { Copy-Item -Force $zipDaily $zipClean; break } catch { Start-Sleep -Milliseconds 500 } }; if (-not (Test-Path $zipClean)) { Write-Error 'Failed to create clean zip after retries.'; exit 1 }; Write-Host ('Created: ' + $zipDaily + ' and ' + $zipClean)"
+        "$ErrorActionPreference='Stop'; $ws='${workspaceFolder}'; $dateDay=Get-Date -Format 'yyyyMMdd'; $dist=Join-Path $ws 'dist'; if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Null }; $zipDaily=Join-Path $dist ('storybook_archipelago-' + $dateDay + '.zip'); $zipClean=Join-Path $dist 'storybook_archipelago_clean.zip'; if (Test-Path $zipDaily) { Remove-Item -Force $zipDaily -ErrorAction SilentlyContinue }; if (Test-Path $zipClean) { Remove-Item -Force $zipClean -ErrorAction SilentlyContinue }; $items=Get-ChildItem -LiteralPath $ws -Force -Recurse | Where-Object { $_.FullName -notlike ($dist + '*') -and $_.FullName -notmatch '\\.git' -and $_.FullName -notmatch '\\.venv' -and $_.FullName -notmatch '__pycache__' -and $_.FullName -notmatch '\\.vscode' -and $_.FullName -notmatch '\\.github' }; Compress-Archive -Path $items -DestinationPath $zipDaily -Force; for ($i=0; $i -lt 10; $i++) { try { Copy-Item -Force $zipDaily $zipClean; break } catch { Start-Sleep -Milliseconds 500 } }; if (-not (Test-Path $zipClean)) { Write-Error 'Failed to create clean zip after retries.'; exit 1 }; Write-Host ('Created: ' + $zipDaily + ' and ' + $zipClean')"
       ],
       "group": "build",
       "problemMatcher": []
     },
-
     {
       "label": "History: push rewritten (force-with-lease)",
       "type": "process",
@@ -83,7 +82,6 @@
       "group": "none",
       "problemMatcher": []
     },
-
     {
       "label": "Run: render choices demo",
       "type": "shell",
@@ -107,7 +105,6 @@
       "problemMatcher": [],
       "group": "test"
     },
-
     {
       "label": "Play: current node (runner)",
       "type": "shell",
