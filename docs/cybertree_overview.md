@@ -8,7 +8,7 @@
 CLAIMVIG’s “Towering Cybertree” grows as **hundreds of small, interconnected multiplayer games (“Cyberbranches”)**.  
 The **first four cyberbranches** are:
 1) Storybook Archipelago (cybernurse)  
-2) Primordial Pool (cyberdoc)  
+2) Primordial Soup (cyberdoc)  
 3) Storybook (game maker)  
 4) FUN Factory (its test)
 

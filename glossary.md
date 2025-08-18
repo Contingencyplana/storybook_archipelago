@@ -22,11 +22,21 @@
 
 **Containment** – The practice of constraining AI agency, recursion, and branching paths to preserve system stability.
 
+**Cyberbranch** – (as a full game) video game.
+
+**Cyberbranchlet** – (as a project sub-area) workspace.
+
 **Cyberdoc** – The nickname for **Primordial Soup**, which acts as the recursive cybernetic doctor. It diagnoses and heals recursive structures at depth, including anomaly containment and cybercell logic.
+
+**Cyberleaf** – minigame node.
 
 **Cybernurse** – The nickname for **Storybook Archipelago**, which heals surface systems and recursive scaffolds. It is the first to act in the triage sequence and later assists the cyberdoc in deeper repair.
 
 **Cyberstemcell** – The foundational recursive unit within Primordial Soup. Each cyberstemcell can divide, differentiate, or contain anomalies. Forms the basis of cybercell growth and minigame generation.
+
+**Cybertwig** – game mode.
+
+**Cybertwiglet** – (as a gameplay segment) minigame.
 
 ---
 
@@ -71,6 +81,8 @@
 ## R
 
 **Recursion** – The structural and poetic backbone of the game. All systems grow in layers. All layers loop or echo.
+
+**Rootlet** – engine/assembly root.
 
 ---
 

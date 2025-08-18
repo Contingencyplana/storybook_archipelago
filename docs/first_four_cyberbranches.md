@@ -1,6 +1,6 @@
 <!-- Path: C:\Users\Admin\storybook_archipelago\docs\first_four_cyberleaves.md -->
 
-# First Four Cyberleaves — Tracker
+# First Four Cyberbranches — Tracker
 
 **Status:** Draft v0.1 • **Owner:** Mark R. Gillam • **Last updated:** 2025-08-18  
 **Purpose:** Single place to track scope, portals, and test readiness for the inaugural leaves.
@@ -21,7 +21,7 @@
 ---
 
 ## 2) Primordial Soup (cyberdoc) — multiplayer
-- **leaf_id:** `primordial_soup/a0_0/entry` *(confirm name; was `primordial_pool` in earlier drafts)*
+- **leaf_id:** `primordial_soup/a0_0/entry`
 - **owner:** …
 - **scope (v0.1):** …
 - **portals:** L → … / R → …
