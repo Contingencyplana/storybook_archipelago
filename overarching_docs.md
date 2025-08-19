@@ -1,5 +1,3 @@
----
-
 # Overarching Docs — Index & Compass
 
 **Status:** Draft v0.1 • **Owner:** Mark R. Gillam • **Last updated:** 2025-08-20  
