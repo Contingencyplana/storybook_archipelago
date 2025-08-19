@@ -105,12 +105,8 @@ Use this file to monitor cross-mode growth, recursive integrity, and player read
 
 **Completed**
 
-- Worldmap: added portal rules, four-part examples, and open-tag guidance; linked to return value contract.
-- Mode overview: added cross-links to portals and registry docs; fixed markdown spacing issues.
-- Root milestones: recorded this alignment; synced next steps with second-node planning.
-- Packaging/guards previously hardened remain in effect.
 
 **Next**
 
-- Seed `a0_0_sailing_mode/roadmaps/milestones.md` with Whispering Grove done and Drifting Glade planning.
-- Add a CI job to publish clean ZIP artifacts on tags (optional).
+
+- 📘 Introduced `three_tier_recursive_workflow.md` — formalizing Vision → Design → Build stack
