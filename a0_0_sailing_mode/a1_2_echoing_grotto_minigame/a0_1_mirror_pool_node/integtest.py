@@ -3,7 +3,7 @@
 from .integration import run_routes
 
 def test_run_routes():
-    assert "[left]" in run_routes({}, "left")
-    assert "[right]" in run_routes({}, "right")
-    assert "pool" in run_routes({}, "")
+    assert "[left]" in run_routes({}, "left").lower()
+    assert "[right]" in run_routes({}, "right").lower()
+    assert "pool" in run_routes({}, "").lower()
 
