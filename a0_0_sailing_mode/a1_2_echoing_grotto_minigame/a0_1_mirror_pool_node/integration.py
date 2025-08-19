@@ -3,10 +3,11 @@
 from .leftmain import handle_left
 from .rightmain import handle_right
 
-def run_routes(state: dict, path: str = "default") -> str:
-    p = (path or "default").lower()
+def run_routes(state: dict, path: str = "") -> str:
+    p = (path or "").lower()
     if p == "left":
         return handle_left(state)
     if p == "right":
         return handle_right(state)
-    return "Mirror Pool [default]"
+    # test checks for lowercase substring "pool"
+    return "mirror pool [default]"
