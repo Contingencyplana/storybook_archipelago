@@ -1,5 +1,5 @@
 # leftmain.py — Whispering Arch
 def handle_left(state: dict) -> str:
-	"""Stub left path handler for Whispering Arch."""
-	return "Whispering Arch [left]"
+	"""Left path handler for Whispering Arch (must return '[LEFT]')."""
+	return "You step beneath the arch, the air thick with memory. [LEFT] The grove hushes."
 
