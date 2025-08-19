@@ -1,4 +1,4 @@
-# Right path handler for mirror pool node.
 
-def handle_right(memory):
-    return "You move right, and the pool deepens. [RIGHT] Reflections stretch into the unknown."
+# rightmain.py — Mirror Pool
+def handle_right(state: dict) -> str:
+    return "Mirror Pool [right]"

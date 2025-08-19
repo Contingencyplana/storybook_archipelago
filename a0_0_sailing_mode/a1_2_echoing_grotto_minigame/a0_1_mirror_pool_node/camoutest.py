@@ -1,5 +1,5 @@
 import pytest
-from camouflage import apply_camouflage
+from .camouflage import apply_camouflage
 
 def test_apply_camouflage_returns_string():
     memory = {}

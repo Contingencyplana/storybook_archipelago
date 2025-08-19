@@ -1,11 +1,12 @@
-# integration.py — simple input router for the node; returns a string.
 
-from .orchestration import orchestrate
+# integration.py — Mirror Pool
+from .leftmain import handle_left
+from .rightmain import handle_right
 
-def run(user_text: str | None = None, memory: dict | None = None) -> str:
-    t = (user_text or "").strip().lower()
-    if t in ("l", "left"):
-        return orchestrate(memory, "left")
-    if t in ("r", "right"):
-        return orchestrate(memory, "right")
-    return orchestrate(memory, None)
+def run_routes(state: dict, path: str = "default") -> str:
+    p = (path or "default").lower()
+    if p == "left":
+        return handle_left(state)
+    if p == "right":
+        return handle_right(state)
+    return "Mirror Pool [default]"
