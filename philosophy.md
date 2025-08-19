@@ -238,10 +238,18 @@ These seven principles define not only how the game is built — but how it evol
 
 Together, they guide:
 
-- All future development
-- AI-driven tooling and validation
-- Documentation structure
-- Camouflage design choices
-- Node-level gameplay flow
 
-This file is living. It may grow, branch, and loop — just like the world it describes.
+
+---
+
+## Managerial Philosophy — The Vision Holder
+
+Storybook Archipelago is guided not by command-and-control, but by vision and trust.  
+The human contributor serves as a vision holder — contemplative, reflective, and non-micromanaging.  
+Decisions emerge through meditation on overarching files, long walks, and quiet consideration, rather than constant directives.  
+The AIs and tools are given freedom to act as builders and collaborators, with human intervention reserved for course corrections, hidden problems, or shifts in direction.  
+
+This philosophy ensures the game grows with balance: not rushed by orders, but shaped by intention.  
+It mirrors the recursive calm at the heart of the Archipelago — a world built by partnership, not domination.  
+
+---
