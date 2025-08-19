@@ -1,4 +1,5 @@
-# Storybook Archipelago — Echoing Grotto / Whispering Arch
-# Node type: minigame node (Tier 1 standard)
-# Purpose: Handles echo amplification and transformation (left=deepening, right=scattering)
+# orchestration.py — Whispering Arch
+def orchestrate(state: dict, path: str = "default") -> str:
+	"""Stub orchestration for Whispering Arch node."""
+	return f"Orchestrating Whispering Arch [{path}]"
 

@@ -1,4 +1,5 @@
-# Storybook Archipelago — Echoing Grotto / Whispering Arch
-# Node type: minigame node (Tier 1 standard)
-# Purpose: Handles echo amplification and transformation (left=deepening, right=scattering)
+# integration.py — Whispering Arch
+def integrate(state: dict, path: str = "default") -> str:
+	"""Stub integration router for Whispering Arch node."""
+	return f"Whispering Arch [{path}]"
 

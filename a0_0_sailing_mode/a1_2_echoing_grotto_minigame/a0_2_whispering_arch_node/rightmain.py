@@ -1,4 +1,5 @@
-# Storybook Archipelago — Echoing Grotto / Whispering Arch
-# Node type: minigame node (Tier 1 standard)
-# Purpose: Handles echo amplification and transformation (left=deepening, right=scattering)
+# rightmain.py — Whispering Arch
+def handle_right(state: dict) -> str:
+	"""Stub right path handler for Whispering Arch."""
+	return "Whispering Arch [right]"
 
