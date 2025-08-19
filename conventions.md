@@ -139,6 +139,7 @@ This pattern applies at workspace, mode, and minigame levels. It aligns with our
 
 ---
 
+
 ## 7. 📖 Story and Camouflage Files (Tier 3)
 
 Each Tier 3 `*_node/` must include:
@@ -149,6 +150,19 @@ Each Tier 3 `*_node/` must include:
 - `integration.py` — master router between L/R/story
 
 See: `minigame_template/` for full node file list.
+
+---
+
+## Commit Scope Naming Rules
+
+### Commit Scope Naming — Overarching Docs
+
+For root-level philosophy and planning files, we allow the `overarching(...)` scope.  
+
+- Example: `overarching(philosophy): add managerial philosophy note (vision holder style)`  
+- This future-proofs commit messages by reserving a dedicated scope for overarching docs (philosophy, planning_spaces, etc.), separate from gameplay or system files.  
+
+---
 
 ---
 
