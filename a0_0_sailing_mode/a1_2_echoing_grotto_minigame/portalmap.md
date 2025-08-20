@@ -28,9 +28,13 @@
 
 ---
 
-### `a0_2_whispering_arch_node`
-- **L →** *TBD (likely back-route to Entry or forward into a0_3)*  
-- **R →** *TBD (reserve for stanza closure or lateral echo path)*  
+
+## Whispering Arch (a0_2)
+
+- **L ** `TBD_next_node_left`  <!-- placeholder -->
+- **R ** `TBD_next_node_right` <!-- placeholder -->
+
+_These anchors are placeholders and will be bound once the next node (a0_3_...) is selected._
 
 ---
 

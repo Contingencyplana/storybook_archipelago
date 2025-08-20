@@ -112,3 +112,7 @@ Use this file to monitor cross-mode growth, recursive integrity, and player read
 - 📘 Introduced `three_tier_recursive_workflow.md` — formalizing Vision → Design → Build stack
 
 ✅ Mirror Pool node (a0_1) sealed — all 8 tests green, fixes + case-insensitive assertions committed and synced.
+
+## Milestone: Whispering Arch sealed — 2025-08-21
+
+- ✅ Sealed **Whispering Arch (a0_2)** — 15 tests passing; added `helpers.tag()`; camouflage mood variants.

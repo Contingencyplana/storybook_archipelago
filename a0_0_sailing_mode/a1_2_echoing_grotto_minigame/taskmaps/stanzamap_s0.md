@@ -1,5 +1,13 @@
 # 🗺️ Stanzamap S0 — Echoing Grotto
 
+### ✅ Checkpoint — Whispering Arch (a0_2) sealed
+
+- Status: **Sealed** — **15 tests passing**
+- Notes:
+	- Edge-case coverage added (unknown/None state, case-insensitive paths)
+	- `helpers.tag()` introduced for normalized path markers
+	- `render_camouflage` supports mood variants (echoing/muted/neutral) + level tag
+
 | Node                       | Status   | Notes                                             |
 |----------------------------|----------|---------------------------------------------------|
 | a0_0_resonant_entry_node   | ☐        |                                                   |
