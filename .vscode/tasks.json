@@ -56,17 +56,75 @@
       "label": "Package: make clean ZIP",
       "type": "process",
       "command": "pwsh",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-
+      "options": { "cwd": "${workspaceFolder}" },
       "args": [
         "-NoProfile",
         "-Command",
-        "$ErrorActionPreference='Stop'; $ws='${workspaceFolder}'; $dateDay=Get-Date -Format 'yyyyMMdd'; $dist=Join-Path $ws 'dist'; if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Null }; $zipTmp=Join-Path $dist ('storybook_archipelago-' + $dateDay + '-tmp.zip'); $zipDaily=Join-Path $dist ('storybook_archipelago-' + $dateDay + '.zip'); $zipClean=Join-Path $dist 'storybook_archipelago_clean.zip'; if (Test-Path $zipTmp) { Remove-Item -Force $zipTmp -ErrorAction SilentlyContinue }; if (Test-Path $zipDaily) { Remove-Item -Force $zipDaily -ErrorAction SilentlyContinue }; if (Test-Path $zipClean) { Remove-Item -Force $zipClean -ErrorAction SilentlyContinue }; function Wait-File([string]$p,[int]$timeoutMs=8000) { $sw=[Diagnostics.Stopwatch]::StartNew(); while ($true) { try { $fs=[System.IO.File]::Open($p,'Open','Read','None'); $fs.Close(); break } catch { Start-Sleep -Milliseconds 200; if ($sw.ElapsedMilliseconds -ge $timeoutMs) { throw \"Timeout waiting for $p\" } } } }; $items=Get-ChildItem -LiteralPath $ws -Force -Recurse -File | Where-Object { $_.FullName -notlike ($dist + '*') -and $_.FullName -notmatch '\\.git' -and $_.FullName -notmatch '\\.venv' -and $_.FullName -notmatch '__pycache__' -and $_.FullName -notmatch '\\.pytest_cache' -and $_.FullName -notmatch '\\.vscode' -and $_.FullName -notmatch '\\.github' -and $_.Name -notlike '*.pyc' -and $_.Name -notlike 'Thumbs.db' -and $_.Name -notlike '.DS_Store' }; Compress-Archive -Path $items -DestinationPath $zipTmp -Force; Wait-File $zipTmp 8000; Move-Item -Force $zipTmp $zipDaily; Wait-File $zipDaily 8000; Copy-Item -Force $zipDaily $zipClean; Wait-File $zipClean 8000; Write-Host ('Created: ' + $zipDaily + ' and ' + $zipClean)"
+        "$ErrorActionPreference='Stop';",
+        "$ws='${workspaceFolder}';",
+        "$dateDay=Get-Date -Format 'yyyyMMdd';",
+        "$dist=Join-Path $ws 'dist';",
+        "if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Null };",
+        "$zipTmp = Join-Path $dist ('storybook_archipelago-' + $dateDay + '-tmp.zip');",
+        "$zipDaily = Join-Path $dist ('storybook_archipelago-' + $dateDay + '.zip');",
+        "$zipClean = Join-Path $dist 'storybook_archipelago_clean.zip';",
+        "if (Test-Path $zipTmp) { Remove-Item -Force $zipTmp -ErrorAction SilentlyContinue };",
+        "if (Test-Path $zipDaily) { Remove-Item -Force $zipDaily -ErrorAction SilentlyContinue };",
+        "if (Test-Path $zipClean) { Remove-Item -Force $zipClean -ErrorAction SilentlyContinue };",
+        "function Wait-File([string]$p,[int]$timeoutMs=8000){ $sw=[Diagnostics.Stopwatch]::StartNew(); while($true){ try{ $fs=[IO.File]::Open($p,'Open','Read','None'); $fs.Close(); break } catch { Start-Sleep -Milliseconds 200; if($sw.ElapsedMilliseconds -ge $timeoutMs){ throw \"Timeout waiting for $p\" } } } };",
+        "$items = Get-ChildItem -LiteralPath $ws -Force -Recurse -File | Where-Object {",
+        "  $_.FullName -notlike ($dist + '\\*') -and",
+        "  $_.FullName -notmatch '\\.git|\\.venv|__pycache__|\\.pytest_cache|\\.vscode|\\.github' -and",
+        "  $_.Name -notlike '*.pyc' -and $_.Name -ne 'Thumbs.db' -and $_.Name -ne '.DS_Store'",
+        "};",
+        "Compress-Archive -Path $items -DestinationPath $zipTmp -Force;",
+        "Wait-File $zipTmp 8000;",
+        "Move-Item -Force $zipTmp $zipDaily;",
+        "Wait-File $zipDaily 8000;",
+        "Copy-Item -Force $zipDaily $zipClean;",
+        "Wait-File $zipClean 8000;",
+        "Write-Host ('Created: ' + $zipDaily + ' and ' + $zipClean)"
       ],
       "group": "build",
       "problemMatcher": []
+    },
+
+    {
+      "label": "Verify: clean zip freshness",
+      "type": "process",
+      "command": "pwsh",
+      "options": { "cwd": "${workspaceFolder}" },
+      "args": [
+        "-NoProfile",
+        "-Command",
+        "$ErrorActionPreference='Stop';",
+        "$ws='${workspaceFolder}';",
+        "$dist=Join-Path $ws 'dist';",
+        "$zip=Join-Path $dist 'storybook_archipelago_clean.zip';",
+        "$latest = Get-ChildItem -LiteralPath $ws -Recurse -File -Force |",
+        "  Where-Object { $_.FullName -notlike ($dist+'\\*') -and $_.FullName -notmatch '\\.git|\\.venv|__pycache__|\\.pytest_cache|\\.vscode|\\.github' -and $_.Name -notlike '*.pyc' -and $_.Name -ne 'Thumbs.db' -and $_.Name -ne '.DS_Store' } |",
+        "  Sort-Object LastWriteTime -Descending | Select-Object -First 1;",
+        "if (-not (Test-Path $zip)) { Write-Error 'No clean zip found.'; exit 1 };",
+        "$zipItem = Get-Item -LiteralPath $zip;",
+        "Write-Host ('Latest workspace file: ' + $latest.FullName + ' @ ' + $latest.LastWriteTime);",
+        "Write-Host ('Zip: ' + $zipItem.FullName + ' @ ' + $zipItem.LastWriteTime);",
+        "if ($zipItem.LastWriteTime -ge $latest.LastWriteTime) {",
+        "  Write-Host 'Fresh: True'; exit 0",
+        "} else {",
+        "  Write-Host 'Fresh: False'; exit 2",
+        "}"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+
+    {
+      "label": "Build+Verify: clean zip",
+      "dependsOn": [
+        "Package: make clean ZIP",
+        "Verify: clean zip freshness"
+      ],
+      "dependsOrder": "sequence"
     },
     {
       "label": "History: push rewritten (force-with-lease)",
