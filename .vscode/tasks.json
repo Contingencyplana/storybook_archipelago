@@ -124,7 +124,8 @@
         "Package: make clean ZIP",
         "Verify: clean zip freshness"
       ],
-      "dependsOrder": "sequence"
+      "dependsOrder": "sequence",
+      "group": { "kind": "build", "isDefault": true }
     },
     {
       "label": "History: push rewritten (force-with-lease)",
