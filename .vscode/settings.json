@@ -1,0 +1,32 @@
+{
+  // Model & chat UX
+  "chat.checkpoints.enabled": true,
+  "chat.editRequests": "inline",
+  "workbench.secondarySideBar.defaultVisibility": "maximizedInWorkspace",
+
+  // Tools & terminals
+  "chat.tools.terminal.autoApprove": {
+    "/^Remove-Item\\b/i": false,
+    "/\\.ps1\\b/i": { "approve": false, "matchCommandLine": true }
+  },
+  "chat.notifyWindowOnConfirmation": true,
+
+  // Experimental helpers
+  "github.copilot.chat.virtualTools.threshold": 128,
+  "chat.todoListTool.enabled": true,
+  "chat.math.enabled": false,
+
+  // MCP (if you use servers)
+  "chat.mcp.autostart": true,
+  "python.testing.pytestArgs": [
+    "."
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+
+  // Windows-friendly newlines and terminal
+  "files.eol": "\r\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "terminal.integrated.defaultProfile.windows": "PowerShell"
+}

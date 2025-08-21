@@ -1,3 +1,13 @@
+
+# Default: normalize to LF (safe for Python, Markdown, JSON, YAML, etc.)
+* text=auto eol=lf
+
+# Force CRLF only for Windows scripts
+*.ps1  text eol=crlf
+*.psm1 text eol=crlf
+*.cmd  text eol=crlf
+*.bat  text eol=crlf
+
 /.*         export-ignore
 /.venv/     export-ignore
 **/__pycache__/ export-ignore
