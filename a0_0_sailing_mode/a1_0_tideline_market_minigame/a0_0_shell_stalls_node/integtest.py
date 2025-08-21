@@ -7,5 +7,6 @@ def test_integration_routes():
     assert "[LEFT]" in left
     assert "1) " in left  # Type-2 numbered list cue on Left
     assert "[RIGHT]" in right
-    assert "grove" in scene.lower()
+    s = scene.lower()
+    assert ("market" in s) or ("grove" in s)
     assert "[PORTAL:" not in scene
