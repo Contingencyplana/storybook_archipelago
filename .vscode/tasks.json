@@ -83,7 +83,11 @@
         "Wait-File $zipDaily 8000;",
         "Copy-Item -Force $zipDaily $zipClean;",
         "Wait-File $zipClean 8000;",
-        "Write-Host ('Created: ' + $zipDaily + ' and ' + $zipClean)"
+  "Write-Host ('Created: ' + $zipDaily + ' and ' + $zipClean)",
+  "$allZips = Get-ChildItem -Path $dist -Filter 'storybook_archipelago-*.zip' | Sort-Object LastWriteTime -Descending;",
+  "$toKeep = $allZips | Select-Object -First 2;",
+  "$toDelete = $allZips | Where-Object { $toKeep -notcontains $_ -and $_.Name -ne 'storybook_archipelago_clean.zip' };",
+  "foreach ($f in $toDelete) { Remove-Item -Force $f.FullName -ErrorAction SilentlyContinue }"
       ],
       "group": "build",
       "problemMatcher": []
