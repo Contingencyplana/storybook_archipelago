@@ -128,6 +128,11 @@
       "group": { "kind": "build", "isDefault": true }
     },
     {
+      "label": "Verify EOL Rules",
+      "type": "shell",
+      "command": "echo Checking Python (.py) → LF && git check-attr eol -- **/*.py && echo Checking Markdown (.md) → LF && git check-attr eol -- **/*.md && echo Checking JSON (.json) → LF && git check-attr eol -- **/*.json && echo Checking YAML (.yml/.yaml) → LF && git check-attr eol -- **/*.yml **/*.yaml && echo Checking PowerShell (.ps1) → CRLF && git check-attr eol -- **/*.ps1 && echo Done."
+    },
+    {
       "label": "History: push rewritten (force-with-lease)",
       "type": "process",
       "command": "pwsh",
@@ -359,6 +364,11 @@
         "--max-steps", "10"
       ],
       "group": "test"
+  },
+  {
+      "label": "Verify EOL Rules",
+      "type": "shell",
+      "command": "echo Checking .py → LF && git check-attr eol -- a0_0_sailing_mode/a0_0_enchanted_isle_minigame/a0_0_whispering_grove_node/integration.py && echo Checking .ps1 → CRLF && git check-attr eol -- build.ps1 && echo Checking status... && git status --short"
     }
   ]
 }
