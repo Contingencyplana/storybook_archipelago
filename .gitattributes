@@ -1,13 +1,33 @@
 
-# Default: normalize to LF (safe for Python, Markdown, JSON, YAML, etc.)
-* text=auto eol=lf
+# Enforce CRLF line endings for all text files
+* text=auto eol=crlf
 
-# Force CRLF only for Windows scripts
-*.ps1  text eol=crlf
-*.psm1 text eol=crlf
-*.cmd  text eol=crlf
-*.bat  text eol=crlf
+# Common binary file overrides (do not modify line endings)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.gz binary
+*.tar binary
+*.7z binary
+*.mp3 binary
+*.mp4 binary
+*.mov binary
+*.avi binary
+*.exe binary
+*.dll binary
+*.so binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
 
+# You can add more binary patterns as needed
+
+# Export-ignore rules (unchanged)
 /.*         export-ignore
 /.venv/     export-ignore
 **/__pycache__/ export-ignore
