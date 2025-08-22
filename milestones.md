@@ -121,6 +121,9 @@ Doctrine milestone: Canonical File Placement Rules finalized. Detailed section a
 
 - **Stanza a1_0 — Tideline Market**: All four nodes (`a0_0_shell_stalls_node`, `a0_1_barter_lane_node`, `a0_2_weighing_scales_node`, `a0_3_ledger_booth_node`) successfully integration-tested and manual playtested. Enter, Left, Right inputs validated. Stanza canonized as playtest-ready.
 
-## Milestone: Whispering Arch sealed — 2025-08-21
+
+## Milestone: Shell Bazaar minigame fully playtested & header sweep complete — 2025-08-22
+
+- All four nodes in a1_1_shell_bazaar_minigame (Bazaar Gate, Pearl Action, Coral Counter, Nautilous Nook) have passed manual playtesting. L/R/Enter inputs route correctly and each node exits cleanly. Header sweeps are complete. Stanza is validated and canonized as playtest-ready.
 
 - ✅ Sealed **Whispering Arch (a0_2)** — 15 tests passing; added `helpers.tag()`; camouflage mood variants.
