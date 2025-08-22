@@ -1,3 +1,7 @@
+from . import leftmain
+from . import rightmain
+from . import story
+
 def route_input(user_input: str, memory: dict) -> str:
     s = (user_input or "").strip().lower()
     if s == "l":

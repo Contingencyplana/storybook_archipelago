@@ -2,7 +2,7 @@
 
 # 🧱 Node Tiers – File Count Doctrine for Storybook Archipelago
 
-This file defines the three **canonical node tiers** used throughout the *Storybook Archipelago* multiplayer video game.  
+This file defines the three **canonical node tiers** used throughout the *Storybook Archipelago* multiplayer video game.
 Each tier represents a distinct level of structural complexity, recursion depth, and AI responsibility.
 
 All nodes must belong to **one of the following tiers**:
@@ -11,8 +11,8 @@ All nodes must belong to **one of the following tiers**:
 
 ## 🟦 Tier 1 – Canonical Nodes (16 Files)
 
-**File Count:** `16`  
-**Purpose:** Full recursive unit with complete integration, test coverage, and memory/camouflage scaffolding.  
+**File Count:** `16`
+**Purpose:** Full recursive unit with complete integration, test coverage, and memory/camouflage scaffolding.
 **Usage:** Core gameplay, recursive systems, AI-training corpus.
 
 ### ✅ Must include:
@@ -31,8 +31,8 @@ All nodes must belong to **one of the following tiers**:
 
 ## 🟨 Tier 2 – Minimal Nodes (8 Files)
 
-**File Count:** `8`  
-**Purpose:** Lightweight but fully playable nodes. Balances functionality with simplicity.  
+**File Count:** `8`
+**Purpose:** Lightweight but fully playable nodes. Balances functionality with simplicity.
 **Usage:** Side paths, modular systems, AI-generated quests, player-created rooms.
 
 ### ✅ Must include:
@@ -52,8 +52,8 @@ All nodes must belong to **one of the following tiers**:
 
 ## 🟥 Tier 3 – Poetic Nodes (4 Files)
 
-**File Count:** `4`  
-**Purpose:** Liminal fragments, atmospheric flavor, poetic interludes.  
+**File Count:** `4`
+**Purpose:** Liminal fragments, atmospheric flavor, poetic interludes.
 **Usage:** One-off events, dreams, hallucinations, ghost encounters, narrative echoes.
 
 ### ✅ Must include:
@@ -68,6 +68,41 @@ All nodes must belong to **one of the following tiers**:
 ### 🧬 Evolution Rule:
 - May be **upgraded** to Tier 2 or Tier 1 if revisited, remembered, or looped into recursion
 - May be **deleted** or archived once their poetic function is complete
+
+---
+
+## Tier 1 Node Control Contract
+
+Every Tier 1 node in Storybook Archipelago obeys the same minimal and universal control set.
+This ensures playability, accessibility, and future-proof overlays (graphics, sound, UI) while keeping the text scaffold consistent.
+
+### Canonical Controls
+
+- **Enter** → Always calls `story.describe_scene(memory)`
+  *Neutral “look around / re-anchor” action. Provides the baseline scaffold for accessibility and overlays.*
+
+- **L** → Always calls `leftmain.handle_left(memory)`
+  *Left is always meaningful, even if only a loopback or placeholder.*
+
+- **R** → Always calls `rightmain.handle_right(memory)`
+  *Right is always meaningful, never inert.*
+
+- **Ctrl+C** → Always exits cleanly
+  *Never a crash; consistent and safe across all nodes.*
+
+### Subtype Overlays
+
+- **Type 1 (Minimal):** Both L and R are basic, no lists.
+- **Type 2:** Left page may surface a numbered list; Right stays basic.
+- **Type 3:** Right page may surface a numbered list; Left stays basic.
+- **Type 4 (Fully complex):** Both L and R may surface lists.
+
+### Rationale
+
+- **Consistency:** Players always know that Enter/L/R/Ctrl+C are valid inputs.
+- **Future-Proofing:** Graphics, sounds, and new input modes can be added later, without altering the text contract.
+- **Testability:** Control paths are stable, simple to test, and CI-friendly.
+- **Accessibility:** Game remains fully playable in terminal-only environments.
 
 ---
 
@@ -92,9 +127,9 @@ All nodes must belong to **one of the following tiers**:
 
 ## 📜 Final Doctrine
 
-> A **Tier 1 node** teaches the system.  
-> A **Tier 2 node** builds the system.  
+> A **Tier 1 node** teaches the system.
+> A **Tier 2 node** builds the system.
 > A **Tier 3 node** *haunts* the system.
 
-This file is recursive canon.  
+This file is recursive canon.
 It defines what a node *is*, what it *may become*, and what it must *never forget*.
