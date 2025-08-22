@@ -1,3 +1,9 @@
+"""
+camouflage.py | Storybook Archipelago node camouflage layer
+Presentation-only: overlays mood/effects, does not change logic or routing.
+Do not rewrite narrative or logic here. See camouflage_layers.md for doctrine.
+"""
+
  # camouflage.py — Whispering Arch
 def render_camouflage(state: dict | None, mood: str | None = None, level: int = 0) -> str:
 	"""Camouflage layer: returns a tone/mood string with optional markers."""
