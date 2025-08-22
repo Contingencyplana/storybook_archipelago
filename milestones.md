@@ -114,7 +114,10 @@ Use this file to monitor cross-mode growth, recursive integrity, and player read
 ✅ Mirror Pool node (a0_1) sealed — all 8 tests green, fixes + case-insensitive assertions committed and synced.
 
 
-## Milestone: Tideline Market stanza canonized — 2025-08-22
+
+## Milestone: Doctrine — Canonical File Placement Rules — 2025-08-22
+
+Doctrine milestone: Canonical File Placement Rules finalized. Detailed section added to template_minigame/README.md, with cross-reference in node_tiers.md. Ensures node files (integration.py, story.py, camouflage.py, orchestration.py, leftmain.py, rightmain.py, leftrightmain.py, and test pairs) always stay inside node folders, never at minigame root.
 
 - **Stanza a1_0 — Tideline Market**: All four nodes (`a0_0_shell_stalls_node`, `a0_1_barter_lane_node`, `a0_2_weighing_scales_node`, `a0_3_ledger_booth_node`) successfully integration-tested and manual playtested. Enter, Left, Right inputs validated. Stanza canonized as playtest-ready.
 
