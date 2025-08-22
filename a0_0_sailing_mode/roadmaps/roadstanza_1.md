@@ -1,18 +1,23 @@
 # roadstanza_1.md — a0_0_sailing_mode
 
+| Minigame Folder                 | Status        | Notes                                      |
+|---------------------------------|---------------|--------------------------------------------|
+| a1_0_tideline_market_minigame/  | Complete (T1) | Barter, shells, memory echoes              |
+| a1_1_shell_bazaar_minigame/     | Complete (T1) | Spiral stalls, L/R traversal, recursive tone|
+| a1_2_echoing_grotto_minigame/   | Incomplete    | Missing one node; not yet playtested       |
+| a1_3_???_minigame/              | Pending       | Placeholder slot for fourth RS1 minigame   |
 
-| Minigame Folder                 | Status        | Notes                             |
-|---------------------------------|---------------|-----------------------------------|
-| a1_0_tideline_market_minigame/  | Active (T1/2) | RS2 entry; Type 1 + limited Type 2|
-| a1_1_shell_bazaar_minigame/     | Active (T1)   | Spiral stalls, L/R traversal, story|
+---
 
 ## Recommended Staging
 
-- Roadstanza 1 (RS2 – minigames 5–8): Type 1 + limited Type 2 (Left list)
+- Roadstanza 1 (RS1 – minigames 5–8): Type 1 + limited Type 2 (Left list)
 
 ### Suggested ratios (guideline)
 
-- RS2: ~70–80% Type 1, ~20–30% Type 2
+- RS1: ~70–80% Type 1, ~20–30% Type 2
+
+---
 
 ## Gates to Introduce Next Type
 
@@ -24,8 +29,11 @@ Introduce a new Type only when all apply:
 - Matching tests exist:
   - Type 2: list assertions for Left paths
 
-Policy alignment (see `node_type_rollout.md`)
+Policy alignment (see `node_type_rollout.md`).
 
-This file is reserved for summary notes or retrospectives if needed.
+---
 
-No further action here; see `roadstanza_2.md` for upcoming RS2 planning.
+## Notes
+
+- RS1 is partially complete: first two minigames sealed, third incomplete, fourth pending.
+- This file will be updated as Echoing Grotto and the fourth minigame progress.

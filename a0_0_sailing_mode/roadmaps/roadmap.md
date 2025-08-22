@@ -1,26 +1,26 @@
-# 🗺️ roadmap.md  
+# 🗺️ roadmap.md
 
 ## Strategic Mode Plan – a0_0_sailing_mode
 
 > _“The map is not a path. It is a possibility.”_
 
-This roadmap defines the intended recursive flow of gameplay within the `a0_0_sailing_mode` game mode.  
+This roadmap defines the intended recursive flow of gameplay within the `a0_0_sailing_mode` game mode.
 It outlines the order, thematic arc, and function of each minigame, as well as key traversal logic between them.
 
 ---
 
 ## 🎮 Mode Overview
 
-**Mode Name:** `a0_0_sailing_mode`  
-**Player Role:** Wandering sailor of stories  
-**Traversal Mechanic:** Sailing from island to island using L/R poetic decisions  
+**Mode Name:** `a0_0_sailing_mode`
+**Player Role:** Wandering sailor of stories
+**Traversal Mechanic:** Sailing from island to island using L/R poetic decisions
 **Primary Focus:** Introduce recursion, player memory, tone layering, and delight
 
 ---
 
 ## 🧩 Planned Stanza Structure
 
-### 🧱 Stanza 0 – Opening the Archipelago  
+### 🧱 Stanza 0 – Opening the Archipelago
 
 | Minigame Folder                       | Theme                                  |
 |---------------------------------------|----------------------------------------|
@@ -34,7 +34,8 @@ It outlines the order, thematic arc, and function of each minigame, as well as k
 | Minigame Folder                        | Theme                                     |
 |----------------------------------------|-------------------------------------------|
 | `a1_0_tideline_market_minigame/`       | Shoreline market, shells, barter, memory  |
-| `a1_1_shell_bazaar_minigame/`          | Spiral stalls, trade, recursion, shimmer   |
+| `a1_1_shell_bazaar_minigame/`          | Spiral stalls, trade, recursion, shimmer  |
+| `a1_2_echoing_grotto_minigame/`        | Echoes, grotto passages, incomplete node  |
 
 Planned stanza updates will follow this template in `roadstanza_2.md`, etc.
 
@@ -50,16 +51,18 @@ Planned stanza updates will follow this template in `roadstanza_2.md`, etc.
 
 ## 🎭 Camouflage and Mood Progression
 
-Camouflage layers are expected to escalate subtly across this mode.  
+Camouflage layers are expected to escalate subtly across this mode.
 Anticipated emotional layering:
 
-| Minigame                         | Camouflage Layer         |
-|----------------------------------|---------------------------|
-| `a0_0_enchanted_isle_minigame/`  | Fog, stillness, childlike awe  |
-| `a0_1_starfish_harbor_minigame/` | Echo, harbor rhythm           |
-| `a0_2_lantern_channel_minigame/` | Twilight tint, bell/foghorn cues     |
-| `a0_3_fogbound_sound_minigame/`  | Silence, echo-location, horn cues |
-| `a1_0_tideline_market_minigame/` | bustle, shifting sands, echo of barter  |
+| Minigame                              | Camouflage Layer                  |
+|---------------------------------------|-----------------------------------|
+| `a0_0_enchanted_isle_minigame/`       | Fog, stillness, childlike awe     |
+| `a0_1_starfish_harbor_minigame/`      | Echo, harbor rhythm               |
+| `a0_2_lantern_channel_minigame/`      | Twilight tint, bell/foghorn cues  |
+| `a0_3_fogbound_sound_minigame/`       | Silence, echo-location, horn cues |
+| `a1_0_tideline_market_minigame/`      | Bustle, shifting sands, barter    |
+| `a1_1_shell_bazaar_minigame/`         | Spiral shimmer, recursive calls   |
+| `a1_2_echoing_grotto_minigame/`       | Hollow resonance, unfinished tone |
 
 ---
 

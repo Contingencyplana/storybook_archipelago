@@ -14,13 +14,14 @@
 ## Playtesting
 
 - [x] Run all node tests and playtest flows
-- [ ] Refine based on feedback and test results
+- [x] Refine based on feedback and test results
 
 ## Integration
 
 - [x] Update portalmap and subtaskmap as needed
-- [ ] Link to worldmap and higher-level planning docs
+- [x] Link to worldmap and higher-level planning docs
 
 ## Notes
 
 - Playtest complete as of August 17, 2025. All nodes contract-compliant and tested. Ready for polish or expansion.
+- Linked to sailing_mode roadmap and stanza docs as of August 22, 2025.
