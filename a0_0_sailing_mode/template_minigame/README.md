@@ -19,6 +19,25 @@ This is a scaffold for new minigames. Pair this root README (overview) with `tas
 
 This template uses a minimal, text-first scaffold for all nodes, with explicit labels and placeholders for future graphics, sound, and UI. See ../../bare_bones_skeletal_of_text.md for the full philosophy and guidelines.
 
+## Canonical File Placement Rules for Tier-1 Minigame Nodes
+
+**Minigame root may contain:**
+
+- Minigame node folders (`a0_0`, `a0_1`, etc.)
+- `taskmaps/` folder
+- `__init__.py`
+- `README.md`
+- `playtest.md`
+
+**Minigame root must not contain files reserved for nodes, including:**
+
+- `portalmap.md`
+- `subtaskmap.md`
+- `nodestanza_#.md`
+- Any of the 16 Tier-1 node files (`integration.py`, `story.py`, `camouflage.py`, `orchestration.py`, `leftmain.py`, `rightmain.py`, `leftrightmain.py`, and all associated `*test.py` files).
+
+All 16 node files must live only inside **node folders**, never in the root of a minigame. This ensures clean separation between minigame-level and node-level logic, documentation, and tests.
+
 Quick links
 
 - taskmaps/README.md — author/planning index

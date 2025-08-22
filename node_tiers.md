@@ -16,6 +16,8 @@ All nodes must belong to **one of the following tiers**:
 **Usage:** Core gameplay, recursive systems, AI-training corpus.
 
 ### ✅ Must include:
+
+> See template_minigame/README.md for canonical rules on minigame root vs node file placement.
 - `story.py`, `leftmain.py`, `rightmain.py`, and all test files
 - `integration.py`, `camouflage.py`, `orchestration.py` and tests
 - `portalmap.md`, `subtaskmap.md`, and `README.md`
