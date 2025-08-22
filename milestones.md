@@ -113,6 +113,11 @@ Use this file to monitor cross-mode growth, recursive integrity, and player read
 
 ✅ Mirror Pool node (a0_1) sealed — all 8 tests green, fixes + case-insensitive assertions committed and synced.
 
+
+## Milestone: Tideline Market stanza canonized — 2025-08-22
+
+- **Stanza a1_0 — Tideline Market**: All four nodes (`a0_0_shell_stalls_node`, `a0_1_barter_lane_node`, `a0_2_weighing_scales_node`, `a0_3_ledger_booth_node`) successfully integration-tested and manual playtested. Enter, Left, Right inputs validated. Stanza canonized as playtest-ready.
+
 ## Milestone: Whispering Arch sealed — 2025-08-21
 
 - ✅ Sealed **Whispering Arch (a0_2)** — 15 tests passing; added `helpers.tag()`; camouflage mood variants.
