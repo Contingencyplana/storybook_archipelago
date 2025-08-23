@@ -1,10 +1,10 @@
-"""
-integration.py | Storybook Archipelago node integration layer
-Node: a0_2_node (template_minigame)
-Role: Entry point for input routing, play loop, and node contract.
-Purpose: Handles 'L', 'R', and other input, routes to leftmain/rightmain/story.
-Expected: def route_input(user_input: str, memory: dict) -> str
-See node_tiers.md and test_strategy.md for contract.
-"""
+from . import leftmain, rightmain, story
 
-
+def route_input(user_input: str, memory: dict) -> str:
+    user_input = (user_input or "").upper()
+    if user_input == "L":
+        return leftmain.handle_input(user_input, memory)
+    elif user_input == "R":
+        return rightmain.handle_input(user_input, memory)
+    else:
+        return story.describe_scene(memory)
