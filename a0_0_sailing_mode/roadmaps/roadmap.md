@@ -35,7 +35,16 @@ It outlines the order, thematic arc, and function of each minigame, as well as k
 |----------------------------------------|-------------------------------------------|
 | `a1_0_tideline_market_minigame/`       | Shoreline market, shells, barter, memory  |
 | `a1_1_shell_bazaar_minigame/`          | Spiral stalls, trade, recursion, shimmer  |
-| `a1_2_echoing_grotto_minigame/`        | Echoes, grotto passages, incomplete node  |
+| `a1_2_echoing_grotto_minigame/`        | Echoes, grotto passages, playtested & complete  |
+
+
+**Progress:** Echoing Grotto (Minigame 7) locked to four canonical nodes; full playtest complete.
+
+UI Mapping:
+- L/R → left/right page turn
+- Numbered options → in-page choices
+- Bookmarks (page edges) → portalmap shortcuts / echoes
+- Cover → main menu (pause/quit/options)
 
 Planned stanza updates will follow this template in `roadstanza_2.md`, etc.
 
