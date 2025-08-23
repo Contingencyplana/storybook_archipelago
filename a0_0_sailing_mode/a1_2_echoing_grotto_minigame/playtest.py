@@ -1,15 +1,15 @@
-
 # Playtest script for Echoing Grotto Minigame (manual node chaining)
-from a0_0_gate_of_echoes_node import integration as gate
-from a0_1_whisper_chorus_node import integration as whisper
-from a0_2_resonance_pool_node import integration as resonance
-from a0_3_crystal_vault_node import integration as vault
+
+from a0_0_sailing_mode.a1_2_echoing_grotto_minigame.a0_0_gate_of_echoes_node import integration as gate
+from a0_0_sailing_mode.a1_2_echoing_grotto_minigame.a0_1_whisper_chorus_node import integration as chorus
+from a0_0_sailing_mode.a1_2_echoing_grotto_minigame.a0_2_resonance_pool_node import integration as pool
+from a0_0_sailing_mode.a1_2_echoing_grotto_minigame.a0_3_crystal_vault_node import integration as vault
 
 def run_playtest():
     nodes = [
         ("Gate of Echoes", gate),
-        ("Whisper Chorus", whisper),
-        ("Resonance Pool", resonance),
+        ("Whisper Chorus", chorus),
+        ("Resonance Pool", pool),
         ("Crystal Vault", vault),
     ]
     print("\nEchoing Grotto Minigame Playtest")
