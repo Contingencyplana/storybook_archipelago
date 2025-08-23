@@ -20,6 +20,11 @@ NODE_PATHS = [
     "a0_1_node",
     "a0_2_node",
     "a0_3_node",
+# CLI input mapping (placeholder for client UI):
+# Enter = click page (turn if no options)
+# L / R = left / right page turn
+# 1/2/3 = numbered options in-page
+# q / Ctrl+C = click cover (menu)
 ]
 
 @pytest.mark.parametrize("node", NODE_PATHS)

@@ -91,4 +91,14 @@ This roadmap will evolve as more islands and layers are revealed.
 
 ---
 
+## UI Mapping (Five Interaction Zones)
+
+- **L / R** → left / right page turn.
+- **Numbered options (1–3, etc.)** → in-page clickable choices.
+- **Bookmarks (page edges)** → portalmap shortcuts or echoes.
+- **Cover (surround)** → main menu (pause, quit, options, save/load).
+
+Note: In CLI playtests, keys are placeholders for click zones:
+Enter = click page (turn), L = left page, R = right page, 1/2/3 = numbered options, q/Ctrl+C = cover/menu.
+
 > _“The wind may choose the path, but you choose the wind.”_

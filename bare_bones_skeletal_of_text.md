@@ -11,6 +11,16 @@ Storybook Archipelago is built from the inside out, starting with a minimal, tex
 - **Accessible:** The game is always playable in a terminal or basic UI, ensuring accessibility and broad compatibility.
 - **Collaborative:** Writers, designers, and developers can work in parallel, knowing the text scaffold is the single source of truth.
 
+
+## UI Alignment: Writing for Five Interaction Zones
+
+When writing for Storybook Archipelago, keep these UI-driven authoring points in mind:
+
+- Numbered lists = clickable options; keep between 3–6 items, one line each.
+- Default click = page turn; when no numbered list is present, clicking the page should advance naturally.
+- Paragraphs should be scannable; keep prose short and visually clean for readability in screenshot/storybook format.
+- CLI keys (Enter, l, r, 1–3) are temporary stand-ins for these interactions during playtesting.
+
 ## Practical Guidelines
 
 - Use explicit labels like `[LEFT PAGE]`, `[RIGHT PAGE]`, and content cues ("Illustration:", "Numbered list:") in all story and logic outputs.

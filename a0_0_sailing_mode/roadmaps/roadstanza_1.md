@@ -7,17 +7,24 @@
 | a1_2_echoing_grotto_minigame/   | Incomplete    | Missing one node; not yet playtested       |
 | a1_3_???_minigame/              | Pending       | Placeholder slot for fourth RS1 minigame   |
 
----
 
-## Recommended Staging
+Policy alignment (see `node_type_rollout.md`).
 
-- Roadstanza 1 (RS1 – minigames 5–8): Type 1 + limited Type 2 (Left list)
+## UI Mapping (Five Interaction Zones)
 
-### Suggested ratios (guideline)
+- **L / R** → left / right page turn.
+- **Numbered options (1–3, etc.)** → in-page clickable choices.
+- **Bookmarks (page edges)** → portalmap shortcuts or echoes.
+- **Cover (surround)** → main menu (pause, quit, options, save/load).
 
-- RS1: ~70–80% Type 1, ~20–30% Type 2
+Note: In CLI playtests, keys are placeholders for click zones:
+Enter = click page (turn), L = left page, R = right page, 1/2/3 = numbered options, q/Ctrl+C = cover/menu.
 
----
+## Notes
+
+- RS1 is partially complete: first two minigames sealed, third incomplete, fourth pending.
+- This file will be updated as Echoing Grotto and the fourth minigame progress.
+
 
 ## Gates to Introduce Next Type
 

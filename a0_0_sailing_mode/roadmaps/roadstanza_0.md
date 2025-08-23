@@ -9,7 +9,18 @@
 
 RS0 summary: All four minigames in this stanza are Tier-1 Type 1. Portals are Active and playtested.
 
+
 Policy alignment (see `node_type_rollout.md`)
+
+## UI Mapping (Five Interaction Zones)
+
+- **L / R** → left / right page turn.
+- **Numbered options (1–3, etc.)** → in-page clickable choices.
+- **Bookmarks (page edges)** → portalmap shortcuts or echoes.
+- **Cover (surround)** → main menu (pause, quit, options, save/load).
+
+Note: In CLI playtests, keys are placeholders for click zones:
+Enter = click page (turn), L = left page, R = right page, 1/2/3 = numbered options, q/Ctrl+C = cover/menu.
 
 ---
 
