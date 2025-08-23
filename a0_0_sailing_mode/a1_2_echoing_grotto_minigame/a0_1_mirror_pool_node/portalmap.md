@@ -1,2 +1,0 @@
-L → storybook_archipelago/a0_0_sailing_mode/a1_2_echoing_grotto_minigame/a0_0_whispering_grove_node/
-R → storybook_archipelago/a0_0_sailing_mode/a1_2_echoing_grotto_minigame/a0_2_echo_chamber_node/

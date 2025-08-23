@@ -1,7 +1,7 @@
+
 # Taskmap — Echoing Grotto Minigame
 
-- [ ] Create and document all node folders
-- [ ] Draft README.md for each node
-- [ ] Implement integration.py and integtest.py for a0_0_resonant_chamber_node
-- [ ] Implement leftmain.py and lefttest.py for a0_0_resonant_chamber_node
-- [ ] Continue stepwise through authoring workflow for all nodes
+- [ ] a0_0_gate_of_echoes_node: Complete all authoring steps
+- [ ] a0_1_whisper_chorus_node: Complete all authoring steps
+- [ ] a0_2_resonance_pool_node: Complete all authoring steps
+- [ ] a0_3_crystal_vault_node: Complete all authoring steps
