@@ -57,6 +57,54 @@ See also:
 - VS Code task: "Run: render choices demo" to print an annotated HTML list quickly.
 - [Bare Bones Skeletal of Text](../bare_bones_skeletal_of_text.md) — for the philosophy and contract of text-first scaffolding that underpins this UI playbook.
 
+## Five Interaction Zones (Top-Down Storybook UI)
+
+The canonical client UI for Storybook Archipelago is a top-down view of an open storybook, with visible bookmarked page edges and a surrounding cover. This creates five consistent interaction zones:
+
+### Zone One — Left Page
+- **Default:** Clicking turns the left page.
+- **If numbered list is present:** Clicking a list item chooses that option instead of turning.
+
+### Zone Two — Left Page Edge (Bookmarks)
+- A swatch of bookmarked page ends is visible left of the left page (~100 implied).
+- **Click bookmark:** Jumps directly to that bookmarked screenshot.
+- **Click elsewhere:** Jumps to one of 100 locations (acts as a memory echo).
+
+### Zone Three — Right Page
+- **Default:** Clicking turns the right page.
+- **If numbered list is present:** Clicking a list item chooses that option instead of turning.
+
+### Zone Four — Right Page Edge (Bookmarks)
+- Same rules as Zone Two, but on the right side.
+- **Bookmark click:** Direct jump.
+- **Elsewhere:** Echo jump to one of 100 locations.
+
+### Zone Five — Storybook Cover (Surround)
+- The visible hard cover around the page spread.
+- Clicking it opens the Main Menu (pause, quit, options, save/load).
+- Can be styled as a closed book on a desk, with a parchment note of menu choices beside it.
+
+---
+
+### Notes
+- **Diegetic UI:** All controls exist “in-world,” preserving immersion.
+- **Consistency:** Identical rules left vs right.
+- **Expandability:** Bookmarks double as save states, quick travel, or echo anchors.
+- **Fail-safe:** The cover zone always offers a clean menu exit.
+
+### CLI Mapping (temporary for playtesting)
+- `Enter` → click page (no numbered list present).
+- `l` → click left page.
+- `r` → click right page.
+- `1/2/3` → click numbered list options.
+- `q` or `Ctrl+C` → click cover (menu).
+
+⚖️ **Open Question:** For Zones 2 & 4 (“click elsewhere” on page edges), should jumps be:
+- Truly random (dreamlike, chaotic), or
+- Patterned/seeded by memory echoes (bounded but still surprising)?
+
+Decision deferred until **end of RS2**.
+
 ## Out-of-scope (for this doc)
 
 - Narrative authoring rules and portal contract details (see portals_and_four_part_paths.md and tests).

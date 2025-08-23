@@ -2,6 +2,16 @@
 
 Purpose: Codify how we progressively build Storybook Archipelago from within the game while phasing AI assistance down over time.
 
+## Architecture Decision: Storybook Spread UI
+
+The primary client UI metaphor for Storybook Archipelago is the storybook spread: a top-down view of an open book. All player interaction is mapped to this diegetic interface, reinforcing immersion and narrative consistency.
+
+The UI is organized into Five Interaction Zones (see `ui_storybook_playbook.md` for details): Left Page, Left Page Edge (Bookmarks), Right Page, Right Page Edge (Bookmarks), and the Storybook Cover (Surround). Each zone has distinct click behaviors, with page edges supporting both direct bookmark jumps and special “echo” jumps.
+
+An open design question remains for Zones 2 & 4 (the page edges): should non-bookmark clicks trigger truly random (dreamlike, chaotic) jumps, or should they be patterned/bounded (e.g., seeded by player memory or previous choices)? This choice will shape the balance between player agency and dreamlike unpredictability.
+
+This decision will be finalized by the end of Roadstanza 2 (RS2). Its outcome will directly affect save/load mechanics, routing logic, and the degree of control players experience versus the sense of narrative surprise.
+
 ## Core stance
 
 - Build the game increasingly from inside the game. External AI (agent) scaffolds early; player-facing tools and nodes take over.
