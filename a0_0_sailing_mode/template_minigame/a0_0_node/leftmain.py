@@ -1,3 +1,2 @@
-def handle_left(memory: dict) -> str:
-	return "The path tilts left. [LEFT] The air pays attention."
-
+def handle_input(user_input: str, memory: dict) -> str:
+    return f"Left placeholder response to {user_input}"
