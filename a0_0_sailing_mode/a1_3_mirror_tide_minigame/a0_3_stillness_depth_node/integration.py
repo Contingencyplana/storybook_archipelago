@@ -1,22 +1,23 @@
 """
-Integration Router — Stillness Depth Node
+Integration Router — Stillness Depth Node (a0_3)
+
+Canonical routing:
+  L -> leftmain.run (rise toward Current Gate)
+  R -> rightmain.run (remain, loop-safe)
+  Enter/"" -> story.observe
+  else -> orchestration.fallback (must include 'unknown')
 """
 
-from . import camouflage
+from . import leftmain, rightmain, orchestration, story
 
-def handle_input(user_input: str, state: dict) -> str:
-    """Master router for Stillness Depth node."""
-    user_input = user_input.strip().lower()
+def handle_input(choice: str, state: dict) -> str:
+    choice = (choice or "").strip().lower()
 
-    if user_input in ("l", "left"):
-        return "You press left — currents swirl back toward Reflection Shore."
-    elif user_input in ("r", "right"):
-        return "You press right — a faint ripple path extends outward."
+    if choice in ("l", "left"):
+        return leftmain.run(state)
+    elif choice in ("r", "right"):
+        return rightmain.run(state)
+    elif choice in ("", "enter"):
+        return story.observe(state)
     else:
-        # Default observation path
-        return observe(state)
-
-def observe(state: dict) -> str:
-    """Default observation when no L/R is pressed."""
-    return camouflage.describe_scene() + " You realize this is the Stillness Depth."
-
+        return orchestration.fallback(choice, state)
